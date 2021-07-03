@@ -1,0 +1,8 @@
+[15-Nov-2014 11:01:44 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Column 'gallery_code' in where clause is ambiguous' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `gallery...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `gallery...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `gallery...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/gallery.php(79): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/emanager/public_html/adminclient/MU3H/galleries/images.php(27): class_gallery- in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77

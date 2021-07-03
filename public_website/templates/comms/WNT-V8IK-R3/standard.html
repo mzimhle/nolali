@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Willow-Nettica Custom Mailer</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+	{literal}
+	<style type="text/css">
+	.list a {color: #cc0000; text-transform: uppercase; font-family: Verdana; font-size: 11px; text-decoration: none;}
+	</style>
+	{/literal}
+</head>
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#c5c5c5" leftmargin="0">
+
+<table cellspacing="0" border="0" style="background-image: url(http://{$userData.domain}/templates/comms/WNT-V8IK-R3/images/bg.gif); background-color: #c5c5c5;" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top">
+
+			<table cellspacing="0" border="0" align="center" style="background: #fff; border: 1px solid #ccc; margin-top: 30px; margin-bottom: 30px;" cellpadding="0" width="600">
+				<tr>
+					<td valign="top">
+						<!-- header -->
+						<table cellspacing="0" border="0"  cellpadding="0" width="600">
+							<tr>
+								<td class="header-text" height="50" valign="top" style="color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; padding: 0 20px;" width="540" colspan="2">
+									<br /><br /><webversion style="color: #990000; text-decoration: none;">Willow-Nettica Mailer - {$smarty.now|date_format:"%A, %B %e, %Y"}</webversion>
+								</td>
+							</tr>
+							<tr>							
+								<td class="main-title" height="5" align="center" valign="top" style="padding: 0 20px; font-size: 25px; font-family: Georgia;" width="600" colspan="2">									
+									<img src="http://www.collop.co.za/administration/images/ct_logo.jpg" />
+								</td>							
+							</tr>
+							<tr>
+								<td class="main-title" height="5" valign="top" style="padding: 0 20px; font-size: 25px; font-family: Georgia;" width="600" colspan="2">									
+									<br />{$userData.title}
+								</td>							
+							</tr>
+							<tr>
+								<td height="20" valign="top" width="600" colspan="2">
+									<img src="http://{$userData.domain}/templates/comms/WNT-V8IK-R3/images/thin-breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+								</td>
+							</tr>
+						</table>
+						<!-- / header -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- content -->
+						<table cellspacing="0" border="0" cellpadding="0" width="600">
+							<tr>
+								<td class="content-copy" valign="top" style="padding: 0 20px; color: #000; font-size: 14px; font-family: Georgia; line-height: 20px;" colspan="2">
+									<br />Dear {$userData.fullname}, <br /><br />
+									{$userData.message}<br /><br />
+								</td>
+							</tr>
+						</table>
+						<!--  / content -->
+					</td>
+				</tr>
+				<tr>
+					<td height="20" valign="top" width="600" colspan="2">
+						<img src="http://{$userData.domain}/templates/comms/WNT-V8IK-R3/images/thin-breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+					</td>
+				</tr>				
+				<tr>
+					<td valign="top" width="600">
+						<!-- footer -->
+						<table cellspacing="0" border="0" height="100" cellpadding="0" width="600">
+							<tr>
+								<td class="copyright" height="100" align="center" valign="top" style="padding: 0 20px; color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; line-height: 20px;" width="600" colspan="2">
+									Willow-Nettica - No. 64, Sir Lowry Road, Zonnebloem, 7925, Cape Town<br />Email: info@willow-nettica.co.za<br /><br />
+									{$smarty.now|date_format:"%A, %B %e, %Y"}<br />
+									<a style="color: #cc0000; text-decoration: none;" href="http://www.willow-nettica.co.za" target="_blank">Willow-Nettica (Pty) Ltd</a>
+									<img src="http://{$userData.domain}/mailers/tracking.php?tracking={$tracking}" width="0" height="0" border="0" /><br /><br /><br />
+								</td>
+							</tr>
+						</table>
+						<!-- / end footer -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

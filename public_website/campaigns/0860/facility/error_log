@@ -1,0 +1,16 @@
+[13-Nov-2014 21:19:54 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in campaigns/MU3H/0860/facility/default.tpl line 9]: syntax error: unrecognized tag: display: table;
+    table-layout: fixed;
+    
+    width:90%;
+    height:100px;
+    background-color:Gray; (Smarty_Compiler.class.php, line 446) in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[14-Nov-2014 20:22:22 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY `product`.`product_name` desc' at line 3' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/product.php(117): Zend_Db_A in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[15-Nov-2014 08:24:03 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in campaigns/MU3H/0860/facility/default.tpl line 103]: syntax error: unrecognized tag:  (Smarty_Compiler.class.php, line 446) in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[15-Nov-2014 08:49:56 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in campaigns/MU3H/0860/facility/default.tpl line 12]: syntax error: unrecognized tag: {/literal (Smarty_Compiler.class.php, line 446) in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[15-Nov-2014 08:50:22 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in campaigns/MU3H/0860/includes/javascript.tpl line 4]: syntax error: unrecognized tag 'literal' (Smarty_Compiler.class.php, line 590) in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095

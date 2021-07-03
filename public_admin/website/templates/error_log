@@ -1,0 +1,14 @@
+[17-May-2015 12:44:21 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_template::getByAccount() in /home/nolalico/public_admin/website/templates/default.php on line 46
+[17-May-2015 12:44:33 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_template::getAll() in /home/nolalico/public_admin/website/templates/default.php on line 46
+[17-May-2015 12:44:47 Africa/Johannesburg] PHP Warning:  Missing argument 1 for class_template::getAll(), called in /home/nolalico/public_admin/website/templates/default.php on line 46 and defined in /home/nolalico/public_admin/library/classes/class/template.php on line 80
+[17-May-2015 12:44:47 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_admin/library/classes/class/template.php(89): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/nolalico/public_admin/website/templates/default.php(46): class_template->getAll()
+#5 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[17-May-2015 12:45:01 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "template/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[17-May-2015 12:45:25 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "website/template/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095

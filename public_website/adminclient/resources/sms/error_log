@@ -1,0 +1,8 @@
+[21-Sep-2013 14:12:38 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc._comms' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_comms`...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_comms`...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_comms`...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/_comms.php(85): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/adminclient/MU3H/resources/sms/default.php(19): class_comms->getB in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77

@@ -1,0 +1,112 @@
+[15-May-2015 15:13:11 Africa/Johannesburg] PHP Warning:  require_once(phpThumb/ThumbLib.inc.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/library/classes/class/File.php on line 3
+[15-May-2015 15:13:11 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'phpThumb/ThumbLib.inc.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/library/classes/class/File.php on line 3
+[15-May-2015 17:39:34 Africa/Johannesburg] PHP Fatal error:  Call to a member function getByProduct() on a non-object in /home/nolalico/public_admin/website/product/details.php on line 33
+[15-May-2015 18:17:44 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "website/product/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[15-May-2015 18:22:45 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "website/product/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[15-May-2015 18:57:31 Africa/Johannesburg] PHP Fatal error:  Call to a member function file_extention() on a non-object in /home/nolalico/public_admin/website/catalogue/product/image.php on line 115
+[15-May-2015 18:59:26 Africa/Johannesburg] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/nolalico/public_admin/library/classes/class/File.php on line 120
+[15-May-2015 18:59:26 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 18:59:26 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/6628840233/min_6628840233.' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 18:59:31 Africa/Johannesburg] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/nolalico/public_admin/library/classes/class/File.php on line 120
+[15-May-2015 18:59:31 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 18:59:31 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/6803558580/min_6803558580.' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 18:59:49 Africa/Johannesburg] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/nolalico/public_admin/library/classes/class/File.php on line 120
+[15-May-2015 18:59:49 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 18:59:49 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/7263770941/min_7263770941.' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:02:53 Africa/Johannesburg] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/nolalico/public_admin/library/classes/class/File.php on line 120
+[15-May-2015 19:02:53 Africa/Johannesburg] PHP Warning:  end() expects parameter 1 to be array, null given in /home/nolalico/public_admin/library/classes/class/File.php on line 120
+[15-May-2015 19:02:53 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:02:53 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/7734843467/min_7734843467.' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:03:41 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:03:41 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/6827248845/min_6827248845.jpg' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:04:20 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:04:20 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/9929811348/min_9929811348.jpg' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:04:48 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:04:48 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /public_website/campaigns/5357/media/products/2393296938/7235173520/min_7235173520.jpg' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/public_website...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:06:07 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:06:07 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /home/nolalico/public_website/campaigns/5357/media/products/2393296938/1661332733/min_1661332733.jpg' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/home/nolalico/...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:07:11 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 19:07:11 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'File not writeable: /home/nolalico/public_website/campaigns/5357/media/products/2393296938/1456079768/min_1456079768.jpg' in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php:662
+Stack trace:
+#0 /home/nolalico/public_admin/website/catalogue/product/image.php(174): GdThumb->save('/home/nolalico/...')
+#1 {main}
+  thrown in /home/nolalico/public_admin/library/classes/phpThumb/GdThumb.inc.php on line 662
+[15-May-2015 19:08:03 Africa/Johannesburg] PHP Warning:  mkdir() [<a href='function.mkdir'>function.mkdir</a>]: Permission denied in /home/nolalico/public_admin/website/catalogue/product/image.php on line 165
+[15-May-2015 20:08:31 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '{', expecting '&' or T_VARIABLE in /home/nolalico/public_admin/library/classes/class/productitem.php on line 108
+[15-May-2015 20:34:37 Africa/Johannesburg] PHP Fatal error:  Class 'classproductitem' not found in /home/nolalico/public_admin/website/catalogue/item/price.php on line 16
+[15-May-2015 20:36:50 Africa/Johannesburg] PHP Fatal error:  Class 'classproductitem' not found in /home/nolalico/public_admin/website/catalogue/item/price.php on line 16
+[15-May-2015 20:37:36 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'product_cocde' in 'where clause'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `product...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `product...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `product...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `product...', Array)
+#4 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('productitem', Array, Array)
+#5 /home/nolalico/public_admin/library/classes/class/productitem.php(50 in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[15-May-2015 20:38:31 Africa/Johannesburg] PHP Fatal error:  Class 'classproductitem' not found in /home/nolalico/public_admin/website/catalogue/item/price.php on line 16
+[15-May-2015 20:39:12 Africa/Johannesburg] PHP Fatal error:  Class 'classproductitem' not found in /home/nolalico/public_admin/website/catalogue/item/price.php on line 16
+[15-May-2015 21:19:31 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::getByItemCode() in /home/nolalico/public_admin/website/catalogue/item/image.php on line 35
+[15-May-2015 21:19:56 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected $end in /home/nolalico/public_admin/website/catalogue/item/image.php on line 166
+[15-May-2015 21:20:19 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'productitemimage.product_code' in 'where clause'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/productitemimage.php(91): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/website/catalogue/item/imag in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[15-May-2015 21:21:09 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'nolalico_system.productitemitemimage' doesn't exist' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/productitemimage.php(91): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/website/catalogue/item/image.php( in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[15-May-2015 21:21:31 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::createReference() in /home/nolalico/public_admin/website/catalogue/item/image.php on line 156
+[15-May-2015 21:22:19 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::updatePrimaryByProduct() in /home/nolalico/public_admin/website/catalogue/item/image.php on line 182
+[15-May-2015 21:22:31 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'productitem.productitemitem_code' in 'where clause'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/productitemimage.php(107): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/library/classes/class/p in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[17-May-2015 01:07:47 Africa/Johannesburg] PHP Warning:  require_once(class/productitemdata.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/website/catalogue/item/extra.php on line 14
+[17-May-2015 01:07:47 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/productitemdata.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/website/catalogue/item/extra.php on line 14
+[17-May-2015 01:11:36 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "website/catalogue/item/productitemdata.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[17-May-2015 01:22:32 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in website/catalogue/item/extra.tpl line 102]: syntax error: unrecognized tag: ${$productitemData.productitem_code (Smarty_Compiler.class.php, line 446) in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[20-May-2015 22:03:01 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "catalogue/item/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095

@@ -1,0 +1,80 @@
+[13-May-2015 17:32:39 Africa/Johannesburg] PHP Warning:  require_once(class/_package.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/products/package/default.php on line 16
+[13-May-2015 17:32:39 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/_package.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/products/package/default.php on line 16
+[13-May-2015 17:41:24 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Select_Exception' with message 'You cannot define a correlation name '_price' more than once' in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php:808
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Select.php(357): Zend_Db_Select->_join('left join', Array, '_price._price_t...', Array, NULL)
+#1 /home/nolalico/public_admin/library/classes/class/_package.php(67): Zend_Db_Select->joinLeft(Array, '_price._price_t...', Array)
+#2 /home/nolalico/public_admin/products/package/default.php(51): class_package->getAll()
+#3 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php on line 808
+[13-May-2015 17:42:36 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Select_Exception' with message 'You cannot define a correlation name '_price' more than once' in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php:808
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Select.php(357): Zend_Db_Select->_join('left join', Array, '_price._price_t...', Array, NULL)
+#1 /home/nolalico/public_admin/library/classes/class/_package.php(67): Zend_Db_Select->joinLeft(Array, '_price._price_t...', Array)
+#2 /home/nolalico/public_admin/products/package/default.php(51): class_package->getAll()
+#3 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php on line 808
+[13-May-2015 17:42:40 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Select_Exception' with message 'You cannot define a correlation name '_price' more than once' in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php:808
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Select.php(357): Zend_Db_Select->_join('left join', Array, '_price._price_t...', Array, NULL)
+#1 /home/nolalico/public_admin/library/classes/class/_package.php(67): Zend_Db_Select->joinLeft(Array, '_price._price_t...', Array)
+#2 /home/nolalico/public_admin/products/package/default.php(51): class_package->getAll()
+#3 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php on line 808
+[13-May-2015 17:42:42 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Select_Exception' with message 'You cannot define a correlation name '_price' more than once' in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php:808
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Select.php(357): Zend_Db_Select->_join('left join', Array, '_price._price_t...', Array, NULL)
+#1 /home/nolalico/public_admin/library/classes/class/_package.php(67): Zend_Db_Select->joinLeft(Array, '_price._price_t...', Array)
+#2 /home/nolalico/public_admin/products/package/default.php(51): class_package->getAll()
+#3 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php on line 808
+[13-May-2015 17:42:58 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Select_Exception' with message 'You cannot define a correlation name '_price' more than once' in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php:808
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Select.php(357): Zend_Db_Select->_join('left join', Array, '_price._price_t...', Array, NULL)
+#1 /home/nolalico/public_admin/library/classes/class/_package.php(67): Zend_Db_Select->joinLeft(Array, '_price._price_t...', Array)
+#2 /home/nolalico/public_admin/products/package/default.php(51): class_package->getAll()
+#3 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Select.php on line 808
+[13-May-2015 17:48:15 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "Packages/package/details.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[14-May-2015 00:50:03 Africa/Johannesburg] PHP Warning:  require_once(administration/includes/auth.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/products/package/price.php on line 9
+[14-May-2015 00:50:03 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'administration/includes/auth.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/products/package/price.php on line 9
+[14-May-2015 00:50:54 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column '_price._price_code' in 'field list'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_price`...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_price`...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_price`...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/_price.php(113): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/products/package/price.php(32): class_price->getB in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[14-May-2015 00:52:07 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'group_deleted' in 'where clause'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_price`...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_price`...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_price`...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/_price.php(113): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/products/package/price.php(32): class_price->getByPr in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[14-May-2015 16:54:14 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_component::getByPackage() in /home/nolalico/public_admin/products/package/component.php on line 32
+[14-May-2015 17:09:50 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '._product_name) AS `_product_name` FROM `_product` ORDER BY `_product`.`_product' at line 1' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_produc...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_produc...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_produc...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(782): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select), Array)
+#4 /home/nolalico/public_adm in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[14-May-2015 17:09:53 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Adapter_Mysqli_Exception' with message 'Got error 28 from storage engine' in /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php:204
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(824): Zend_Db_Adapter_Mysqli->describeTable('_product', NULL)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(846): Zend_Db_Table_Abstract->_setupMetadata()
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(886): Zend_Db_Table_Abstract->_getCols()
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(970): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#4 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Select.php(100): Zend_Db_Table_Abstract->info()
+#5 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Select.php(78): Zend_Db_Table_Select->setTable(Object(class_product))
+#6 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1006): Zend_Db_Table_S in /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php on line 204
+[14-May-2015 17:09:58 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '._product_name) AS `_product_name` FROM `_product` ORDER BY `_product`.`_product' at line 1' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_produc...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_produc...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_produc...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(782): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select), Array)
+#4 /home/nolalico/public_adm in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77

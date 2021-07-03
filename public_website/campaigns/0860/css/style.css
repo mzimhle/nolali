@@ -1,0 +1,268 @@
+	body, html {
+		background: url("/campaign/images/body-bg.gif") repeat scroll center top rgb(55, 39, 28);
+		color: #bca695;
+		font-family: Tahoma,Geneva,sans-serif;
+		font-size: 100%;
+		/* line-height: 1.125em; */
+		margin:0;
+		padding:0;	
+		font-size: 13px;		
+	}	
+	#wrap {
+		width:976px;
+		margin:0 auto;
+		/* background:#99c; */		  
+		background: url("/campaign/images/content-bg.png") repeat scroll left top rgba(0, 0, 0, 0);		
+	}
+	
+	#header {
+    	padding:5px 10px;
+		background:#ddd;
+		background: url("/campaign/images/header-bg-top.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+		height: 443px;
+		position:relative;
+	}		
+	.header-box {
+	  margin: 139px auto auto;
+	  position: absolute;
+	  top: 0; left: 0; bottom: 0; right: 0;
+	  width: 904px;
+	}
+	
+	#slideshow-navigation a {
+		background: url("/campaign/images/slide.png") no-repeat scroll 50% 50% rgba(0, 0, 0, 0);
+		display: block;
+		float: left;
+		font-size: 0;
+		height: 9px;
+		margin: 10px 0 0;
+		outline-style: none;
+		outline-width: medium;
+		padding: 2px;
+		width: 9px;
+	}
+	
+	#slideshow-navigation .activeSlide {
+		background:url(/campaign/images/slide.png) no-repeat scroll 0% 50%;
+	}
+	
+	h1, h2, h3, h4{
+	    margin:0;
+		color: #c30000;
+    }
+
+	#slideshow img { border: 6px solid; }
+	
+	#navigation .nav { width:100%; overflow:hidden; padding: 0 0 0 16px;}
+	#navigation .nav li { display:inline;}
+	#navigation .nav li a { display:block; float:left; width:156px; height:55px; line-height:52px; font-size:16px; text-transform:uppercase; font-weight:bold; color:#fff; text-decoration:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; text-align:center; margin-right:2px; background:url(/campaign/images/nav-bg1.png) no-repeat left top;}
+	#navigation .nav li a:hover { background:url(/campaign/images/nav-bg2.png) no-repeat left top;}
+	#navigation .nav li a.current { background:url(/campaign/images/nav-bg2.png) no-repeat left top;}
+
+	#main {
+		float:left;
+		width:675px;
+		padding:10px;
+		/* background:#9c9; */
+	}
+	h2 {
+		margin:0 0 1em;
+	}
+	#sidebar {
+		float:right;
+		width: 217px;
+		padding:10px;
+		/* background:#99c; */
+		background: none repeat scroll 0 0 #1d110b;	
+		margin-right: 14px;		
+	}
+	#footer {
+		clear:both;
+		/* background:#cc9; */
+		padding: 9px 11px 35px;
+		font-size: 0.75em;
+	}
+	#footer .nav {
+		padding: 0 15px 23px 0;
+		padding: 0 15px 0 0;
+		text-align: left;	
+		list-style: outside none none;
+		width: 382px;
+		float: left;
+    }
+	
+	#footer .nav li {
+		display: inline;
+		padding: 0 15px 0 0;
+	}
+	
+	#footer .nav li a {
+		color: #e3dad2;
+		/* padding: 0 48px 0 45px;		 */
+	}
+	* html #footer {
+		height:auto;
+	}
+	
+	#footer .powered {
+		float: right;
+		padding: 0 1px 0 0;
+	}
+	
+	#footer p {
+		width: 367px;
+	}
+	#footer .powered p {
+		text-align: center;
+		width: 84px !important;
+		margin-top: 0;
+	}	
+.line-hor {
+    background: none repeat scroll 0 0 #4d3525;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    margin: 10px 0 16px;
+    overflow: hidden;
+}
+	
+#gallery {   
+    width: 100%; /* 540px; */    
+    margin: auto;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+#gallery .galleryitem {
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+	width: 220px;
+	margin-bottom: 20px;
+	height: 100%;
+	font-size: 13px;
+}
+
+#gallery .galleryitem .sectionitem {
+	border-bottom: 1px solid #57473c;
+    line-height: 1.45em;
+    margin: auto;
+}
+
+#gallery .gallerytitle {
+	color: #e3dad2;
+}
+.button {
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.button span {
+    background: url("/campaign/images/button-side.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    display: inline-block;
+    padding-left: 1px;
+}
+
+.button span span {
+    background: url("/campaign/images/button-side.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    padding-left: 0;
+    padding-right: 1px;
+}
+
+.button span span a {
+    background: url("/campaign/images/button-bg.gif") repeat-x scroll left top rgba(0, 0, 0, 0);
+    color: #d5c6bb;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 152px;
+}
+
+.fancybox-custom .fancybox-skin {
+	box-shadow: 0 0 50px #222;
+}
+
+.img-indent {
+	float: left;
+	margin-right: 0px;
+}
+
+.alt-top {
+	margin: 24px;
+}
+
+.clear {
+	clear: both;
+	margin-bottom: 15px;
+}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+.col-1 {width:300px; margin-right:37px;}
+.col-2 {width:300px; margin-right:37px;}
+
+.col-1 ul, .col-2 ul, .col-3 ul {
+	list-style: outside none none;
+}
+
+.col-1 ul li, .col-2 ul li, .col-3 ul li {
+    background: url("/campaign/images/bull1.gif") no-repeat scroll left 8px rgba(0, 0, 0, 0);
+    padding: 0 0 0 13px;
+}
+
+
+.line-ver {
+    background-image: url("/campaign/images/line-ver.gif");
+    background-repeat: repeat-y;
+    width: 100%;
+}
+
+.pimg {
+	margin-right: 10px;
+}
+	
+#contact-area {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea, #contact-area select {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+label {
+	float: left;
+	text-align: left;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 13px;
+}
+
+.error {
+	color: red !important;
+}
+
+.success {
+	color: green !important;
+}

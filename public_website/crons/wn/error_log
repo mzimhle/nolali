@@ -1,0 +1,124 @@
+[26-Nov-2013 14:58:39 Africa/Johannesburg] PHP Notice:  Undefined index: client_email in /home/collopco/public_html/crons/wn/monthlyinvoice.php on line 140
+[26-Nov-2013 14:58:39 Africa/Johannesburg] PHP Notice:  Undefined index: reference in /home/collopco/public_html/library/classes/class/ADMIN/_comms.php on line 125
+[26-Nov-2013 15:02:35 Africa/Johannesburg] PHP Notice:  Undefined index: reference in /home/collopco/public_html/library/classes/class/ADMIN/_comms.php on line 125
+[27-Nov-2013 09:28:51 Africa/Johannesburg] PHP Warning:  file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Filename cannot be empty in /home/collopco/public_html/library/classes/class/ADMIN/_comms.php on line 106
+[20-Jan-2014 00:00:03 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[22-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-Jan-2014 00:00:01 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[24-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[25-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[26-Jan-2014 00:00:03 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[27-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[28-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[29-Jan-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[30-Jan-2014 00:00:07 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[31-Jan-2014 00:00:04 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[01-Feb-2014 00:00:03 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[02-Feb-2014 00:00:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[03-Feb-2014 00:00:04 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areamap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `wn_clie...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `wn_clie...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `wn_clie...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/ADMIN/client.php(119): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/wn/monthlyinvoice.php(32): class_wn_client->getCurr in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77

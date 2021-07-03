@@ -1,0 +1,87 @@
+[21-May-2015 19:12:34 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/nolalico/public_website_admin/library/classes/class/invoice.php on line 137
+[21-May-2015 19:12:50 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:13:22 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:14:25 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:15:33 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:15:50 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:17:15 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:17:49 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:18:02 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'invoice_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(193): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/invoice/def in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[21-May-2015 19:21:51 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected $end in /home/nolalico/public_website_admin/library/classes/class/invoice.php on line 296
+[21-May-2015 20:18:16 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_IF in /home/nolalico/public_website_admin/invoice/item.php on line 25
+[21-May-2015 22:16:01 Africa/Johannesburg] PHP Warning:  require_once(class/clientcontact.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_website_admin/invoice/generate.php on line 16
+[21-May-2015 22:16:01 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/clientcontact.php' (include_path='/home/nolalico/public_website_admin/:/home/nolalico/public_website_admin/library/classes/') in /home/nolalico/public_website_admin/invoice/generate.php on line 16
+[21-May-2015 23:01:47 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_website_admin/library/classes/class/template.php(107): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(281): class_template->getByType('INVOICE')
+#5 /home/nolalico/public_website_admin/invoice/generate.php(45): class_invoice->createInvoice('DBQ7488813')
+ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[21-May-2015 23:02:21 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_website_admin/library/classes/class/template.php(107): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/nolalico/public_website_admin/library/classes/class/invoice.php(281): class_template->getByType('INVOICE')
+#5 /home/nolalico/public_website_admin/invoice/generate.php(45): class_invoice->createInvoice('DBQ7488813')
+ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214

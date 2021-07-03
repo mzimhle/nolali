@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://css-tricks.com/examples/EditableInvoice/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/wn/invoice_files/style.css">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/wn/invoice_files/print.css" media="print">
+	<link rel='stylesheet'  href="http://collop.co.za/templates/invoice/wn/invoice_files/fonts.css" type='text/css' />
+</head>
+<body>
+	<div id="page-wrap">
+		<p id="header">INVOICE</p>
+		<div id="identity">
+            <p id="address">
+				No. 64, Sir Lowry Road,<br />
+				Zonnebloem, Cape Town<br />
+				7925 <br />
+				Tel: 0735640764				
+			</p>
+            <div class="logo">
+              <img src="http://www.willow-nettica.co.za/img/ct_logo.jpg" />
+            </div>
+		</div>
+		<div style="clear:both"></div>
+		<div id="identity">
+            <p id="address" style="width: 400px !important;"> 
+				<span id="customer-title">{$client.client_company}</span><br /><br />
+				Cell: {$client.client_contact_cell|default:"N/A"} / Tel: {$client.client_contact_telephone|default:"N/A"}<br />
+				Email: {$client.client_contact_email|default:"N/A"}<br />
+				To: {$client.client_contact_name} {$client.client_contact_surname}<br />
+			</p>
+            <div class="logo"> 
+				<table width="320px">
+						<tr>
+							<td class="meta-head">Invoice #</td>
+							<td>{$invoice.invoice_reference}</td>
+						</tr>
+						<tr>
+							<td class="meta-head">Due Date</td>
+							<td><p id="date">{$paymentDate|date_format:"%B %e, %Y"}</p></td>
+						</tr>
+						<tr>
+							<td class="meta-head">Amount Due</td>
+							<td><div class="due">R {$invoiceData.due_amount}</div></td>
+						</tr>
+				</table>              
+            </div>
+		</div>
+		<table id="items">
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+				<th width="17%">Price</th>
+			</tr>
+			{foreach from=$products item=item}
+			<tr class="item-row">
+				<td class="item-name">{$item.invoiceitem_name}</td>
+				<td class="description">{$item.invoiceitem_description}</td>
+				<td align="right">R {$item.invoiceitem_price}</td>
+			</tr>
+			{/foreach}
+			<tr>
+				<th colspan="3">Payments Made</th>
+			</tr>
+			{foreach from=$invoicepaymentsData item=item}
+			<tr class="item-row">
+				<td class="item-name" colspan="2">{$item.invoicepayment_added|date_format:"%B %e, %Y"}: {$item.invoicepayment_description}</td>
+				<td align="right">- R {$item.invoicepayment_amount}</td>
+			</tr>
+			{foreachelse}
+			<tr class="item-row">
+				<td align="left" colspan="3">No Payments made yet.</td>
+			</tr>			
+			{/foreach}			
+			<tr>
+				<td colspan="3" align="right" class="total-value"><div id="total">R {$invoiceData.due_amount}</div></td>
+			</tr>
+		</table>
+		<div id="terms">
+		  <p id="header">Payments Made To: </p>
+		  Account Holder: Willow-Nettica Pty Ltd<br />
+		  Bank: Standard Bank<br />
+		  Account Number: 070595658<br />
+		  Branch Code: 020909<br />
+		  <b>Reference: {$invoice.invoice_reference}</b>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[22-May-2015 11:41:53 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Table_Select_Exception' with message 'Select query cannot join with another table' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Select.php:215
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(456): Zend_Db_Table_Select->assemble()
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select), Array)
+#2 /home/nolalico/public_website_admin/library/classes/class/_price.php(171): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Table_Select))
+#3 /home/nolalico/public_website_admin/catalogue/invoice/item.php(171): class_price->getByCode('1432155271', 'PRODUCTITEM')
+#4 {main}
+  thrown in /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Select.php on line 215
+[22-May-2015 11:42:37 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected ')' in /home/nolalico/public_website_admin/library/classes/class/_price.php on line 160

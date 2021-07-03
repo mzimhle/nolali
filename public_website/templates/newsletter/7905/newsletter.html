@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>{$domainData.campaign_company} - {$data.newsletter_title}</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+	{literal}
+	<style type="text/css">
+	.list a {color: #cc0000; text-transform: uppercase; font-family: Verdana; font-size: 11px; text-decoration: none;}
+	</style>
+	{/literal}
+</head>
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#c5c5c5" leftmargin="0">
+
+<table cellspacing="0" border="0" style="background-image: url(http://{$domainData.campaign_domain}{$link}images/bg.gif); background-color: #c5c5c5;" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top">
+
+			<table cellspacing="0" border="0" align="center" style="background: #fff; border-right: 1px solid #ccc; border-left: 1px solid #ccc;" cellpadding="0" width="600">
+				<tr>
+					<td valign="top">
+						<!-- header -->
+						<table cellspacing="0" border="0" height="157" cellpadding="0" width="600">
+							<tr>
+								<td class="header-text" height="50" valign="top" style="color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; padding: 0 20px;" width="540" colspan="2">
+									<br /><br /><webversion style="color: #990000; text-decoration: none;">{$domainData.campaign_company} Newsletter - {$date|date_format:"%A, %B %e, %Y"}</webversion>
+								</td>
+							</tr>
+							<tr>
+								<td class="main-title" height="5" valign="top" style="padding: 0 20px; font-size: 25px; font-family: Georgia; font-style: italic;" width="600" colspan="2">
+									{$data.newsletter_title}
+								</td>
+							</tr>
+							<tr>
+								<td height="20" valign="top" width="600" colspan="2">
+									<img src="http://{$domainData.campaign_domain}{$link}images/breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+								</td>
+							</tr>
+						</table>
+						<!-- / header -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- content -->
+						<table cellspacing="0" border="0" height="870" cellpadding="0" width="600">
+							<tr>
+								<td class="content-copy" valign="top" style="padding: 0 20px; color: #000; font-size: 14px; font-family: Georgia; line-height: 20px;" colspan="2">
+									{$data.newsletter_content}
+								</td>
+							</tr>
+						</table>
+						<!--  / content -->
+					</td>
+				</tr>
+				<tr>
+					<td height="20" valign="top" width="600" colspan="2">
+						<img src="http://{$domainData.campaign_domain}{$link}images/breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+					</td>
+				</tr>				
+				<tr>
+					<td valign="top" width="600">
+						<!-- footer -->
+						<table cellspacing="0" border="0" height="202" cellpadding="0" width="600">
+							<tr>
+								<td class="copyright" height="100" align="center" valign="top" style="padding: 0 20px; color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; line-height: 20px;" width="600" colspan="2">
+									{$domainData.campaign_company} - {$domainData.campaign_address},  Email: {$domainData.campaign_email}<br /><br />
+									{$date|date_format:"%A, %B %e, %Y"}<br />
+									<a style="color: #cc0000; text-decoration: none;" href="http://{$domainData.campaign_domain}" target="_blank">{$domainData.campaign_company}</a><br /><br />
+									<a style="color: #cc0000; text-decoration: none; font-size: 10px;" href="http://{$domainData.campaign_domain}/newsletter/unsubscribe/?email={$email}" target="_blank">Click here to unsubscribe</a>
+								</td>
+							</tr>
+						</table>
+						<!-- / end footer -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

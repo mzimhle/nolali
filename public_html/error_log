@@ -1,0 +1,53 @@
+[29-Apr-2015 22:48:55 Africa/Johannesburg] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/nolalico/public_html/contacts.php on line 126
+[29-Apr-2015 22:56:59 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Adapter_Mysqli_Exception' with message 'Access denied for user 'nolalico_user'@'localhost' to database '“nolalico_db”'' in /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Mysqli.php:333
+Stack trace:
+#0 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(304): Zend_Db_Adapter_Mysqli->_connect()
+#1 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(194): Zend_Db_Adapter_Abstract->getConnection()
+#2 /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php(824): Zend_Db_Adapter_Mysqli->describeTable('enquiry', NULL)
+#3 /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php(846): Zend_Db_Table_Abstract->_setupMetadata()
+#4 /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php(886): Zend_Db_Table_Abstract->_getCols()
+#5 /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php(1021): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#6 /home/nolalico/public_html/library/classes/class/en in /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Mysqli.php on line 333
+[29-Apr-2015 22:57:19 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Table_Exception' with message 'Primary key column(s) (pk_enquiry_id) are not columns in this table (enquiry_code,areapost_code,enquiry_name,enquiry_surname,enquiry_email,enquiry_number,enquiry_message,enquiry_added,enquiry_updated,enquiry_active,enquiry_deleted)' in /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php:889
+Stack trace:
+#0 /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php(1021): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#1 /home/nolalico/public_html/library/classes/class/enquiry.php(31): Zend_Db_Table_Abstract->insert(Array)
+#2 /home/nolalico/public_html/contacts.php(51): class_enquiry->insert(Array)
+#3 {main}
+  thrown in /home/nolalico/public_html/library/classes/Zend/Db/Table/Abstract.php on line 889
+[29-Apr-2015 22:58:42 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'nolalico_db.areamap' doesn't exist' in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `enquiry...')
+#1 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `enquiry...')
+#2 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `enquiry...')
+#3 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_html/library/classes/class/enquiry.php(108): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_html/library/classes/class/enquiry.php(84): class_enquiry->getByRefere in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[29-Apr-2015 22:59:54 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_html/library/classes/class/enquiry.php(77): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/nolalico/public_html/library/classes/class/enquiry.php(94): class_enquiry->getCode('1181430341194')
+#5 /home/nolalico/public_html/library/classes/class/enquiry.php(29): class_enquiry->createReference()
+#6 /home/nolalico/public_html/contacts.php(51): class_enquir in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[29-Apr-2015 23:00:35 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_html/library/classes/class/enquiry.php(77): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/nolalico/public_html/library/classes/class/enquiry.php(94): class_enquiry->getCode('2721430341235')
+#5 /home/nolalico/public_html/library/classes/class/enquiry.php(29): class_enquiry->createReference()
+#6 /home/nolalico/public_html/contacts.php(51): class_enquir in /home/nolalico/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[29-Apr-2015 23:02:07 Africa/Johannesburg] PHP Fatal error:  Call to a member function assign() on a non-object in /home/nolalico/public_html/contacts.php on line 58
+[29-Apr-2015 23:02:36 Africa/Johannesburg] PHP Warning:  require_once(/home/nolalico/public_html/library/classes/smarty/Smarty.class.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_html/config/smarty.php on line 18
+[29-Apr-2015 23:02:36 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/nolalico/public_html/library/classes/smarty/Smarty.class.php' (include_path='/home/nolalico/public_html/:/home/nolalico/public_html/library/classes/') in /home/nolalico/public_html/config/smarty.php on line 18
+[29-Apr-2015 23:05:10 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 84
+[29-Apr-2015 23:11:32 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 84
+[29-Apr-2015 23:19:06 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 84
+[29-Apr-2015 23:20:34 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 84
+[29-Apr-2015 23:21:12 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 84
+[29-Apr-2015 23:21:29 Africa/Johannesburg] PHP Notice:  Undefined variable: codeAlphabet in /home/nolalico/public_html/library/classes/class/enquiry.php on line 126
+[29-Apr-2015 23:21:29 Africa/Johannesburg] PHP Notice:  Undefined variable: content in /home/nolalico/public_html/library/classes/class/enquiry.php on line 59

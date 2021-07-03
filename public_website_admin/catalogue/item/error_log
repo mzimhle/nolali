@@ -1,0 +1,3 @@
+[20-May-2015 07:11:14 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::getByGallery() in /home/nolalico/public_website_admin/catalogue/item/image.php on line 35
+[20-May-2015 07:14:30 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::updatePrimaryByGallery() in /home/nolalico/public_website_admin/catalogue/item/image.php on line 210
+[20-May-2015 07:15:17 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productitemimage::updatePrimaryByGallery() in /home/nolalico/public_website_admin/catalogue/item/image.php on line 83

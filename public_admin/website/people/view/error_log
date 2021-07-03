@@ -1,0 +1,58 @@
+[16-May-2015 15:14:25 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/nolalico/public_admin/library/classes/class/participant.php on line 45
+[16-May-2015 15:14:44 Africa/Johannesburg] PHP Fatal error:  Class 'class_participant' not found in /home/nolalico/public_admin/website/people/default.php on line 18
+[16-May-2015 15:15:46 Africa/Johannesburg] PHP Warning:  require_once(_productpriceitem.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/library/classes/class/_comm.php on line 4
+[16-May-2015 15:15:46 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '_productpriceitem.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/library/classes/class/_comm.php on line 4
+[16-May-2015 15:16:09 Africa/Johannesburg] PHP Fatal error:  Class 'class_campaign' not found in /home/nolalico/public_admin/library/classes/class/participant.php on line 20
+[16-May-2015 15:16:34 Africa/Johannesburg] PHP Warning:  Missing argument 1 for class_participant::getAll(), called in /home/nolalico/public_admin/website/people/default.php on line 52 and defined in /home/nolalico/public_admin/library/classes/class/participant.php on line 150
+[16-May-2015 15:16:34 Africa/Johannesburg] PHP Warning:  Missing argument 2 for class_participant::getAll(), called in /home/nolalico/public_admin/website/people/default.php on line 52 and defined in /home/nolalico/public_admin/library/classes/class/participant.php on line 150
+[16-May-2015 15:16:34 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') GROUP BY `participant`.`participant_code`' at line 3' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `partici...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `partici...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `partici...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(16 in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 15:17:38 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "campaign/people/default.tpl" in /home/nolalico/public_admin/library/classes/smarty/Smarty.class.php on line 1095
+[16-May-2015 15:19:09 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'campaign.campaign_code' in 'where clause'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `partici...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `partici...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `partici...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(162): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_admin/website/people/default.php(52): class_ in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 15:33:31 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'areapost_code'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(208): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_admin/website/people/default.php(57): class_participant->getSearch(' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 15:35:16 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'campaign_code'' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(208): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_admin/website/people/default.php(57): class_participant->getSearch(' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 15:35:38 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Undeclared variable: undefined' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `partici...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `partici...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `partici...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query('SELECT `partici...', Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(213): Zend_Db_Adapter_Abstract->fetchAll('SELECT `partici...')
+#5 /home/nolalico/public_admin/website/people/default.php(57): class_participant->getSearch('D9EKDGA in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 15:35:56 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Undeclared variable: undefined' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `partici...')
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `partici...')
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `partici...')
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query('SELECT `partici...', Array)
+#4 /home/nolalico/public_admin/library/classes/class/participant.php(213): Zend_Db_Adapter_Abstract->fetchAll('SELECT `partici...')
+#5 /home/nolalico/public_admin/website/people/default.php(57): class_participant->getSearch('D9EKDGA in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[16-May-2015 17:39:01 Africa/Johannesburg] PHP Fatal error:  Call to a member function file_extention() on a non-object in /home/nolalico/public_admin/website/people/details.php on line 98
+[16-May-2015 17:45:46 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting '(' in /home/nolalico/public_admin/website/people/default.php on line 59
+[16-May-2015 19:19:38 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/nolalico/public_admin/website/people/details.php on line 180

@@ -1,0 +1,55 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteBase /
+
+DirectoryIndex index.php default.php
+
+Options Includes FollowSymLinks MultiViews
+
+######################################################################## 
+
+##### Redirect non www to www domains start
+#collop.co.za
+#RewriteCond %{HTTP_HOST} ^e-manager\.co\.za$ [NC]
+#RewriteRule ^(.*)$ http://www.e-manager.co.za/$1 [R=301,L]
+##### Redirect non www to www domains end
+
+#sasss.co.za
+#RewriteCond %{HTTP_HOST} ^datuma.e-manager\.co\.za$ [NC]
+#RewriteRule ^(.*)$ http://datuma.e-manager.co.za/$1 [R=301,L]
+##### Redirect non www to www domains end
+########################################################################
+
+########################################################################
+#RewriteCond %{HTTP_HOST} !^datuma.nolali\.co\.za$
+#RewriteRule . - [S=2]
+#RewriteRule	^campaign/(.*)$	campaigns/0860/$1 	[QSA,L]
+#RewriteRule	^admin/(.*)$ 		adminclient/$1			[QSA,L]
+########################################################################
+########################################################################
+#RewriteCond %{HTTP_HOST} !^package1.nolali\.co\.za$
+#RewriteRule . - [S=2]
+#RewriteRule	^campaign/(.*)$	campaigns/8236/$1 	[QSA,L]
+#RewriteRule	^admin/(.*)$ 		adminclient/$1			[QSA,L]
+########################################################################
+########################################################################
+#RewriteCond %{HTTP_HOST} !^package2.nolali\.co\.za$
+#RewriteRule . - [S=2]
+#RewriteRule	^campaign/(.*)$	campaigns/7646/$1 	[QSA,L]
+#RewriteRule	^admin/(.*)$ 		adminclient/$1			[QSA,L]
+########################################################################
+########################################################################
+#RewriteCond %{HTTP_HOST} !^package3.nolali\.co\.za$
+#RewriteRule . - [S=2]
+#RewriteRule	^campaign/(.*)$	campaigns/5357/$1 	[QSA,L]
+#RewriteRule	^admin/(.*)$ 		adminclient/$1			[QSA,L]
+########################################################################
+########################################################################
+
+#### MAILERS ####
+RewriteRule ^mailer/view/(.*)$				mailers/view.php?code=$1				[QSA,L]
+RewriteRule ^mailer/tracking/(.*)$			mailers/tracking.php?tracking=$1	[QSA,L]
+RewriteRule ^mailer/unsubscribe/(.*)$	mailers/unsubscribe.php?code=$1	[QSA,L]
+

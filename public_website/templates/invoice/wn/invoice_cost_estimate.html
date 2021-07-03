@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://css-tricks.com/examples/EditableInvoice/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/wn/invoice_files/style.css">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/wn/invoice_files/print.css" media="print">
+	<link rel='stylesheet'  href="http://collop.co.za/templates/invoice/wn/invoice_files/fonts.css" type='text/css' />
+</head>
+<body>
+	<div id="page-wrap">
+		<p id="header">COST ESTIMATE</p>
+		<div id="identity">
+            <p id="address">
+				No. 64, Sir Lowry Road,<br />
+				Zonnebloem, Cape Town<br />
+				7925 <br />
+				Tel: 0735640764				
+			</p>
+            <div class="logo">
+              <img src="http://www.willow-nettica.co.za/img/ct_logo.jpg" />
+            </div>
+		</div>
+		<div style="clear:both"></div>
+		<div id="identity">
+            <p id="address" style="width: 400px !important;"> 
+				<span id="customer-title">{$client.client_company}</span><br /><br />
+				Cell: {$client.client_contact_cell|default:"N/A"} / Tel: {$client.client_contact_telephone|default:"N/A"}<br />
+				Email: {$client.client_contact_email|default:"N/A"}<br />
+				To: {$client.client_contact_name} {$client.client_contact_surname}<br />
+			</p>
+            <div class="logo"> 
+				<table width="320px">
+						<tr>
+							<td class="meta-head">Invoice #</td>
+							<td>{$invoice.invoice_reference}</td>
+						</tr>
+						<tr>
+							<td class="meta-head">Date Sent</td>
+							<td><p id="date">{$smarty.now|date_format:"%B %e, %Y"}</p></td>
+						</tr>
+						<tr>
+							<td class="meta-head">Total Amount</td>
+							<td><div class="due">R {$invoice.invoice_total}</div></td>
+						</tr>
+				</table>              
+            </div>
+		</div>
+		<table id="items">
+			<tr>
+				<th>Item</th>
+				<th>Description</th>
+				<th width="17%">Price</th>
+			</tr>
+			{foreach from=$products item=item}
+			<tr class="item-row">
+				<td class="item-name">{$item.invoiceitem_name}</td>
+				<td class="description">{$item.invoiceitem_description}</td>
+				<td align="right">R {$item.invoiceitem_price}</td>
+			</tr>
+			{/foreach}
+			<tr>
+				<td colspan="3" align="right" class="total-value"><div id="total">R {$invoice.invoice_total}</div></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'Droid Sans';
+	src: url('fonts/droidsans/droidsans.eot');
+	src: url('fonts/droidsans/droidsans.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/droidsans/droidsans.woff') format('woff'),
+		 url('fonts/droidsans/droidsans.ttf') format('truetype'),
+		 url('fonts/droidsans/droidsans.svg#droid_sans') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-weight: 400;	
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('fonts/ubuntu/ubuntu.eot');
+	src: url('fonts/ubuntu/ubuntu.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/ubuntu/ubuntu.woff') format('woff'),
+		 url('fonts/ubuntu/ubuntu.ttf') format('truetype'),
+		 url('fonts/ubuntu/ubuntu.svg#ubuntu') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-weight: 400;	
+}
+
+@font-face {
+	font-family: 'ProximaNovaSoft';
+	src: url('fonts/proximanovasoft/proximanovasoft.eot');
+	src: url('fonts/proximanovasoft/proximanovasoft.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/proximanovasoft/proximanovasoft.woff') format('woff'),
+		 url('fonts/proximanovasoft/proximanovasoft.ttf') format('truetype'),
+		 url('fonts/proximanovasoft/proximanovasoft.svg#proximanovasoft') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-weight: 400;	
+}
+
+@font-face {
+	font-family: 'chunkfive';
+	src: url('fonts/chunkfive/chunkfive.eot');
+	src: url('fonts/chunkfive/chunkfive.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/chunkfive/chunkfive.woff') format('woff'),
+		 url('fonts/chunkfive/chunkfive.ttf') format('truetype'),
+		 url('fonts/chunkfive/chunkfive.svg#chunkfive') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-weight: 400;	
+}

@@ -1,0 +1,11 @@
+[18-May-2015 08:20:01 Africa/Johannesburg] PHP Warning:  require_once(class/document.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_website_admin/inquiry/default.php on line 25
+[18-May-2015 08:20:01 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/document.php' (include_path='/home/nolalico/public_website_admin/:/home/nolalico/public_website_admin/library/classes/') in /home/nolalico/public_website_admin/inquiry/default.php on line 25
+[23-May-2015 12:33:02 Africa/Johannesburg] PHP Fatal error:  Call to a member function getSearch() on a non-object in /home/nolalico/public_website_admin/inquiry/default.php on line 21
+[23-May-2015 12:33:42 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'campaign_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/inquiry.php(115): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/inquiry/de in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77

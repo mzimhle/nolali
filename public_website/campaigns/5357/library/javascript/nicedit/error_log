@@ -1,0 +1,3 @@
+[21-Sep-2013 22:12:38 Africa/Johannesburg] PHP Notice:  Undefined variable: status in /home/collopco/public_html/library/javascript/nicedit/nicUpload.php on line 81
+[21-Sep-2013 22:12:38 Africa/Johannesburg] PHP Notice:  Undefined index: APC_UPLOAD_PROGRESS in /home/collopco/public_html/library/javascript/nicedit/nicUpload.php on line 42
+[21-Sep-2013 22:12:38 Africa/Johannesburg] PHP Notice:  Undefined index: id in /home/collopco/public_html/library/javascript/nicedit/nicUpload.php on line 44

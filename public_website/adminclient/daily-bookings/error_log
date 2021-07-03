@@ -1,0 +1,124 @@
+[12-Nov-2014 11:22:14 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 6' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `booking...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `booking...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `booking...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/booking.php(277): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_D in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 11:24:12 Africa/Johannesburg] PHP Warning:  require_once(class/MU3H/campaignbooking.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/daily-bookings/calendar.php on line 16
+[12-Nov-2014 11:24:12 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/MU3H/campaignbooking.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/daily-bookings/calendar.php on line 16
+[12-Nov-2014 11:25:05 Africa/Johannesburg] PHP Warning:  require_once(class/MU3H/booking.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/daily-bookings/calendar.php on line 16
+[12-Nov-2014 11:25:05 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/MU3H/booking.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/daily-bookings/calendar.php on line 16
+[12-Nov-2014 12:11:48 Africa/Johannesburg] PHP Warning:  require_once(class/campaigninvoice.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 18
+[12-Nov-2014 12:11:48 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/campaigninvoice.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 18
+[12-Nov-2014 19:15:53 Africa/Johannesburg] PHP Warning:  require_once(class/campaigninvoice.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 18
+[12-Nov-2014 19:15:53 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/campaigninvoice.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 18
+[12-Nov-2014 19:23:27 Africa/Johannesburg] PHP Notice:  Undefined index: productprice_code in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 79
+[12-Nov-2014 19:23:27 Africa/Johannesburg] PHP Notice:  Undefined index: productprice_name in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 79
+[12-Nov-2014 19:23:27 Africa/Johannesburg] PHP Notice:  Undefined index: productprice_price in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 79
+[12-Nov-2014 19:23:27 Africa/Johannesburg] PHP Notice:  Undefined index: productprice_name in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 79
+[12-Nov-2014 19:23:27 Africa/Johannesburg] PHP Notice:  Undefined index: productprice_price in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 79
+[12-Nov-2014 19:23:51 Africa/Johannesburg] PHP Notice:  Undefined variable: productpriceObject in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 70
+[12-Nov-2014 19:23:51 Africa/Johannesburg] PHP Fatal error:  Call to a member function getByProduct() on a non-object in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 70
+[12-Nov-2014 19:39:18 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'campaign.campaign_code = cb.campaign_code
+								and campaign.campaign_code = ' at line 26' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select ????????...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select ????????...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select ????????...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select ????????...', Array)
+#4 /home/emanager/public_html/library/cl in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 19:40:22 Africa/Johannesburg] PHP Notice:  Undefined variable: select in /home/emanager/public_html/library/classes/class/booking.php on line 336
+[12-Nov-2014 19:42:21 Africa/Johannesburg] PHP Notice:  Undefined index: booking_message in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 145
+[12-Nov-2014 19:42:22 Africa/Johannesburg] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/emanager/public_html/library/classes/class/booking.php on line 246
+[12-Nov-2014 19:42:22 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/invoicepayment.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(249): class_invoicepayment->getByInvoiceCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(111): class_booking->getByCode('6772984949')
+#6 /home/emanager/public_html/adminclien in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 20:31:56 Africa/Johannesburg] PHP Notice:  Undefined index: booking_message in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 145
+[12-Nov-2014 20:31:56 Africa/Johannesburg] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/emanager/public_html/library/classes/class/booking.php on line 246
+[12-Nov-2014 20:31:56 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/invoicepayment.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(249): class_invoicepayment->getByInvoiceCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(111): class_booking->getByCode('3161111652')
+#6 /home/emanager/public_html/adminclien in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 20:34:06 Africa/Johannesburg] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/emanager/public_html/library/classes/class/booking.php on line 246
+[12-Nov-2014 20:34:06 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/invoicepayment.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(249): class_invoicepayment->getByInvoiceCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(111): class_booking->getByCode('4248741798')
+#6 /home/emanager/public_html/adminclien in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 21:38:04 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'campaign.campaign_code = cb.campaign_code
+								and campaign.campaign_code = ' at line 26' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select ????????...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select ????????...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select ????????...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select ????????...', Array)
+#4 /home/emanager/public_html/library/cl in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 21:38:33 Africa/Johannesburg] PHP Notice:  Undefined index: booking_number_adult in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 151
+[12-Nov-2014 21:38:33 Africa/Johannesburg] PHP Notice:  Undefined index: booking_number_children in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 152
+[12-Nov-2014 21:38:33 Africa/Johannesburg] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/emanager/public_html/library/classes/class/booking.php on line 246
+[12-Nov-2014 21:38:33 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/invoicepayment.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(249): class_invoicepayment->getByInvoiceCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(111): class_booking->getByCode('4692736434')
+#6 /home/emanager/public_html/adminclien in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 21:40:05 Africa/Johannesburg] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/emanager/public_html/library/classes/class/booking.php on line 246
+[12-Nov-2014 21:40:05 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/invoicepayment.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(249): class_invoicepayment->getByInvoiceCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(111): class_booking->getByCode('6893224481')
+#6 /home/emanager/public_html/adminclien in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 21:41:40 Africa/Johannesburg] PHP Notice:  Undefined property: class_invoice::$campaign in /home/emanager/public_html/library/classes/class/invoice.php on line 51
+[12-Nov-2014 21:41:40 Africa/Johannesburg] PHP Notice:  Trying to get property of non-object in /home/emanager/public_html/library/classes/class/invoice.php on line 51
+[12-Nov-2014 21:41:40 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/booking.php(239): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(173): class_booking->getByCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(143): class_booking->createInvoice(NULL)
+#6 /home/emanager/public_html/adminclient/MU3H/daily-bookings/de in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 21:42:45 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/booking.php(239): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/booking.php(173): class_booking->getByCode(NULL)
+#5 /home/emanager/public_html/library/classes/class/booking.php(143): class_booking->createInvoice(NULL)
+#6 /home/emanager/public_html/adminclient/MU3H/daily-bookings/de in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[12-Nov-2014 21:54:20 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'campaign.campaign_code' in 'where clause'' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select ????????...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select ????????...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select ????????...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select ????????...', Array)
+#4 /home/emanager/public_html/library/classes/class/booking.php(369): Zend_Db_Adapter_Abstract->fetchRow('select ????????...', Array)
+#5 /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php(13 in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 21:55:43 Africa/Johannesburg] PHP Notice:  Undefined index: booking_number_adult in /home/emanager/public_html/library/classes/class/booking.php on line 50
+[12-Nov-2014 21:55:43 Africa/Johannesburg] PHP Notice:  Undefined index: booking_number_children in /home/emanager/public_html/library/classes/class/booking.php on line 51
+[12-Nov-2014 21:55:47 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/emanager/public_html/library/classes/class/booking.php:50) in /home/emanager/public_html/adminclient/MU3H/daily-bookings/details.php on line 161

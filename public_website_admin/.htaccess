@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteBase /
+
+DirectoryIndex index.php default.php
+
+Options Includes FollowSymLinks MultiViews
+

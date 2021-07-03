@@ -1,0 +1,1 @@
+<div class="content">	<ul id="menu">		<li><a {if $currentPage eq '/' or $currentPage eq ''}class="current"{/if} href="/admin/">Home</a></li>		{section name=id loop=$userData.pages}			<li><a {if $currentPage eq $userData.pages[id]}class="current"{/if} href="/admin/{$userData.pages[id]}/">{$userData.pages[id]|capitalize}</a></li>			{/section}	</ul></div>

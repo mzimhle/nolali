@@ -1,0 +1,21 @@
+[09-Apr-2015 21:30:10 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'website.website_code' in 'where clause'' in /home/mailbokc/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/mailbokc/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `partici...')
+#1 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `partici...')
+#2 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `partici...')
+#3 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/mailbokc/public_html/library/classes/class/participant.php(71): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/mailbokc/public_website/participant/default.php(18): class_participan in /home/mailbokc/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[09-Apr-2015 21:30:41 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "participants/default.tpl" in /home/mailbokc/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[09-Apr-2015 22:09:20 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_client::pairs() in /home/mailbokc/public_website/participant/details.php on line 35
+[10-Apr-2015 07:08:45 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'clientcontact_deleted' in 'field list'' in /home/mailbokc/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/mailbokc/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `partici...')
+#1 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `partici...')
+#2 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `partici...')
+#3 /home/mailbokc/public_html/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `partici...', Array)
+#4 /home/mailbokc/public_html/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('participant', Array, Array)
+#5 /home/mailbokc/public_html/library/classes/class/participant.php(55) in /home/mailbokc/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[19-May-2015 15:28:54 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "participants/default.tpl" in /home/nolalico/public_website_admin/library/classes/smarty/Smarty.class.php on line 1095
+[27-May-2015 14:52:46 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '[' in /home/nolalico/public_website_admin/people/default.php on line 65
+[27-May-2015 14:53:10 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '[' in /home/nolalico/public_website_admin/people/default.php on line 65

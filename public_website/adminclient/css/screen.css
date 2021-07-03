@@ -1,0 +1,254 @@
+﻿* { margin: 0; padding: 0; }
+body { font: .74em Tahoma, Verdana, Sans-Serif, Arial; background: url(../images/body.gif) repeat; color: #7f7f7f; }
+h1 { font: normal 3.4em "Trebuchet MS", Helvetica, Arial; }
+h2 { font: normal 1.8em "Trebuchet MS", Helvetica, Arial; color: #dfdfdf; margin: 0 0 15px; }
+h3 { font: normal 1.4em "Trebuchet MS", Helvetica, Arial; margin: 0 0 20px; }
+h4 { font: normal 1.2em "Trebuchet MS", Helvetica, Arial; color: #dfdfdf; margin: 0 0 4px; }
+p { margin: 0 0 15px; line-height: 1.6em; }
+a { outline: 0; color: #304D6F; text-decoration: none; }
+li { list-style: none; }
+li a, img { display: block; }
+img { outline: 0; border: 0; }
+#wrapper { width: 984px; margin: auto; }
+.clr { clear: both; }
+#logo { float: left;  padding: 20px 0 10px;}
+	#logo h1 a { color: #fff; }
+		#logo h1 a span { color: #808080; }
+#menu { height: 12px; /* 44px;*/ padding: 5px 0 0 4px; }
+	#menu li { float: left; font-size: 0.8em; text-transform: uppercase; }
+		#menu li a { color: #888; margin: 0 30px 0 0; }
+			#menu li a.current, #menu li a:hover { color: #fff; }			
+	#pitch { clear: both; background: url(../images/pitch.jpg) no-repeat; height: 228px; margin: 0 0 30px; padding: 60px 360px 0 30px; }
+		#pitch h1 { font-size: 2.4em; color: #304D6F; margin: 0 0 20px; }
+		#pitch em { font-size: 1.3em; font-weight: bold; line-height: 1.6em; }
+.content { background: url(../images/content.gif) repeat; padding: 10px; }
+.link { background: #304D6F; color: #fff; padding: 5px 10px; font-size: .9em; }
+/* #main { padding: 20px; } */
+.col { float: left; width: 283px; margin: 0 30px 15px 0; }
+	.col.last { float: right; margin-right: 0; }
+	.case img { float: left; clear: left; margin: 0 20px 20px 0; background: #121212; padding: 3px; }
+	/* .short { padding: 0 0 15px 0; background: url(../images/line.gif) repeat-x left bottom; } */
+	.case a, .article a { color: #ddd; font-weight: bold; }
+	#tableContent a{ color: #797268;}
+	.date { font-size: .84em; margin: 0 0 3px; }
+.colwide{ float: left; width: 632px; margin: 0 30px 15px 0; }
+.coltwo{float: left; width: 640px; margin: 0 30px 15px 0;}
+.rightmenu { float: right; width: 283px; margin: 0 30px 15px 0; }
+#footer { clear: both; background: url(../images/line.gif) repeat-x; padding: 20px 0 10px; font-size: .9em; }
+	#footer a { color: #ccc; margin: 0 10px 0 0; border-bottom: 1px dotted #444; padding: 0 0 1px; }
+	#links { float: right; }
+		#links a { margin: 0 0 0 10px; }
+	#footer p { margin: 0 0 8px; }
+
+.error { color: red !important; font-weight: bold !important;}
+.success {color: green !important; font-weight: bold  !important;}
+
+/* Search pages. */
+.colsearch { float: left; width: 170px; /* 230px; */ margin: 0 10px 10px 0; }
+.width100 {width: 100px;}
+.searchbreak { background: url(../images/line.gif) repeat-x right bottom;  padding: 20px 20px 10px; }
+.colsearch.last { margin-top: 28px;}
+.breadcrum { margin: 10px 0 10px 0;}
+.breadcrum a { margin: 0 10px 0 10px;}
+.breadcrum a.first { margin: 0 10px 0 0;}
+.linebreak { width: 100%; background: url(../images/line.gif) repeat-x; padding: 1px 0;}
+/* Search content. */
+#tableContent { margin: 20px 0 20px 0;}
+
+#tableContent table {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#tableContent caption {
+	padding: 0 0 5px 0;
+	width: 100%;	 
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+#tableContent th {
+	color: #DDDDDD;
+    font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: url("../images/content.gif") repeat scroll 0 0 transparent
+}
+
+#tableContent th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+#tableContent td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+}
+
+
+#tableContent td.alt {
+	background: #F5FAFA;
+	color: #797268;
+}
+
+#tableContent th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff url(../images/bullet1.gif) no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#tableContent th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa url(../images/bullet2.gif) no-repeat;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #797268;
+}
+
+ul.categorylist li {
+	margin: 10px;
+}
+
+ul.categorylist li input {
+	margin-right: 5px;
+}
+
+
+/* Start Pagination */
+	
+	.paging {
+		text-align: center;
+		font-size: 12px;
+		padding: 0 0 15px;
+	}
+	
+	.paging ul {
+		margin: 0;
+		padding: 0 15px;
+		float: right;
+	}
+	
+	.paging ul li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float: left;
+	}
+	
+	.paging ul li a {
+		display: block;
+		margin: 0 1px;
+		padding: 4px 8px;
+		background: #b3b3b3;
+		color: #ffffff;
+		float: left;
+		text-decoration: none;
+	}
+	
+	.paging ul li a:hover {
+		background: #dddddd;
+	}
+	
+	.paging ul li.active a {
+		/* background: #aadbfc; */
+		background: #304D6F;
+	}
+	
+	/* End Pagination */
+	
+.line {
+    background: url("../images/line.gif") repeat-x scroll left bottom transparent;
+    padding: 0 0 15px;
+}
+
+.line_break {
+    background: url("../images/line.gif") repeat-x scroll left bottom transparent;
+    padding: 0 0 5px;
+	margin: 0 0 13px;
+}
+.top_header_links {
+	font: 13px "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+    padding: 0 0 5px;
+	font-weight: bold;
+	margin-top: 52px;
+    float: right;
+}
+
+/* Text area niceEdit */
+.nicEdit-main {
+	background-color: #fff !important;
+	color: black !important;
+}
+
+/* Big separator. */
+.lineseparator {
+    background: url("../images/line.gif") repeat-x scroll 0 0 transparent;
+    clear: both;
+    font-size: 0.9em;
+    padding: 20px 0 10px;
+}
+
+/* hightlight. */
+.highlightbox {
+    float: left;
+    margin: 10px 30px 15px 0;
+    width: 180px;
+}
+
+.highlightbox span {
+	color: #304D6F;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.notify-header {
+	color: #DDDDDD; 
+	font-size: 20px; 
+	font-weight: bold;
+	clear: both;
+}
+
+.width452 {
+	width: 452px !important;
+}
+
+.comments {
+	font-size: 0.84em;
+    margin: 0 0 3px;
+	color: #304D6F;
+	font-weight: bold;
+}
+
+.clear {
+	clear: both;
+}
+
+.selecteditem {
+	font-weight: bold;
+	color: green;
+}
+
+.blackheading {
+	font-weight: bold;
+	color: black !important;
+	font-size: 18px;
+}
+
+.textalignright {
+	text-align: right !important;
+}

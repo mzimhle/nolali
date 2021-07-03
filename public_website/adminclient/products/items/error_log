@@ -1,0 +1,5 @@
+[10-Sep-2013 23:40:06 Africa/Johannesburg] PHP Notice:  Undefined variable: campaignproductitemData in /home/collopco/public_html/adminclient/MU3H/products/items/details.php on line 92
+[10-Sep-2013 23:40:06 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/collopco/public_html/adminclient/MU3H/products/items/details.php:92) in /home/collopco/public_html/adminclient/MU3H/products/items/details.php on line 112
+[11-Sep-2013 00:31:36 Africa/Johannesburg] PHP Notice:  Undefined variable: campaignproductitemData in /home/collopco/public_html/adminclient/MU3H/products/items/details.php on line 92
+[11-Sep-2013 00:31:36 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/collopco/public_html/adminclient/MU3H/products/items/details.php:92) in /home/collopco/public_html/adminclient/MU3H/products/items/details.php on line 112
+[25-Sep-2013 11:31:14 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected $end in /home/collopco/public_html/library/classes/class/MU3H/campaignproductitemimage.php on line 85

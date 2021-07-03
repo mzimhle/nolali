@@ -1,0 +1,106 @@
+[19-May-2014 22:34:16 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "templates/comms/WNT-V8IK-R3/standard.html" in /home/collopco/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[03-Mar-2015 21:39:51 Africa/Johannesburg] PHP Warning:  require_once(class/_comms.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/crons/monthlyinvoice.php on line 19
+[03-Mar-2015 21:39:51 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/_comms.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/crons/monthlyinvoice.php on line 19
+[03-Mar-2015 22:30:57 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_email in /home/collopco/public_html/crons/monthlyinvoice.php on line 43
+[03-Mar-2015 22:30:57 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_name in /home/collopco/public_html/crons/monthlyinvoice.php on line 44
+[03-Mar-2015 22:30:57 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_surname in /home/collopco/public_html/crons/monthlyinvoice.php on line 44
+[03-Mar-2015 22:30:57 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_clientproduct::getMonthlyForInvoice() in /home/collopco/public_html/crons/monthlyinvoice.php on line 47
+[03-Mar-2015 22:31:00 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_email in /home/collopco/public_html/crons/monthlyinvoice.php on line 43
+[03-Mar-2015 22:31:00 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_name in /home/collopco/public_html/crons/monthlyinvoice.php on line 44
+[03-Mar-2015 22:31:00 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_surname in /home/collopco/public_html/crons/monthlyinvoice.php on line 44
+[03-Mar-2015 22:31:00 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_clientproduct::getMonthlyForInvoice() in /home/collopco/public_html/crons/monthlyinvoice.php on line 47
+[03-Mar-2015 22:31:11 Africa/Johannesburg] PHP Notice:  Undefined index: client_contact_surname in /home/collopco/public_html/crons/monthlyinvoice.php on line 44
+[03-Mar-2015 22:31:11 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_clientproduct::getMonthlyForInvoice() in /home/collopco/public_html/crons/monthlyinvoice.php on line 47
+[03-Mar-2015 22:31:23 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_clientproduct::getMonthlyForInvoice() in /home/collopco/public_html/crons/monthlyinvoice.php on line 47
+[03-Mar-2015 22:37:10 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Column 'client_code' in where clause is ambiguous' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `clientp...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `clientp...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `clientp...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/clientproduct.php(131): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/crons/monthlyinvoice.php(47): class_clientproduct-> in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[03-Mar-2015 22:38:15 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_clientproduct::getForInvoicing() in /home/collopco/public_html/crons/monthlyinvoice.php on line 47
+[04-Mar-2015 08:21:43 Africa/Johannesburg] PHP Fatal error:  Using $this when not in object context in /home/collopco/public_html/crons/monthlyinvoice.php on line 58
+[04-Mar-2015 08:22:06 Africa/Johannesburg] PHP Notice:  Undefined index: client_notes in /home/collopco/public_html/crons/monthlyinvoice.php on line 63
+[04-Mar-2015 08:22:06 Africa/Johannesburg] PHP Notice:  Undefined index: product_price in /home/collopco/public_html/crons/monthlyinvoice.php on line 75
+[04-Mar-2015 08:22:06 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoice_send_to_client' in 'field list'' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `in...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `in...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `in...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `in...', Array)
+#4 /home/collopco/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('invoice', Array)
+#5 /home/collopco/public_html/library/classes/class/invoice.php(35): Zend_Db_Tabl in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[04-Mar-2015 08:23:22 Africa/Johannesburg] PHP Notice:  Undefined index: client_notes in /home/collopco/public_html/crons/monthlyinvoice.php on line 63
+[04-Mar-2015 08:23:22 Africa/Johannesburg] PHP Notice:  Undefined index: product_price in /home/collopco/public_html/crons/monthlyinvoice.php on line 75
+[04-Mar-2015 08:23:22 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoice_send_to_client' in 'field list'' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `in...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `in...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `in...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `in...', Array)
+#4 /home/collopco/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('invoice', Array)
+#5 /home/collopco/public_html/library/classes/class/invoice.php(35): Zend_Db_Tabl in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[04-Mar-2015 08:24:50 Africa/Johannesburg] PHP Notice:  Undefined index: clientproduct_notes in /home/collopco/public_html/crons/monthlyinvoice.php on line 63
+[04-Mar-2015 08:24:50 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_comm::sendEmailComm() in /home/collopco/public_html/crons/monthlyinvoice.php on line 211
+[04-Mar-2015 21:09:02 Africa/Johannesburg] PHP Notice:  Undefined variable: invoiceItemsData in /home/collopco/public_html/crons/monthlyinvoice.php on line 114
+[04-Mar-2015 21:09:35 Africa/Johannesburg] PHP Notice:  Undefined variable: client in /home/collopco/public_html/crons/monthlyinvoice.php on line 124
+[04-Mar-2015 21:09:37 Africa/Johannesburg] PHP Notice:  Undefined index: from in /home/collopco/public_html/crons/monthlyinvoice.php on line 189
+[04-Mar-2015 21:09:37 Africa/Johannesburg] PHP Notice:  Undefined index: message in /home/collopco/public_html/crons/monthlyinvoice.php on line 189
+[04-Mar-2015 21:09:37 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/collopco/public_html/library/classes/class/clientcontact.php(150): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#4 /home/collopco/public_html/library/classes/class/_comm.php(109): class_clientcontact->getByCode(NULL)
+#5 /home/collopco/public_html/crons/monthlyinvoice.php(189): class_comm->sendClient('1424014639', 'Monthly Invoice...', NULL, '', '', Array)
+#6 {main}
+  thrown in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[04-Mar-2015 21:14:45 Africa/Johannesburg] PHP Notice:  Undefined variable: messaage in /home/collopco/public_html/crons/monthlyinvoice.php on line 191
+[04-Mar-2015 21:14:46 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Operand should contain 1 column(s)' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `clientc...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `clientc...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `clientc...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/clientcontact.php(150): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/library/classes/class/_comm.php(109): class_clientcontact->getByCo in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[04-Mar-2015 21:15:05 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Operand should contain 1 column(s)' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `clientc...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `clientc...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `clientc...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/clientcontact.php(150): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/library/classes/class/_comm.php(109): class_clientcontact->getByCo in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[04-Mar-2015 22:05:24 Africa/Johannesburg] PHP Notice:  Undefined variable: message in /home/collopco/public_html/library/classes/class/_comm.php on line 245
+[05-Mar-2015 00:18:26 Africa/Johannesburg] PHP Notice:  Undefined variable: template in /home/collopco/public_html/library/classes/class/_comm.php on line 313
+[05-Mar-2015 00:22:06 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected $end in /home/collopco/public_html/crons/monthlyinvoice.php on line 134
+[05-Mar-2015 01:17:58 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '{' in /home/collopco/public_html/crons/monthlyinvoice.php on line 205
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Notice:  Undefined offset: 0 in /home/collopco/public_html/library/classes/class/_comm.php on line 250
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Warning:  file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Filename cannot be empty in /home/collopco/public_html/library/classes/class/_comm.php on line 250
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Notice:  Undefined offset: 0 in /home/collopco/public_html/library/classes/class/_comm.php on line 253
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Notice:  Undefined offset: 0 in /home/collopco/public_html/library/classes/class/_comm.php on line 260
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Notice:  Undefined offset: 0 in /home/collopco/public_html/library/classes/class/_comm.php on line 261
+[05-Mar-2015 01:18:14 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : Column '_attachment_name' cannot be null' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `_a...', Array)
+#3 /home/collopco/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('_attachment', Array)
+#4 /home/collopco/public_html/library/classes/class/_attachment.php(31): Zend_Db_Table_Abstract->insert(Array)
+#5 /home/collopco/public_html/library/classes/class/_comm.php(263): class_attachment->insert(Array)
+#6 /home/collopco/public_html/crons/monthlyinvoice.php(166): class_c in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[05-Mar-2015 01:19:44 Africa/Johannesburg] PHP Fatal error:  [] operator not supported for strings in /home/collopco/public_html/crons/monthlyinvoice.php on line 165
+[05-Mar-2015 20:24:15 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceremind_startdate' in 'field list'' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `in...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `in...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `in...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `in...', Array)
+#4 /home/collopco/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('invoiceremind', Array)
+#5 /home/collopco/public_html/library/classes/class/invoiceremind.php(31): in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[05-Mar-2015 20:55:55 Africa/Johannesburg] PHP Notice:  Undefined variable: tempData in /home/collopco/public_html/crons/invoicereminder.php on line 47
+[05-Mar-2015 21:20:18 Africa/Johannesburg] PHP Notice:  Undefined index: _comm_subject in /home/collopco/public_html/crons/invoicereminder.php on line 47

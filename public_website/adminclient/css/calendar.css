@@ -1,0 +1,18 @@
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		background-color: white;
+		padding: 15px;
+		}
+		
+		.customevent1, .customevent1 div, .customevent1 span, .customevent1 a div  { background-color: #6495ED }
+		.customevent2, .customevent2 div, .customevent2 span, .customevent2 a div { background-color: #008B8B }
+		.customevent3, .customevent3 div, .customevent3 span, .customevent3 a div { background-color: #B8860B }
+		.customevent4, .customevent4 div, .customevent4 span, .customevent4 a div { background-color: #556B2F }
+		.customevent5, .customevent5 div, .customevent5 span, .customevent5 a div { background-color: #FF8C00 }
+		.customevent6, .customevent6 div, .customevent6 span, .customevent6 a div { background-color: #483D8B }
+		.customevent7, .customevent7 div, .customevent7 span, .customevent7 a div { background-color: #2F4F4F }
+		.customevent8, .customevent8 div, .customevent8 span, .customevent8 a div { background-color: #B22222 }
+		.customevent9, .customevent9 div, .customevent9 span, .customevent9 a div { background-color: #DAA520 }
+		.customevent10, .customevent10 div, .customevent10 span, .customevent10 a div { background-color: #CD5C5C }
+		.customevent11, .customevent11 div, .customevent11 span, .customevent11 a div { background-color: #F0E68C }

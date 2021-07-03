@@ -1,0 +1,18 @@
+[19-May-2015 22:09:33 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'nolalico_system.productprice' doesn't exist' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/productprice.php(103): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_we in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[19-May-2015 22:19:15 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'nolalico_system.productprice' doesn't exist' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/productprice.php(103): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/nolalico/public_we in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[19-May-2015 22:30:04 Africa/Johannesburg] PHP Fatal error:  Class 'class_price' not found in /home/nolalico/public_website_admin/library/classes/class/product.php on line 26
+[19-May-2015 22:49:46 Africa/Johannesburg] PHP Fatal error:  Call to undefined method class_productimage::createCode() in /home/nolalico/public_website_admin/catalogue/product/image.php on line 184

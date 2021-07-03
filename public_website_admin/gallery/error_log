@@ -1,0 +1,25 @@
+[23-Mar-2015 22:03:37 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "gallery/image.tpl" in /home/collopco/public_intranet/library/classes/smarty/Smarty.class.php on line 1095
+[18-May-2015 17:00:54 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'gallery_primary' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `gallery...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `gallery...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `gallery...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `gallery...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('gallery', Array, Array)
+#5 /home/nolalico/public_we in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[18-May-2015 17:01:23 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'galleryimage_code' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `gallery...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `gallery...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `gallery...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `gallery...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('gallery', Array, Array)
+#5 /home/nolalico/publi in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[18-May-2015 17:01:48 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'campaign_code' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `gallery...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `gallery...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `gallery...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `gallery...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('galleryimage', Array, Array)
+#5 /home/nolalico/publ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77

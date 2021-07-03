@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>{$administrator.campaign_company} - Username and Password Log In Details</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+	{literal}
+	<style type="text/css">
+	.list a {color: #cc0000; text-transform: uppercase; font-family: Verdana; font-size: 11px; text-decoration: none;}
+	</style>
+	{/literal}
+</head>
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#c5c5c5" leftmargin="0">
+
+<table cellspacing="0" border="0" style="background-image: url(http://{$administrator.campaign_domain}/templates/{$administrator.campaign_code}/newsletter/images/bg.gif); background-color: #c5c5c5;" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top">
+
+			<table cellspacing="0" border="0" align="center" style="background: #fff; border-right: 1px solid #ccc; border-left: 1px solid #ccc;" cellpadding="0" width="600">
+				<tr>
+					<td valign="top">
+						<!-- header -->
+						<table cellspacing="0" border="0" height="157" cellpadding="0" width="600">
+							<tr>
+								<td class="header-text" height="50" valign="top" style="color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; padding: 0 20px;" width="540" colspan="2">
+									<br /><br /><webversion style="color: #990000; text-decoration: none;">{$administrator.campaign_company} Newsletter - {$smarty.now|date_format:"%A, %B %e, %Y"}</webversion>
+								</td>
+							</tr>
+							<tr>
+								<td class="main-title" height="5" valign="top" style="padding: 0 20px; font-size: 25px; font-family: Georgia; font-style: italic;" width="600" colspan="2">
+									Administrator Log In
+								</td>
+							</tr>
+							<tr>
+								<td height="20" valign="top" width="600" colspan="2">
+									<img src="http://{$administrator.campaign_domain}/templates/{$administrator.campaign_code}/newsletter/images/breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+								</td>
+							</tr>
+						</table>
+						<!-- / header -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- content -->
+						<table cellspacing="0" border="0" cellpadding="0" width="600">
+							<tr>
+								<td class="content-copy" valign="top" style="padding: 0 20px; color: #000; font-size: 14px; font-family: Georgia; line-height: 20px;" colspan="2">
+									<br />Dear {$administrator.administrator_name} {$administrator.administrator_surname}, <br /><br />
+									Please find below your log in details for the {$administrator.campaign_name} administration website:<br /><br />
+									Go to : <a href="http://{$administrator.campaign_domain}/admin/" target="_blank">http://{$administrator.campaign_domain}/admin/</a><br /><br />									
+									<table>
+										<tr><td>Username</td><td>:</td><td> <b>{$administrator.administrator_email}</b></td></tr>
+										<tr><td>Password</td><td>:</td><td><b>{$administrator.administrator_password}</b></td></tr>
+									</table>
+									<br />									
+								</td>
+							</tr>
+						</table>
+						<!--  / content -->
+					</td>
+				</tr>
+				<tr>
+					<td height="20" valign="top" width="600" colspan="2">
+						<img src="http://{$administrator.campaign_domain}/templates/{$administrator.campaign_code}/newsletter/images/breaker.jpg" height="20" alt="" style="border: 0;" width="600" />
+					</td>
+				</tr>				
+				<tr>
+					<td valign="top" width="600">
+						<!-- footer -->
+						<table cellspacing="0" border="0" height="202" cellpadding="0" width="600">
+							<tr>
+								<td class="copyright" height="100" align="center" valign="top" style="padding: 0 20px; color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; line-height: 20px;" width="600" colspan="2">
+									{$administrator.campaign_company}<br />
+									{$administrator.campaign_address}<br />
+									{$administrator.campaign_email}<br /><br />
+									{$smarty.now|date_format:"%A, %B %e, %Y"}<br />
+									<a style="color: #cc0000; text-decoration: none;" href="http://{$administrator.campaign_domain}" target="_blank">{$administrator.campaign_company}</a><br /><br />
+									<a style="color: #cc0000; text-decoration: none;" href="http://{$administrator.campaign_domain}/mailer/view/{$tracking}">If you cannot see this email properly, please click here to view it on a browser</a>
+								</td>
+							</tr>
+						</table>
+						<!-- / end footer -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<img src="http://{$administrator.campaign_domain}/mailer/tracking/[tracking]" width="0px" height="0px" />
+</body>
+</html>

@@ -1,0 +1,5 @@
+[05-Nov-2013 16:45:31 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_STRING in /home/bizloung/public_html/crons/scrape/box.php on line 123
+[05-Nov-2013 16:48:53 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected $end in /home/bizloung/public_html/crons/scrape/box.php on line 80
+[05-Nov-2013 16:49:36 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '}' in /home/bizloung/public_html/crons/scrape/box.php on line 98
+[05-Nov-2013 16:50:04 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '}' in /home/bizloung/public_html/crons/scrape/box.php on line 101
+[01-Dec-2013 00:44:49 Africa/Johannesburg] PHP Fatal error:  Call to undefined function onlyAlphaNumeric() in /home/collopco/public_html/crons/wn/scrape/brabys.php on line 156

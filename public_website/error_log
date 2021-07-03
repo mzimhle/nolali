@@ -1,0 +1,26 @@
+[12-Aug-2013 22:27:02 Africa/Johannesburg] PHP Warning:  require_once(config/database.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/includes/auth.php on line 7
+[12-Aug-2013 22:27:02 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'config/database.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/includes/auth.php on line 7
+[12-Aug-2013 22:27:53 Africa/Johannesburg] PHP Warning:  require_once(Zend/Db.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/config/database.php on line 7
+[12-Aug-2013 22:27:53 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Db.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/config/database.php on line 7
+[12-Aug-2013 22:28:48 Africa/Johannesburg] PHP Warning:  require_once(Zend/Db/Table.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:28:48 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Db/Table.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:32:19 Africa/Johannesburg] PHP Warning:  require_once(Zend/Db/Table.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:32:19 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Db/Table.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:38:40 Africa/Johannesburg] PHP Warning:  require_once(Zend/Db/Table.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:38:40 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Db/Table.php' (include_path='/home/collopco/public_html/:/home/collopco/public_html/library/classes/') in /home/collopco/public_html/config/database.php on line 8
+[12-Aug-2013 22:59:46 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Adapter_Mysqli_Exception' with message 'Access denied for user 'root'@'localhost' (using password: NO)' in /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php:333
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(832): Zend_Db_Adapter_Mysqli->_connect()
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(902): Zend_Db_Adapter_Abstract->quote('datumaguesthous...', NULL)
+#2 /home/collopco/public_html/library/classes/Zend/Db/Select.php(1000): Zend_Db_Adapter_Abstract->quoteInto('campaign_domain...', 'datumaguesthous...', NULL)
+#3 /home/collopco/public_html/library/classes/Zend/Db/Select.php(475): Zend_Db_Select->_where('campaign_domain...', 'datumaguesthous...', NULL, true)
+#4 /home/collopco/public_html/library/classes/admin/class/campaign.php(93): Zend_Db_Select->where('campaign_domain...', 'datumaguesthous...')
+#5 /home/collopco/public_html/includes/auth.php(32): class_campaign->getByDomain('datumaguestho in /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php on line 333
+[01-Nov-2013 14:10:45 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'collopco_llopc.areaMap' doesn't exist' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `campaig...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `campaig...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `campaig...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/collopco/public_html/library/classes/class/campaign.php(97): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/collopco/public_html/includes/auth.php(35): class_campaign->getByDomain('yoliyencon in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77

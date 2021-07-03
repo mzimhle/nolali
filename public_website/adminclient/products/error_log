@@ -1,0 +1,84 @@
+[12-Nov-2014 12:20:14 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/product.php(103): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_D in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 12:20:48 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY `product_name` desc' at line 2' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/product.php(103): Zend_Db_Adapter_Abs in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 12:20:51 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY `product_name` desc' at line 2' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/product.php(103): Zend_Db_Adapter_Abs in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 14:21:47 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'product_shortDescription' in 'field list'' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `pr...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `pr...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `pr...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `pr...', Array)
+#4 /home/emanager/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('product', Array)
+#5 /home/emanager/public_html/library/classes/class/product.php(35): Zend_Db_Ta in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 14:23:50 Africa/Johannesburg] PHP Notice:  Undefined index: product_page in /home/emanager/public_html/adminclient/MU3H/products/details.php on line 57
+[12-Nov-2014 14:23:50 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/emanager/public_html/adminclient/MU3H/products/details.php:57) in /home/emanager/public_html/adminclient/MU3H/products/details.php on line 68
+[12-Nov-2014 14:42:30 Africa/Johannesburg] PHP Warning:  require_once(class/MU3H/campaignproduct.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/products/items.php on line 15
+[12-Nov-2014 14:42:30 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/MU3H/campaignproduct.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/products/items.php on line 15
+[12-Nov-2014 15:40:11 Africa/Johannesburg] PHP Notice:  Undefined index: productitem_name in /home/emanager/public_html/adminclient/MU3H/products/items.php on line 133
+[12-Nov-2014 15:40:11 Africa/Johannesburg] PHP Notice:  Undefined index: productitem_description in /home/emanager/public_html/adminclient/MU3H/products/items.php on line 134
+[12-Nov-2014 15:40:11 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/emanager/public_html/adminclient/MU3H/products/items.php:133) in /home/emanager/public_html/adminclient/MU3H/products/items.php on line 140
+[13-Nov-2014 22:10:53 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Column 'product_code' in where clause is ambiguous' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `product...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `product...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `product...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/product.php(81): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/emanager/public_html/adminclient/MU3H/products/details.php(24): class_product- in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[13-Nov-2014 22:17:38 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/productimage.php(95): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/product.php(121): class_productimage->getByProduct(NULL)
+#5 /home/emanager/public_html/adminclient/MU3H/products/default.php(49): class_product->getAll()
+#6 {main}
+  thrown in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[13-Nov-2014 22:17:47 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/productimage.php(95): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/product.php(121): class_productimage->getByProduct(NULL)
+#5 /home/emanager/public_html/adminclient/MU3H/products/default.php(49): class_product->getAll()
+#6 {main}
+  thrown in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[13-Nov-2014 22:19:46 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/productimage.php(95): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/product.php(121): class_productimage->getByProduct(NULL)
+#5 /home/emanager/public_html/adminclient/MU3H/products/default.php(49): class_product->getAll()
+#6 {main}
+  thrown in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[13-Nov-2014 22:20:21 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/emanager/public_html/library/classes/class/productimage.php(95): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/emanager/public_html/library/classes/class/product.php(121): class_productimage->getByProduct(NULL)
+#5 /home/emanager/public_html/adminclient/MU3H/products/default.php(49): class_product->getAll()
+#6 {main}
+  thrown in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 214

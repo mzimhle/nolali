@@ -1,0 +1,18 @@
+[14-May-2015 08:14:34 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1506): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select))
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1368): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#4 /home/nolalico/public_admin/library/classes/class/_product.php(91): Zend_Db_Table_Abstract->fetchRow(Object(Zend_Db_Table_Select))
+#5 /home/nolalico/public_admin/library/classes/class/_product.php(111): class_product->getCode(NULL)
+#6 /home/nolalico/pu in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[14-May-2015 20:26:05 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Adapter_Mysqli_Exception' with message 'Incorrect key file for table '/var/mysql_tmpfs/#sql_6bdfb_4.MYI'; try to repair it' in /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php:204
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(824): Zend_Db_Adapter_Mysqli->describeTable('_product', NULL)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(846): Zend_Db_Table_Abstract->_setupMetadata()
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(886): Zend_Db_Table_Abstract->_getCols()
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(970): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#4 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Select.php(100): Zend_Db_Table_Abstract->info()
+#5 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Select.php(78): Zend_Db_Table_Select->setTable(Object(class_product))
+#6 /home/nolalico/public_admin/library/classes in /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Mysqli.php on line 204

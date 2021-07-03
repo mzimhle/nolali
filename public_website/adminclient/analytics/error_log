@@ -1,0 +1,23 @@
+[11-Sep-2013 00:32:59 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Exception' with message 'GAPI: Failed to authenticate user. Error: "Error=BadAuthentication
+Url=https://www.google.com/accounts/ContinueSignIn?plt=AKgnsbvsEjanOPqhn_KddMPc_BrFGSpelv6nhIOq9OKTLv8NA7MQrxYPhABo9-LJd48fmhBogQa6rUOtiH-BZ_gwaiA5-CCkGQMbx3IDe-uJEivT5Yd6IRs1SHUtKHWL6iVDuNBJtugwDlGiwZELf_LdryPBStZeN3YvVlJHyxJMLoxD2naToqI7CDZR9IpLAYgKBIiDPHou2sFKxch3ULAUoNODSNfgdA&sarp=1&scc=1
+Info=WebLoginRequired
+"' in /home/collopco/public_html/library/classes/gapi.class.php:418
+Stack trace:
+#0 /home/collopco/public_html/library/classes/gapi.class.php(62): gapi->authenticateUser('willow.nettica@...', 'sakile123')
+#1 /home/collopco/public_html/adminclient/MU3H/analytics/stats.php(16): gapi->__construct('willow.nettica@...', 'sakile123')
+#2 {main}
+  thrown in /home/collopco/public_html/library/classes/gapi.class.php on line 418
+[23-Nov-2014 11:47:13 Africa/Johannesburg] PHP Warning:  require_once(gapi.class.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/analytics/stats.php on line 6
+[23-Nov-2014 11:47:13 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'gapi.class.php' (include_path='/home/emanager/public_html/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/analytics/stats.php on line 6
+[23-Nov-2014 11:52:31 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '}' in /home/emanager/public_html/adminclient/MU3H/analytics/stats.php on line 29
+[23-Nov-2014 11:52:50 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected '}' in /home/emanager/public_html/adminclient/MU3H/analytics/stats.php on line 29
+[23-Nov-2014 11:53:09 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Exception' with message 'GAPI: Failed to request report data. Error: "GDataauthErrorAuthorizationInvalid Credentials"' in /home/emanager/public_html/library/classes/gapi.class.php:236
+Stack trace:
+#0 /home/emanager/public_html/adminclient/MU3H/analytics/stats.php(21): gapi->requestReportData(73634502, Array, Array, Array, NULL, '2014-09-23', '2014-11-23')
+#1 {main}
+  thrown in /home/emanager/public_html/library/classes/gapi.class.php on line 236
+[23-Nov-2014 11:54:37 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Exception' with message 'GAPI: Failed to request report data. Error: "GDataauthErrorAuthorizationInvalid Credentials"' in /home/emanager/public_html/library/classes/gapi.class.php:236
+Stack trace:
+#0 /home/emanager/public_html/adminclient/MU3H/analytics/stats.php(21): gapi->requestReportData(73634502, Array, Array, Array, NULL, '2014-09-23', '2014-11-23')
+#1 {main}
+  thrown in /home/emanager/public_html/library/classes/gapi.class.php on line 236

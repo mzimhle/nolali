@@ -1,0 +1,39 @@
+[09-Sep-2013 08:05:31 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "templates/newsletter/7905/newsletter.html" in /home/collopco/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[12-Sep-2013 00:45:57 Africa/Johannesburg] PHP Notice:  Undefined index: newsletter_active in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 58
+[12-Sep-2013 00:45:57 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/collopco/public_html/adminclient/MU3H/newsletters/details.php:58) in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 95
+[21-Sep-2013 19:45:17 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in adminclient/MU3H/newsletters/details.tpl line 58]: syntax error: unrecognized tag: $$errorArray.sendemail (Smarty_Compiler.class.php, line 446) in /home/collopco/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[21-Sep-2013 19:46:27 Africa/Johannesburg] PHP Notice:  Undefined variable: newsletter in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 71
+[21-Sep-2013 19:46:27 Africa/Johannesburg] PHP Notice:  Undefined variable: newsletter in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 72
+[21-Sep-2013 19:46:27 Africa/Johannesburg] PHP Notice:  Undefined variable: newsletter in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 71
+[21-Sep-2013 19:46:27 Africa/Johannesburg] PHP Notice:  Undefined variable: newsletter in /home/collopco/public_html/adminclient/MU3H/newsletters/details.php on line 72
+[21-Sep-2013 20:04:11 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in /home/collopco/public_html/cache/smarty/compile/%%E5^E5A^E5A626A5%%details.tpl.php on line 78
+[21-Sep-2013 20:06:06 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in /home/collopco/public_html/cache/smarty/compile/%%E5^E5A^E5A626A5%%details.tpl.php on line 78
+[21-Sep-2013 20:07:56 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in /home/collopco/public_html/cache/smarty/compile/%%E5^E5A^E5A626A5%%details.tpl.php on line 78
+[29-Sep-2013 22:46:00 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column '_comms_reference' in 'field list'' in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/collopco/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `_c...')
+#1 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `_c...')
+#2 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `_c...')
+#3 /home/collopco/public_html/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `_c...', Array)
+#4 /home/collopco/public_html/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('_comms', Array)
+#5 /home/collopco/public_html/library/classes/class/_comms.php(23): Zend_Db_Table_Abstra in /home/collopco/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 17:42:50 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `newslet...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `newslet...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `newslet...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/newsletter.php(117): Zend_Db_Adapter_Abstract->fetchAll(Object(Zen in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 17:43:32 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'newsletter_title' in 'order clause'' in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/emanager/public_html/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `newslet...')
+#1 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `newslet...')
+#2 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `newslet...')
+#3 /home/emanager/public_html/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/emanager/public_html/library/classes/class/newsletter.php(117): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/emanager/public_html/adminclient/MU3H/newsletter/default.php(19): class_n in /home/emanager/public_html/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[12-Nov-2014 17:43:43 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "adminclient/MU3H/newsletters/default.tpl" in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[12-Nov-2014 17:48:31 Africa/Johannesburg] PHP Warning:  require_once(class/_comms.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/newsletter/details.php on line 15
+[12-Nov-2014 17:48:31 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/_comms.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/newsletter/details.php on line 15
+[12-Nov-2014 17:49:26 Africa/Johannesburg] PHP Warning:  require_once(class/_comms.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/emanager/public_html/adminclient/MU3H/newsletter/details.php on line 15
+[12-Nov-2014 17:49:26 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/_comms.php' (include_path='/home/emanager/public_html:/home/emanager/public_html/adminclient/MU3H/:/home/emanager/public_html/library/classes/') in /home/emanager/public_html/adminclient/MU3H/newsletter/details.php on line 15

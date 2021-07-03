@@ -1,0 +1,28 @@
+[16-Nov-2014 08:45:46 Africa/Johannesburg] PHP Notice:  Trying to get property of non-object in /home/emanager/public_html/campaigns/MU3H/0860/booking/details.php on line 106
+[16-Nov-2014 08:45:46 Africa/Johannesburg] PHP Notice:  Trying to get property of non-object in /home/emanager/public_html/campaigns/MU3H/0860/booking/details.php on line 109
+[16-Nov-2014 08:52:50 Africa/Johannesburg] PHP Fatal error:  Smarty error: [in campaigns/MU3H/0860/booking/details.tpl line 183]: syntax error: mismatched tag {/if}. (Smarty_Compiler.class.php, line 2303) in /home/emanager/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[20-Nov-2014 08:09:57 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/emanager/public_html/campaigns/MU3H/0860/booking/details.php on line 8
+[20-Nov-2014 08:10:29 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/emanager/public_html/campaigns/MU3H/0860/booking/details.php on line 8
+[26-May-2015 17:22:29 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column '_pi.price_code' in 'where clause'' in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select ????????...')
+#1 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select ????????...')
+#2 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select ????????...')
+#3 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select ????????...', Array)
+#4 /home/nolalico/public_website/campaigns/5357/library/classes/class/booking.php(245): Zend_Db_Adapter_Abstract->fetchRow('sele in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[26-May-2015 17:23:45 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'campaign.campaign_code' in 'where clause'' in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select ????????...')
+#1 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select ????????...')
+#2 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select ????????...')
+#3 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select ????????...', Array)
+#4 /home/nolalico/public_website/campaigns/5357/library/classes/class/booking.php(245): Zend_Db_Adapter_Abstract->fetchR in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[27-May-2015 13:26:44 Africa/Johannesburg] PHP Notice:  Undefined variable: code in /home/nolalico/public_website/campaigns/5357/library/classes/class/booking.php on line 311
+[04-Jun-2015 18:32:25 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Adapter_Mysqli_Exception' with message 'Incorrect key file for table '/var/mysql_tmpfs/#sql_b91a3_2.MYI'; try to repair it' in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Mysqli.php:204
+Stack trace:
+#0 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Table/Abstract.php(824): Zend_Db_Adapter_Mysqli->describeTable('product', NULL)
+#1 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Table/Abstract.php(863): Zend_Db_Table_Abstract->_setupMetadata()
+#2 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Table/Abstract.php(970): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#3 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Table/Select.php(100): Zend_Db_Table_Abstract->info()
+#4 /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Table/Select.php(78): Zend_Db_Table_Select->setTable(Object(class_product))
+#5 /home/nolalico/public_website/campaigns/5357/library/clas in /home/nolalico/public_website/campaigns/5357/library/classes/Zend/Db/Adapter/Mysqli.php on line 204

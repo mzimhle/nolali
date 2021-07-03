@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>{$newsletterData.campaign_company} - {$newsletterData.newsletter_name}</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />	
+	{literal}
+	<style type="text/css">
+	.list a {color: #cc0000; text-transform: uppercase; font-family: Verdana; font-size: 11px; text-decoration: none;}
+	</style>
+	{/literal}
+</head>
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#c5c5c5" leftmargin="0">
+
+<table cellspacing="0" border="0" style="background-image: url(http://{$newsletterData.campaign_domain}/templates/{$newsletterData.campaign_code}/newsletter/images/bg.gif); background-color: #c5c5c5;" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top">
+
+			<table cellspacing="0" border="0" align="center" style="background: #fff; border-right: 1px solid #ccc; border-left: 1px solid #ccc;" cellpadding="0" width="800">
+				<tr>
+					<td valign="top">
+						<!-- header -->
+						<table cellspacing="0" border="0" height="157" cellpadding="0" width="800">
+							<tr>
+								<td class="header-text" height="50" valign="top" style="color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; padding: 0 20px;" width="800" colspan="2">
+									<br /><br /><webversion style="color: #990000; text-decoration: none;">{$newsletterData.campaign_company} Newsletter - {$smarty.now|date_format:"%A, %B %e, %Y"}</webversion>
+								</td>
+							</tr>
+							<tr>
+								<td class="main-title" height="5" valign="top" style="padding: 0 20px; font-size: 25px; font-family: Georgia; font-style: italic;" width="800" colspan="2">
+									{$newsletterData.newsletter_name}
+								</td>
+							</tr>
+							<tr>
+								<td height="20" valign="top" width="800" colspan="2">
+									<img src="http://{$newsletterData.campaign_domain}/templates/{$newsletterData.campaign_code}/newsletter/images/breaker.jpg" height="20" alt="" style="border: 0;" width="800" />
+								</td>
+							</tr>
+						</table>
+						<!-- / header -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- content -->
+						<table cellspacing="0" border="0" cellpadding="0" width="800">
+							<tr>
+								<td class="content-copy" valign="top" style="padding: 0 20px; color: #000; font-size: 14px; font-family: Georgia; line-height: 20px;" colspan="2">
+									Good day [fullname],
+									<br /><br />
+									{$newsletterData.newsletter_content}									
+									<p>
+										<a style="color: #cc0000; text-decoration: none;" href="http://{$newsletterData.campaign_domain}/mailer/view/[tracking]" target="_blank">View on mail browser</a>
+									</p>
+								</td>
+							</tr>
+						</table>
+						<!--  / content -->
+					</td>
+				</tr>
+				<tr>
+					<td height="20" valign="top" width="800" colspan="2">
+						<img src="http://{$newsletterData.campaign_domain}/templates/{$newsletterData.campaign_code}/newsletter/images/breaker.jpg" height="20" alt="" style="border: 0;" width="800" />
+					</td>
+				</tr>				
+				<tr>
+					<td valign="top" width="800">
+						<!-- footer -->
+						<table cellspacing="0" border="0" height="202" cellpadding="0" width="800">
+							<tr>
+								<td class="copyright" height="100" align="center" valign="top" style="padding: 0 20px; color: #999; font-family: Verdana; font-size: 10px; text-transform: uppercase; line-height: 20px;" width="800" colspan="2">
+									<a style="color: #cc0000; text-decoration: none;" href="http://{$newsletterData.campaign_domain}" target="_blank">{$newsletterData.campaign_company}</a><br /><br />
+									{$newsletterData.campaign_address} <br /> 
+									{$newsletterData.campaign_email}<br /><br />
+									{$smarty.now|date_format:"%A, %B %e, %Y"}<br />									
+									<a style="color: #cc0000; text-decoration: none; font-size: 8px;" href="http://{$newsletterData.campaign_domain}/mailer/unsubscribe/[participantcode]" target="_blank">Click here to unsubscribe</a>
+								</td>
+							</tr>
+						</table>
+						<!-- / end footer -->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<img src="http://{$newsletterData.campaign_domain}/mailer/tracking/[tracking]" width="0px" height="0px" />
+</body>
+</html>

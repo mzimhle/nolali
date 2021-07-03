@@ -1,0 +1,28 @@
+[14-May-2014 13:43:12 Africa/Johannesburg] PHP Warning:  require_once(class/mailer.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/lubabalo/public_html/administration/mailers/details.php on line 13
+[14-May-2014 13:43:12 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/mailer.php' (include_path='/home/lubabalo/public_html/:/home/lubabalo/public_html/library/classes/') in /home/lubabalo/public_html/administration/mailers/details.php on line 13
+[14-May-2014 14:20:54 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "/templates/mailers/standard.html" in /home/lubabalo/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[14-May-2014 14:24:24 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "/templates/mailers/standard.html" in /home/lubabalo/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[14-May-2014 14:26:03 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "/templates/mailers/standard.html" in /home/lubabalo/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[26-May-2014 23:17:33 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "templates/mailers/standard.html" in /home/lubabalo/public_html/library/classes/smarty/Smarty.class.php on line 1095
+[31-May-2014 09:24:35 Africa/Johannesburg] PHP Fatal error:  Cannot redeclare class Zend_Mail in /home/lubabalo/public_html/library/classes/Zend/Mail.php on line 1261
+[16-May-2015 19:39:59 Africa/Johannesburg] PHP Warning:  require_once(administration/includes/auth.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_admin/website/newsletter/default.php on line 13
+[16-May-2015 19:39:59 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'administration/includes/auth.php' (include_path='/home/nolalico/public_admin/:/home/nolalico/public_admin/library/classes/') in /home/nolalico/public_admin/website/newsletter/default.php on line 13
+[18-Jun-2015 20:17:01 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_admin/library/classes/class/gallerytype.php(84): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/nolalico/public_admin/website/gallery/type/default.php(50): class_gallerytype->getAll()
+#5 {main}
+  thrown in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[18-Jun-2015 20:20:29 Africa/Johannesburg] PHP Warning:  Missing argument 1 for class_gallerytype::getCode(), called in /home/nolalico/public_admin/library/classes/class/gallerytype.php on line 32 and defined in /home/nolalico/public_admin/library/classes/class/gallerytype.php on line 104
+[18-Jun-2015 20:20:29 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1506): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select))
+#3 /home/nolalico/public_admin/library/classes/Zend/Db/Table/Abstract.php(1368): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#4 /home/nolalico/public_admin/library/classes/class/gallerytype.php(110): Zend_Db_Table_Abstract->fetchRow(Object(Zend_Db_Table_Select))
+#5 /home/nolalico/public_admin/library/classes/class/gallerytype.php(32): class_gallerytype->getCode()
+#6 /home/nolal in /home/nolalico/public_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214

@@ -1,0 +1,218 @@
+[21-May-2015 06:13:57 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/nolalico/public_website_admin/booking/default.php on line 96
+[21-May-2015 06:14:43 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/nolalico/public_website_admin/booking/default.php on line 96
+[21-May-2015 06:27:13 Africa/Johannesburg] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/nolalico/public_website_admin/booking/default.php on line 96
+[22-May-2015 14:49:16 Africa/Johannesburg] PHP Warning:  Smarty error: unable to read resource: "bookinggenerate.tpl" in /home/nolalico/public_website_admin/library/classes/smarty/Smarty.class.php on line 1095
+[22-May-2015 15:31:38 Africa/Johannesburg] PHP Warning:  require_once(priceitem.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_website_admin/library/classes/class/booking.php on line 4
+[22-May-2015 15:31:38 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'priceitem.php' (include_path='/home/nolalico/public_website_admin/:/home/nolalico/public_website_admin/library/classes/') in /home/nolalico/public_website_admin/library/classes/class/booking.php on line 4
+[22-May-2015 15:31:50 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'booking.booking_reference' in 'on clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `booking...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `booking...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `booking...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(72): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_w in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[22-May-2015 15:56:48 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'campaign.campaign_vat' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `booking...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `booking...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `booking...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(88): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_webs in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[22-May-2015 15:58:58 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Column 'booking_code' in where clause is ambiguous' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `booking...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `booking...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `booking...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(90): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_website_ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[22-May-2015 20:46:42 Africa/Johannesburg] PHP Warning:  require_once(class/_payment.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/nolalico/public_website_admin/booking/payment.php on line 14
+[22-May-2015 20:46:42 Africa/Johannesburg] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'class/_payment.php' (include_path='/home/nolalico/public_website_admin/:/home/nolalico/public_website_admin/library/classes/') in /home/nolalico/public_website_admin/booking/payment.php on line 14
+[22-May-2015 20:56:21 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'booking.booking_code_payment._payment_reference' in 'on clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `_paymen...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `_paymen...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `_paymen...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/_payment.php(106): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 03:57:10 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Table 'nolalico_system.payment' doesn't exist' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `payment...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `payment...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `payment...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/_payment.php(136): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_website_adm in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 03:58:30 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'payment_paid_date' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `_p...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `_p...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `_p...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `_p...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('_payment', Array)
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 03:59:25 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column '_payment_amount' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('INSERT INTO `_p...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'INSERT INTO `_p...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('INSERT INTO `_p...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(546): Zend_Db_Adapter_Abstract->query('INSERT INTO `_p...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1053): Zend_Db_Adapter_Abstract->insert('_payment', Array)
+#5 /home/nolalico/public_website_ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 04:00:51 Africa/Johannesburg] PHP Warning:  number_format() expects parameter 1 to be double, string given in /home/nolalico/public_website_admin/cache/smarty/compile/%%20^20B^20B311EB%%payment.tpl.php on line 65
+[23-May-2015 04:00:51 Africa/Johannesburg] PHP Warning:  number_format() expects parameter 1 to be double, string given in /home/nolalico/public_website_admin/cache/smarty/compile/%%20^20B^20B311EB%%payment.tpl.php on line 65
+[23-May-2015 04:00:52 Africa/Johannesburg] PHP Warning:  number_format() expects parameter 1 to be double, string given in /home/nolalico/public_website_admin/cache/smarty/compile/%%20^20B^20B311EB%%payment.tpl.php on line 65
+[23-May-2015 04:00:52 Africa/Johannesburg] PHP Warning:  number_format() expects parameter 1 to be double, string given in /home/nolalico/public_website_admin/cache/smarty/compile/%%20^20B^20B311EB%%payment.tpl.php on line 65
+[23-May-2015 04:00:52 Africa/Johannesburg] PHP Warning:  number_format() expects parameter 1 to be double, string given in /home/nolalico/public_website_admin/cache/smarty/compile/%%20^20B^20B311EB%%payment.tpl.php on line 65
+[23-May-2015 04:03:01 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'payment_deleted' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `_paymen...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `_paymen...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `_paymen...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `_paymen...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('_payment', Array, Array)
+#5 /home/nolalico/public_w in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 04:03:09 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'payment_deleted' in 'field list'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('UPDATE `_paymen...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'UPDATE `_paymen...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('UPDATE `_paymen...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(604): Zend_Db_Adapter_Abstract->query('UPDATE `_paymen...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1110): Zend_Db_Adapter_Abstract->update('_payment', Array, Array)
+#5 /home/nolalico/public_w in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 10:01:21 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column '_payment.booking_code' in 'on clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `booking...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `booking...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('SELECT `booking...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(102): Zend_Db_Adapter_Abstract->fetchRow(Object(Zend_Db_Select))
+#5 /home/nolalico/public_webs in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:15:08 Africa/Johannesburg] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in /home/nolalico/public_website_admin/booking/generate.php on line 56
+[23-May-2015 11:15:08 Africa/Johannesburg] PHP Warning:  date_format() expects parameter 1 to be DateTime, string given in /home/nolalico/public_website_admin/booking/generate.php on line 56
+[23-May-2015 11:15:08 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(89): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/nolalico/public_website_admin/booking/generate.php(71): class_invoiceitem->getByInvoice(NULL)
+#5 {main}
+  thrown in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:16:25 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(89): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#4 /home/nolalico/public_website_admin/booking/generate.php(71): class_invoiceitem->getByInvoice(NULL)
+#5 {main}
+  thrown in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:16:42 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem_cod...')
+#4 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(40): Zend_Db_Table_Abstract->delete('invoiceitem_cod...', '218771432370942')
+#5 /home/nolalico/public_website_admin/booking/generate.php in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:17:30 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem_cod...')
+#4 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(40): Zend_Db_Table_Abstract->delete('invoiceitem_cod...', '218771432370942')
+#5 /home/nolalico/public_website_admin/booking/generate.php in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:21:37 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem_cod...')
+#4 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(40): Zend_Db_Table_Abstract->delete('invoiceitem_cod...', '218771432370942')
+#5 /home/nolalico/public_website_admin/booking/generate.php in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:21:49 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem_cod...')
+#4 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(40): Zend_Db_Table_Abstract->delete('invoiceitem_cod...', '218771432370942')
+#5 /home/nolalico/public_website_admin/booking/generate.php in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:24:15 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceitem' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem')
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:25:28 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceitem' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem')
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:25:54 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceitem' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem')
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:26:19 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceitem' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem')
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:26:28 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoiceitem' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', 'invoiceitem')
+#5 /home/nolalico/public_websit in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:28:18 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli statement execute error : No data supplied for parameters in prepared statement' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:214
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(300): Zend_Db_Statement_Mysqli->_execute(Array)
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoiceitem', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php(40): Zend_Db_Table_Abstract->delete(Array)
+#5 /home/nolalico/public_website_admin/booking/generate.php(75): class_invoiceitem->remove('218771432370942' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 214
+[23-May-2015 11:28:32 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'invoicepayment' in 'where clause'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('DELETE FROM `in...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'DELETE FROM `in...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('DELETE FROM `in...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(633): Zend_Db_Adapter_Abstract->query('DELETE FROM `in...')
+#4 /home/nolalico/public_website_admin/library/classes/Zend/Db/Table/Abstract.php(1162): Zend_Db_Adapter_Abstract->delete('invoicepayment', 'invoicepayment')
+#5 /home/nolalico/publ in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 11:28:51 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/nolalico/public_website_admin/library/classes/class/invoiceitem.php:1) in /home/nolalico/public_website_admin/booking/generate.php on line 122
+[23-May-2015 12:11:44 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'campaign_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(202): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/booking/de in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77
+[23-May-2015 12:17:31 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Duplicate column name 'campaign_code'' in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php:77
+Stack trace:
+#0 /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('select count(*)...')
+#1 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'select count(*)...')
+#2 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(467): Zend_Db_Adapter_Mysqli->prepare('select count(*)...')
+#3 /home/nolalico/public_website_admin/library/classes/Zend/Db/Adapter/Abstract.php(725): Zend_Db_Adapter_Abstract->query('select count(*)...', Array)
+#4 /home/nolalico/public_website_admin/library/classes/class/booking.php(201): Zend_Db_Adapter_Abstract->fetchRow('select count(*)...')
+#5 /home/nolalico/public_website_admin/booking/de in /home/nolalico/public_website_admin/library/classes/Zend/Db/Statement/Mysqli.php on line 77

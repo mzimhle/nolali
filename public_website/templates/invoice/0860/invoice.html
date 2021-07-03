@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://css-tricks.com/examples/EditableInvoice/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/{$domainData.campaign_code}/css/style.css">
+	<link rel="stylesheet" href="http://collop.co.za/templates/invoice/{$domainData.campaign_code}/css/print.css" media="print">
+	<link rel='stylesheet'  href="http://collop.co.za/templates/invoice/{$domainData.campaign_code}/css/fonts.css" type='text/css' />
+</head>
+<body>
+	<div id="page-wrap">
+		<p id="header">INVOICE</p>
+		<div id="identity">
+            <p id="address">
+			</p>
+            <div class="logo">
+              <a href="http://{$domainData.campaign_domain}" class="logo-text"  alt="{$domainData.campaign_company}" title="{$domainData.campaign_company}">{$domainData.campaign_company}</a>
+            </div>
+		</div>
+		<div style="clear:both"></div>
+		<div id="identity">
+            <p id="address" style="width: 400px !important;">
+				<span id="customer-title">{$invoiceData.participant_name} {$invoiceData.participant_surname}</span><br /><br />
+				{if isset($participantdetailsData)}
+					{foreach from=$participantdetailsData item=item}
+								{if $item.participantdetail_email neq ''}email : {$item.participantdetail_email}{/if}{if $item.participantdetail_cell neq ''} / cell : {$item.participantdetail_cell}{/if}{if $item.participantdetail_telephone neq ''} <br />tel : {$item.participantdetail_telephone}{/if}{if $item.participantdetail_fax neq ''} / fax : {$item.participantdetail_fax}{/if}
+					{/foreach}
+				{else}
+					<span class="error">There are not contact details for the client</span>
+				{/if} 			
+
+			</p>
+            <div class="logo">
+				<table width="320px">
+						<tr>
+							<td class="meta-head">Invoice #</td>
+							<td>{$invoiceData.campaigninvoice_code}</td>
+						</tr>
+						<tr>
+							<td class="meta-head">Due Date</td>
+							<td><p id="date">{$invoiceData.campaigninvoice_payment_date|date_format:"%B %e, %Y"}</p></td>
+						</tr>
+						<tr>
+							<td class="meta-head">Amount Due</td>
+							<td><div class="due">R {$invoicePayments.due|number_format:2:".":","}</div></td>
+						</tr>
+				</table>              
+            </div>
+		</div>
+		<table id="items">
+			<tr>
+				<th align="left">Quantity</th>
+				<th align="left">Item</th>
+				<th align="left">Description</th>
+				<th width="17%">Price</th>
+			</tr>
+			{foreach from=$invoiceitemsData item=item}
+			<tr class="item-row">
+				<td class="item-name">{$item.campaigninvoiceitem_quantity}</td>
+				<td class="item-name">{$item.campaigninvoiceitem_name}</td>
+				<td class="description">{$item.campaigninvoiceitem_description}</td>
+				<td align="right">R {$item.campaigninvoiceitem_price}</td>
+			</tr>
+			{/foreach}
+			<tr>
+				<th colspan="4" align="left">Payments</th>
+			</tr>				
+			{if isset($invoicepaymentsData)}
+			{foreach from=$invoicepaymentsData item=item}
+			<tr class="item-row">
+				<td colspan="2" class="item-name">{$item.campaigninvoicepayment_description}</td>
+				<td colspan="2" align="right">R - {$item.campaigninvoicepayment_amount|number_format:2:".":","}</td>
+			</tr>
+			{/foreach}			
+			{/if}				
+			<tr class="item-row">
+				<td colspan="2" class="item-name">Item Total</td>
+				<td colspan="2" align="right">R {$invoicePayments.items|number_format:2:".":","}</td>
+			</tr>
+			<tr class="item-row">
+				<td colspan="2" class="item-name">Vat Payment</td>
+				<td colspan="2" align="right">R {$invoicePayments.vat|number_format:2:".":","}</td>
+			</tr>			
+			<tr>
+				<th colspan="4" align="left">Final Total</th>
+			</tr>	
+			<tr class="item-row">
+				<td colspan="4" align="right">R {$invoicePayments.due|number_format:2:".":","}</td>
+			</tr>			
+		</table>
+		<div id="terms">
+		  <p id="header">Payments Made To: </p>
+		  Account Holder: {$domainData.campaign_bankaccount_holder|default:"N/A"}<br />
+		  Bank: {$domainData.campaign_bankaccount_bank|default:"N/A"}<br />
+		  Account Number: {$domainData.campaign_bankaccount_number|default:"N/A"}<br />
+		  Branch Code: {$domainData.campaign_bankaccount_branchcode|default:"N/A"}<br />
+		  <b>Invoice Reference: {$invoiceData.campaigninvoice_code}</b>
+		  <br /><br />
+				{$domainData.campaign_address}				
+				<br /><br />
+				Contact Us
+				<br /><br />
+				tel: {$domainData.campaign_telephone|default:"N/A"} / fax: {$domainData.campaign_fax|default:"N/A"} / email: {$domainData.campaign_email|default:"N/A"}		  
+		</div>
+	</div>
+</body>
+</html>
