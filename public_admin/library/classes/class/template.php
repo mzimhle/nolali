@@ -1,43 +1,31 @@
 <?php
 
-require_once 'campaign.php';
-
-//custom account item class as account table abstraction
+//custom company item class as company table abstraction
 class class_template extends Zend_Db_Table_Abstract
 {
    //declare table variables
-    protected 	$_name 		= 'template';
-	public 			$productcode	= null;
+    protected 	$_name	    = 'template';
+	public		$_primary   = 'template_id';
 	
-	public $_campaign			= null;
-
 	function init()	{
-		
 		global $zfsession;
-		
-		$this->_campaign			= new class_campaign();	
-		
+        $this->_account = isset($zfsession->activeEntity) ? $zfsession->activeEntity['account_id'] : $zfsession->account;
+		$this->_entity  = isset($zfsession->activeEntity) ? $zfsession->activeEntity['entity_id'] : null;
+        $this->_where   = $this->_entity != null ? "entity_id = ".$this->_entity." and account_id = ".$this->_account : "account_id = ".$zfsession->account." and entity_id is null or entity_id = ''";	
 	}
-	
 	/**
 	 * Insert the database record
 	 * example: $table->insert($data);
 	 * @param array $data
      * @return boolean
-	 */ 
-
-	 public function insert(array $data)
-    {
+	 */
+	public function insert(array $data) {
         // add a timestamp
-        $data['template_added'] = date('Y-m-d H:i:s');
-        $data['template_code']  	= isset($data['template_code']) ? $data['template_code'] : $this->createCode();
-		$data['campaign_code']	= $this->_campaign->_campaign;
-		
+        $data['template_added']	= date('Y-m-d H:i:s');				
+        $data['account_id']	    = $this->_account;
+        $data['entity_id']	    = $this->_entity;		
 		return parent::insert($data);
-		
     }
-
-	
 	/**
 	 * Update the database record
 	 * example: $table->update($data, $where);
@@ -45,103 +33,99 @@ class class_template extends Zend_Db_Table_Abstract
 	 * @param array $data
      * @return boolean
 	 */
-    public function update(array $data, $where)
-    {
+    public function update(array $data, $where) {
         // add a timestamp
         $data['template_updated'] = date('Y-m-d H:i:s');
-        
         return parent::update($data, $where);
     }
-	
 	/**
 	 * get job by job template Id
  	 * @param string job id
      * @return object
 	 */
-	public function getByCode($code)
-	{
+	public function getById($id) {
 		$select = $this->_db->select()	
-					->from(array('template' => 'template'))
-					->joinLeft(array('campaign' => 'campaign'), 'campaign.campaign_code = template.campaign_code')	
-					->where($this->_campaign->_campaignsql)
-					->where('template_deleted = 0')
-					->where('template_code = ?', $code)
-					->limit(1);
-       
-	   $result = $this->_db->fetchRow($select);
-        return ($result == false) ? false : $result = $result;
+			->from(array('template' => 'template'))
+			->where('template_id = ?', $id)
+            ->where($this->_where)
+			->limit(1);
 
+		$result = $this->_db->fetchRow($select);
+        return ($result == false) ? false : $result = $result;
 	}
-	
 	/**
 	 * get job by job template Id
  	 * @param string job id
      * @return object
 	 */
-	public function getAll()
-	{
-		$select = $this->_db->select()	
-					->from(array('template' => 'template'))	
-					->joinLeft(array('campaign' => 'campaign'), 'campaign.campaign_code = template.campaign_code')
-					->where($this->_campaign->_campaignsql)
-					->where('template_deleted = 0');
-       
-		$result = $this->_db->fetchAll($select);
-        return ($result == false) ? false : $result = $result;
-	}	
+	public function paginate($start, $length, $filter = array()) {
 	
-	public function pairs()
-	{
+		$where	= 'template_deleted = 0';
+		$csv	= 0;
+
+		if(count($filter) > 0) {
+			for($i = 0; $i < count($filter); $i++) {
+				if(isset($filter[$i]['filter_search']) && trim($filter[$i]['filter_search']) != '') {
+					$array = explode(" ",trim($filter[$i]['filter_search']));					
+					if(count($array) > 0) {
+						$where .= " and (";
+						for($s = 0; $s < count($array); $s++) {
+							$text = $array[$s];
+							$this->sanitize($text);
+							$where .= "lower(template_code) like lower('%$text%')";
+							if(($s+1) != count($array)) {
+								$where .= ' or ';
+							}
+						}
+					}
+					$where .= ")";
+				}
+			}
+		}
+
 		$select = $this->_db->select()
-					->from(array('template' => 'template'), array('template.template_code', 'template.template_name'))
-					->joinLeft(array('campaign' => 'campaign'), 'campaign.campaign_code = template.campaign_code', array())	
-					->where($this->_campaign->_campaignsql)
-					->where('template_deleted = 0')
-					->order('template_name');
-						
-		$result = $this->_db->fetchAll($select);
-		return ($result == false) ? false : $result = $result;
-	}	
-	
-	/**
-	 * get domain by domain Account Id
- 	 * @param string domain id
-     * @return object
-	 */
-	public function getCode($code)
-	{
-		$select = $this->_db->select()	
-						->from(array('template' => 'template'))	
-					   ->where('template_code = ?', $code)
-					   ->limit(1);
+			->from(array('template' => 'template'))
+			->where($where)
+            ->where($this->_where)
+			->order('template_code desc');
 
-	   $result = $this->_db->fetchRow($select);	
-        return ($result == false) ? false : $result = $result;
-	}
-	
-	function createCode() {
-		/* New code. 
-		$code = "";
-		$codeAlphabet = "1234567890";
-
-		$count = strlen($codeAlphabet) - 1;
-		
-		for($i=0;$i<10;$i++){
-			$code .= $codeAlphabet[rand(0,$count)];
-		}
-		*/
-		
-		$code = time();
-		
-		/* First check if it exists or not. */
-		$itemCheck = $this->getCode($code);
-		
-		if($itemCheck) {
-			/* It exists. check again. */
-			$this->createCode();
+		if($csv) {
+			$result = $this->_db->fetchAll($select);
+			return ($result == false) ? false : $result = $result;	
 		} else {
-			return $code;
+			$result_count = $this->_db->fetchRow("select count(*) as query_count from ($select) as query");
+			$result = $this->_db->fetchAll($select . " limit $start, $length");
+			return ($result === false) ? false : $result = array('count'=>$result_count['query_count'],'displayrecords'=>count($result),'records'=>$result);
 		}
-	}		
+	}	
+	/**
+	 * get job by job template Id
+ 	 * @param string job id
+     * @return object
+	 */	
+	public function getTemplate($category, $code, $id = null) {
+        if($id == null) {
+            $select = $this->_db->select()	
+                ->from(array('template' => 'template'))
+                ->where("template_category = ?", $category)
+                ->where($this->_where)
+                ->where("template_deleted = 0 and template_code = ?", $code)
+                ->limit(1);
+        } else {
+            $select = $this->_db->select()
+                ->from(array('template' => 'template'))
+                ->where("template_category = ?", $category)
+                ->where("template_code = ?", $code)
+                ->where($this->_where)
+                ->where("template_deleted = 0 and template_id != ?", $id)
+                ->limit(1);
+        }
+
+		$result = $this->_db->fetchRow($select);
+		return ($result == false) ? false : $result = $result;
+	}
+
+    function sanitize(&$string) { $string = preg_replace("/[^a-zA-Z0-9_]+/", "", $string);}
+    function sanitizeArray(&$array) { for($i = 0; $i < count($array); $i++) { $array[$i] = preg_replace("/[^a-zA-Z0-9_]+/", "", $array[$i]); } }
 }
 ?>

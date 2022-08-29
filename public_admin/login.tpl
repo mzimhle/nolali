@@ -1,62 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Nolali</title>
-
-{include_php file='includes/css.php'}
-{include_php file='includes/javascript.php'}
-
-</head>
-
-<body>
-<!-- Start Main Container -->
-<div id="container">
-
-    <!-- Start Content Section -->
-  <div id="content">
-  
-  <div class="inner">
-  {include_php file='includes/header.php'}
-  	
-    <!-- Start Login Area -->
-  	<div id="login_area">
-    	<form id="loginForm" name="loginForm" method="post" target="" action="login.php">
-  		<div style="height:100px; width:200px; text-align:left;">
-            <div class="frm-group">
-                <div>Email:</div>
-                <span class="formfield">
-                <input name="email" type="text" id="email" size="35" maxlength="100" class="required frm-input email" value="" />
-                </span>
-            </div>
-            <div class="frm-group">
-                <div>Password:</div>
-                <span class="formfield">
-                <input name="password" type="password" id="password" size="35" maxlength="100"  class="frm-input required" value="" />
-                </span>
-                </div>
-            </div>
-            <div class="frm-group">
-                <div class="frm-input">
-                <a href="#" class="button" onclick="document.forms.loginForm.submit(); "><span>Login</span></a>
-            </div>
-        </div>
-        </form>
-		<br />
-        <div class="error">{$message}</div>
-        
-    </div><!-- End Login area -->
-    
-    <div class="clearer"><!-- --></div>
-    </div><!--inner-->
-  	
-    
-  </div><!-- End Content Section -->
-	
- {include_php file='includes/footer.php'}
-
-
-</div>
-<!-- End Main Container -->
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{include_php file="{$DOCUMENTROOT}/includes/meta.php"}
+  </head>
+  <body>
+    <div class="signin-wrapper">
+      <div class="signin-box">
+        <h2 class="slim-logo">
+			<img src="/images/logo.png?v=1" class="center" />
+		</h2>
+        <h2 class="signin-title-primary">Hello Administrator!</h2>
+        <h3 class="signin-title-secondary">Sign in to continue.</h3>
+		<form method="POST" action="login.php">
+        <div class="form-group">
+          <input type="text" name="account_user" id="account_user" class="form-control" placeholder="Enter your username">
+        </div><!-- form-group -->
+        <div class="form-group">
+          <input type="password" name="account_password" id="account_password" class="form-control" placeholder="Enter your password">
+        </div><!-- form-group -->
+		{if isset($message)}<div class="alert alert-danger" role="alert"><strong>{$message}</strong></div>{/if}
+        <button type="submit" class="btn btn-primary btn-block btn-signin">Log in</button>
+		</form>
+      </div><!-- signin-box -->
+    </div><!-- signin-wrapper -->
+    <script src="/library/javascript/jquery.js"></script>
+    <script src="/library/javascript/popper.js"></script>
+    <script src="/library/javascript/bootstrap.js"></script>
+  </body>
 </html>

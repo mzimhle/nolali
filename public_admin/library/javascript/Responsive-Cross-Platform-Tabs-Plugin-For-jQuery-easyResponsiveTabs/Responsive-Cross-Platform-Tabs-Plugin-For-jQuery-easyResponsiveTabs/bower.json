@@ -1,0 +1,27 @@
+{
+  "name": "jquery.easyResponsiveTabs",
+  "version": "1.2.2",
+  "homepage": "https://github.com/WerkintJs/jquery.easyResponsiveTabs",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "main": [
+    "src/jquery.easyResponsiveTabs.js",
+    "src/easy-responsive-tabs.css"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

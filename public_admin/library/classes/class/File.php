@@ -5,85 +5,79 @@ require_once 'phpThumb/ThumbLib.inc.php';
 class File {
 
 	public $allowedExtensions = array();
-	/*
+
 	public $image	= array(
-										'min'			=> array('width' => '50', 'height' => '50', 'code' => 'min_'),
-										'tiny'			=> array('width' => '120', 'height' => '120', 'code' => 'tny_'),
-										'thumb'		=> array('width' => '300', 'height' => '200', 'code' => 'tmb_'),
-										'medium'	=> array('width' => '570', 'height' => '320', 'code' => 'mdm_'),
-										'big'			=> array('width' => '536', 'height' => '480', 'code' => 'big_')
-									);
-	*/
-	public $image	= array(
-										'min'			=> array('width' => '50', 'height' => '50', 'crop' => 50, 'code' => 'min_'),
-										'tiny'			=> array('width' => '120', 'height' => '120', 'crop' => 120, 'code' => 'tny_'),
-										'thumb'		=> array('width' => '300', 'height' => '300', 'crop' => 300, 'code' => 'tmb_'),
-										'medium'	=> array('width' => '500', 'height' => '500', 'crop' => 570, 'code' => 'mdm_'),
-										'big'			=> array('width' => '560', 'height' => '560', 'crop' => 600, 'code' => 'big_')
-									);
-									
+		'tiny'			=> array('width' => '220', 'height' => '180', 'code' => 'tny_'),
+		'min'			=> array('width' => '440', 'height' => '360', 'code' => 'min_'),
+		'thumb'		=> array('width' => '660', 'height' => '540', 'code' => 'tmb_'),
+		'big'			=> array('width' => '880', 'height' => '720', 'code' => 'big_'),
+		'original'	=> array('width' => '1100', 'height' => '900', 'code' => 'orig_'),
+	);
+	
 	public $mime_types2 = array(
         'pdf' => 'application/pdf',
-		'ico' => 'image/vnd.microsoft.icon'
+		'ico' => 'image/vnd.microsoft.icon',
+		'eot' => 'application/octet-stream',
 	);
 	
     public $mime_types = array(
-            'txt' 		=> 'text/plain',
-            'htm'		=> 'text/html',
-            'html' 	=> 'text/html',
-            'php' 	=> 'text/html',
-            'css' 		=> 'text/css',
-            'js' 		=> 'application/javascript',
-            'json' 	=> 'application/json',
-            'xml' 	=> 'application/xml',
-            'swf' 		=> 'application/x-shockwave-flash',
-            'flv' 		=> 'video/x-flv',
-
-            // images
-            'png' 	=> 'image/png',
-            'jpeg' 	=> 'image/jpeg',
-            'jpg' 		=> 'image/jpeg',
-            'gif' 		=> 'image/gif',
-            'bmp' 	=> 'image/bmp',
-            'ico' 		=> 'image/x-icon',
-            'tiff' 		=> 'image/tiff',
-            'tif' 		=> 'image/tiff',
-            'svg' 	=> 'image/svg+xml',
-            'svgz' 	=> 'image/svg+xml',
-
-            // archives
-            'zip' 		=> 'application/zip',
-            'rar' 		=> 'application/x-rar-compressed',
-            'exe' 	=> 'application/x-msdownload',
-            'msi' 	=> 'application/x-msdownload',
-            'cab' 	=> 'application/vnd.ms-cab-compressed',
-
-            // audio/video
-            'mp3' 	=> 'audio/mpeg',
-            'qt' 		=> 'video/quicktime',
-            'mov' 	=> 'video/quicktime',
-
-            // adobe
-			'pdf' 		=> 'application/octet-streamn',
-            'psd' 	=> 'image/vnd.adobe.photoshop',
-            'ai' 		=> 'application/postscript',
-            'eps' 	=> 'application/postscript',
-            'ps' 		=> 'application/postscript',
-
-            // ms office
-            'doc' 		=> 'application/msword',
-            'rtf' 		=> 'application/rtf',
-            'xls' 		=> 'application/vnd.ms-excel',
-            'ppt' 		=> 'application/vnd.ms-powerpoint',
-			'docx' 		=> 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-			'csv' 		=> 'text/csv',
-            // open office
-            'odt' 		=> 'application/vnd.oasis.opendocument.text',
-            'ods' 	=> 'application/vnd.oasis.opendocument.spreadsheet',
-        );	
+		'txt' 	=> 'text/plain',
+		'htm'	=> 'text/html',
+		'html' 	=> 'text/html',
+		'php' 	=> 'text/html',
+		'css'	=> 'text/css',
+		'js' 	=> 'application/javascript',
+		'json' 	=> 'application/json',
+		'xml' 	=> 'application/xml',
+		'swf' 	=> 'application/x-shockwave-flash',
+		'flv' 	=> 'video/x-flv',
+		// fonts
+		'eot' 	=> 'application/vnd.ms-fontobject',		
+		'woff'	=> 'application/font-woff',
+		'woff2' => 'application/octet-stream',
+		'ttf'	=> 'application/octet-stream',
+		// images
+		'png' 	=> 'image/png',
+		'jpeg' 	=> 'image/jpeg',
+		'jpg' 	=> 'image/jpeg',
+		'gif' 	=> 'image/gif',
+		'bmp' 	=> 'image/bmp',
+		'ico' 	=> 'image/x-icon',
+		'tiff' 	=> 'image/tiff',
+		'tif' 	=> 'image/tiff',
+		'svg' 	=> 'image/svg+xml',
+		'svgz' 	=> 'image/svg+xml',
+		// archives
+		'zip' 	=> 'application/zip',
+		'rar' 	=> 'application/x-rar-compressed',
+		'exe' 	=> 'application/x-msdownload',
+		'msi' 	=> 'application/x-msdownload',
+		'cab' 	=> 'application/vnd.ms-cab-compressed',
+		// audio/video
+		'mp3' 	=> 'audio/mpeg',
+		'qt' 	=> 'video/quicktime',
+		'mov' 	=> 'video/quicktime',
+		// adobe
+		'pdf' 	=> 'application/octet-stream',
+		'psd' 	=> 'image/vnd.adobe.photoshop',
+		'ai' 	=> 'application/postscript',
+		'eps' 	=> 'application/postscript',
+		'ps' 	=> 'application/postscript',
+		// ms office
+		'doc' 	=> 'application/msword',
+		'rtf' 	=> 'application/rtf',
+		'xls' 	=> 'application/vnd.ms-excel',
+		'ppt' 	=> 'application/vnd.ms-powerpoint',
+		'docx' 	=> 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+		'csv' 	=> 'text/csv',
+		// open office
+		'odt' 	=> 'application/vnd.oasis.opendocument.text',
+		'ods' 	=> 'application/vnd.oasis.opendocument.spreadsheet',
+		// bank file
+		'ofx'	=> 'application/octet-stream'
+    );	
 		    		
 	function __construct($allowedExtPar = array()) {
-
 		$this->allowedExtensions = $allowedExtPar;
 	}
 	
@@ -100,7 +94,7 @@ class File {
 		if(function_exists('mime_content_type')) {
 			return mime_content_type($filename);
 		} else {
-		 $ext = strtolower(array_pop(explode('.',$filename)));
+		 $ext = @strtolower(array_pop(explode('.',$filename)));
         if (array_key_exists($ext, $this->mime_types)) {
             return $this->mime_types[$ext];
         }
@@ -117,26 +111,74 @@ class File {
 	}
 	
 	public function file_extention($filename) {
-		$extension = end(explode('.', $filename));
-		return $extension;
+		return strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 	}
 	
-	/*
-	public function file_valid_type($filename) {
-		$content_type = $this->file_content_type($filename);
-		
-		if($content_type != '') {
-			return $content_type; 
-		} else {
-			return false;
+	//resize and crop image by center
+	function resize_crop_image($max_width, $max_height, $source_file, $dst_dir, $quality = 80) {
+	
+		$imgsize	= getimagesize($source_file);
+		$width 		= $imgsize[0];
+		$height 	= $imgsize[1];
+		$mime 		= $imgsize['mime'];
+
+		switch($mime){
+			case 'image/gif':
+				$image_create = "imagecreatefromgif";
+				$image = "imagegif";
+				break;
+	 
+			case 'image/png':
+				$image_create = "imagecreatefrompng";
+				$image = "imagepng";
+				$quality = 7;
+				break;
+	 
+			case 'image/jpeg':
+				$image_create = "imagecreatefromjpeg";
+				$image = "imagejpeg";
+				$quality = 80;
+			   break;
+			   
+			 case 'image/jpg':
+				$image_create = "imagecreatefromjpeg";
+				$image = "imagejpeg";
+				$quality = 80;
+				break;
+			default:
+				return false;
+				break;
 		}
+		 
+		$dst_img = imagecreatetruecolor($max_width, $max_height);
+		$src_img = $image_create($source_file);
+		 
+		$width_new = $height * $max_width / $max_height;
+		$height_new = $width * $max_height / $max_width;
+		//if the new width is greater than the actual width of the image, then the height is too large and the rest cut off, or vice versa
+		if($width_new > $width){
+			//cut point by height
+			$h_point = (($height - $height_new) / 2);
+			//copy image
+			imagecopyresampled($dst_img, $src_img, 0, 0, 0, $h_point, $max_width, $max_height, $width, $height_new);
+		}else{
+			//cut point by width
+			$w_point = (($width - $width_new) / 2);
+			imagecopyresampled($dst_img, $src_img, 0, 0, $w_point, 0, $max_width, $max_height, $width_new, $height);
+		}
+		 
+		$image($dst_img, $dst_dir, $quality);
+	 
+		if($dst_img)imagedestroy($dst_img);
+		if($src_img)imagedestroy($src_img);
 	}
-	*/
 	
 	public function getValidateExtention($name, $ext, $i = '') {
 
 		if($i === '') {
+
 			$mime = array_search($_FILES[$name]['type'], $this->mime_types); 
+
 			if(!$mime) {
 				$mime = array_search($_FILES[$name]['type'], $this->mime_types2); 
 			}
@@ -146,8 +188,9 @@ class File {
 			} else {
 				return false;
 			}
-		} else {		
+		} else {
 			$mime = array_search($_FILES[$name]['type'][$i], $this->mime_types); 
+			
 			
 			if(!$mime) {
 				$mime = array_search($_FILES[$name]['type'][$i], $this->mime_types2); 

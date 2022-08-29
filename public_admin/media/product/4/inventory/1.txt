@@ -1,0 +1,357 @@
+Symfony 5
+=========
+
+Installation
+------------
+
+Run the command:
+> composer create-project symfony/skeleton edu      // installing composer
+> composer require symfony/asset                    // For the ability to link with assets
+> composer require sensio/framework-extra-bundle    // This is for Parameter Converter.
+> composer require doctrine                         // The database package.
+
+To view the website, run the following command, this will help you view the website ( on http://127.0.0.1:8000 ):
+> php -S 127.0.0.1:8000 -t public
+
+P.S. symfony/flex was installed right along with symfony/skeleton. Will install a package but will configure the package and add the proper files and folders for you
+
+Install database package
+------------------------
+
+After installation this will be created on the /.env file:
+
+> DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
+
+Routes
+------
+
+When a parameter is optional
+> @Route('/blog/{page?}', name='block_list', requirements={'page'='\d+'})
+
+Sessions
+--------
+
+You need:
+
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+
+Functions of a session:
+
+set it:                         $session->set('name', 'session value');
+check if it exists:             if($session->has('name'))
+remove session:                 $session->remove('name');
+clear all existing sessions:    $session->clear();
+
+POST & Get database
+------------------
+
+You need:
+
+use Symfony\Component\HttpFoundation\Request;
+
+Functions:
+
+$_GET
+    > $request->query->get('name', 'your-default-value-you-give-if-it-does-not-exist');
+$_POST
+    > $request->request->get('name');
+Ajax check
+    > $request->isXmlHttpRequest();
+$_FILES
+    > $request->files->get('uploaded-file-uploader-name-in-html');
+$_SERVER
+    > $request->server->get('HTTP_HOST');
+
+Custom Pages
+------------
+
+Make sure twig is installed with flex:
+> composer require twig
+
+Note, custom pages are all exception errors, so even the 500 or 404 errors will be displayed
+as exceptions in the 'dev' environment, so on the 'prod' environment these will be changed.
+So first change your environment from 'dev' to 'prod'.
+
+The path is:
+    \templates\bundles\TwigBundle\Exception\error404.html.twig  - 404 specific error
+    \templates\bundles\TwigBundle\Exception\error.html.twig     - all other errors
+
+Binding a service to a controller
+---------------------------------
+
+N.B.: USED IN PREHMIS:
+
+This is done in config/services.yaml, the given controller has a variable on its contructor called $logger, which comes from the monolog package:
+
+App\Controller\DefaultController:
+    bind:
+        $logger: '@monolog.logger.doctrine'
+
+DefaultController.php:
+
+We will be able to use the $logger without needing to instantiate it.
+
+public function __construct($logger) {
+    // use $logger service.
+}
+
+YAML and .ENV variables
+-----------------------
+
+Initially variables are saved in the /.env file with the format:
+# comments
+name=value
+
+But when you want to use them on the yaml files like services.yaml, etc., you will might need to get the 
+default variables if the .env file does not exist, e.g.:
+
+parameters:
+    env(PROXY_PORT): '8080'
+
+What the above says is that, if the PROXY_PORT .env variable does not exist, give it a value of 8080.
+To use it in the, for example services.yaml file, use the following:
+
+proxy:
+    host: '%env(PROXY_HOST)%'
+
+CSS and Javascript in Symfony ( Webpack Core )
+----------------------------------------------
+
+To install it first you need to have npm and node.js installed, then run the following:
+
+Create a package.json in your root folder by running the below, follow the instructions:
+> npm init
+
+Created file would have the following:
+
+{
+  "name": "symfony.loc",
+  "version": "1.0.0",
+  "description": "My educational system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mzimhle",
+  "license": "ISC"
+}
+
+Now, to install web pack after setting up your npm for your project, will be:
+> npm install @symfony/webpack-encore --save-dev    // Install webpack
+> npm install --save jquery                         // Becaure of the tutorial, we needed jquery, otherwise its not needed.
+
+Create webpack.config.js file in your root directory. Below its contents are described:
+
+Encore
+    .setOutputPath('public/build') // Files are compiled and minified will be stored
+    .setPublicPath('/build') // This is the folder that we need to create at the root of the project. Fix: We do not need to create it.  
+    .addEntry('js/custom', './assets/js/custom.js')
+    .addStyleEntry('css/custom', './assets/css/custom.css')
+
+    // P.S. The first arguments in .addEntry and .addStyleEntry is not the page but rather the folder inside /build the file will be compiled in.
+    // P.S. The first argument in .addEntry and .addStyleEntry NEEDS TO BE UNIQUE for all files.
+
+In order to not have to run web core everytime you have a change, add the --watch at the end.:
+> ./node_modules/.bin/encore production --watch
+
+
+Doctrine
+--------
+
+CRUD has been covered at work, no need to go through it, but keep in mind:
+
+$repository->find(1)                                        // One Record - Find by ID
+$repository->findOneBy(['name' => 'Mzimhle'])               // One Record - Find by a one or more specific column(s)
+$repository->findBy('name' => 'Mzimhle', ['id' => 'desc']]) // Multiple Records - Find by one or more specified column(s)
+$repository->findAll()                                      // Get everything.
+
+Parameter Converter
+*******************
+
+When you want to convert a parameter without using above doctrine functions. 
+
+Via @route:
+
+    /**
+     * @Route("/{id}", name="index")
+     */
+    public function index(Request $request, User $user) {
+        dump($user);
+    }
+
+On the above, will dump the user with the given "id", please keep in mind that the "id" is the column name found in the table 
+that references the User entity.
+
+Life Cycle Callbacks
+********************
+
+Automatic column update on event using doctrine, for example if you want to update createdAt and updatedAt columns depending
+on event of insert and update.
+
+
+    /**
+    *   @ORM\Entity(repositoryClass="...")
+    *   @ORM\HasLifecycleCallbacks()
+    *
+    */
+    class User {        
+        /*
+        *   @ORM\PrePersist
+        */
+        public function setCreatedAtValue() {
+            $this->createdAt = new \DateTime(); // Will be executed automatically when a user is INSERTED.
+        }
+    }
+
+The total list of the listeners is:
+prePersist / postPersist    = On insert before and after
+preUpdate / postUpdate      = On update before and after
+
+Database Relationships
+**********************
+
+One-to-Many & Many-to-one
+-------------------------
+
+
+We have user and video tables. User can have many videos and video can only belong to one user.
+On the video entity, the video has id, title and user.
+    Video.php
+
+    /* 
+    *   @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="videos")
+    *   @ORM\JoinColumn(nullable=true, onDelete="CASCADE")
+    */
+    private $user
+    
+    User.php
+    
+    /*
+    *   @ORM\OneToMany(targetEntity="App\Entity\Video", mappedBy="user")
+    */
+    private $videos;
+
+Automatically delete objects:
+
+onDelete="CASCADE" =    This is on the database level, where you need to specify ondelete what must happen, 
+                        like if you delete the user, the videos linked to this user must also be deleted.
+                        This is useful when you get a database error that a record cannot be deleted because of 
+                        constraints.:
+                        @ORM\JoinColumn(nullable=true, onDelete="CASCADE")
+
+One-to-One
+----------
+
+User only has exactly one address, address has exactly, one user. In this case, its unidirectional meaning it will be added
+on one entity, the user entity only.
+
+User.php
+
+/**
+ *  @ORM\OneToOne(targetEntity="App\Entity\Address", cascade={"persist", "remove"})
+ **/
+
+with cascade={"persist", "remove"}, there are two options, "persist" is that all related entity objects must also be added when adding this, "remove"
+is that when removing this one, all related entity objects must also be removed.
+
+Many-to-Many
+------------
+
+Like with twitter, a user can follow many, and many users can follow the user.
+So there will be a field called 'followed' and another one called 'following' these will just be variables on the entity, not db.
+Create another table to keep track of these called user_user.
+
+eager / lazy loading
+********************
+
+lazy loading    -   This is when you 'find' an entity of User but it will not bring back any video collection, will only bring it 
+                    when you request it using the GetVideos function.
+eager loading   -   This is the opposite of the above, but in the repository class a 'findWithVideos' function must be created where you 
+                    will have to create a query with 'createQueryBuilder'
+
+Doctrine Inheritance Mapping
+****************************
+
+P.S. Install "composer require symfony/debug-bundle" - this will allow you to dump without exiting as well as show in the console instead of the page.
+Created Author.php, Video.php, Pdf.php and a File.php ( this one will be an abstract class ). PDF.php will extend the abstract File.php
+
+So all files will be saved on File.php entity, where the PDF.php and Video.php extend it. File.php will have the id of the file.
+There are two ways these relationships can work, check below.
+
+Assuming File and Pdf entity records are in one table:
+
+File.php
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
+ * @ORM\InheritanceTtype("SINGLE_TABLE")                                    -- Tells that we keep pdf and video in one table
+ * @ORM\DiscriminatorColumn(name="type", type="string")                     -- The column name in the file table that separates the types of files
+ * @ORM\DiscriminatorMap({"video" = "Video", "pdf" = Pdf"})                 -- the type and entity of the type. type "video" is on the entity "Video".
+ */
+
+abstract class File { .... }
+
+P.S.
+...
+ * @ORM\InheritanceTtype("JOINED")              -- Where you will have 3 tables instead of one.
+...
+
+Service Parameters
+******************
+
+How to pass parameters to services. For example if a service is called as a parameter in a controller function.:
+On the config/services.yaml create the following, this is to use it on a SPECIFIC SERVICE:
+
+services:
+......
+App\Services\MyService:
+    arguments:
+        $param: 'parameter value'
+        $param2: 'parameter 2 value';
+......
+
+But now, if you want to use the same parameter else where in other services:
+
+parameters:
+    admin_email: admin@admin.com
+services:
+......
+......
+    App\Services\MyService:
+        arguments:
+            $param: 'parameter value'
+            $param2: 'parameter 2 value';
+            $adminEmail: '%admin_email%';
+
+So your sercie class will look like this:
+
+class MyService {
+    public function __construct($param, $param2, $adminEmail) {
+          .... 
+    }
+}
+
+If you want to use a a parameter in EVERY SERVICE defined in the services.yam
+
+....
+services:
+    ....
+    bind:
+        $globalParam: 'global parameter to be used by all services defined in services.yam value'
+....
+
+Now your MyService class will look like this:
+
+class MyService {
+    public function __construct($param, $param2, $adminEmail, $globalParam) {
+          .... 
+    }
+}
+
+If you want to pass a service or entity as a parameter via the services.yaml file, it needs to happen this way, you need to add the @ sign in front:
+services:
+......
+......
+    App\Services\My2ndService:
+        arguments:
+            $param: '@App\Entity\User'

@@ -1,30 +1,111 @@
-<div id="header">
-    <!-- Start Heading -->
-        
-    <div id="heading">
-        <div id="ct_logo">
-
-        </div>
+<div class="slim-header">
+  <div class="container">
+	<div class="slim-header-left">
+	  <h2 class="slim-logo">
+		<a href="/">
+			<img src="/images/header_logo.png" class="center" />
+		</a>
+	  </h2>
+	</div><!-- slim-header-left -->
+	<div class="slim-header-right">
+	  <div class="dropdown dropdown-c">
+		<a href="#" class="logged-user" data-toggle="dropdown">
+            {if isset($activeEntity)}
+		  <span>{$activeEntity.account_name} - {$activeEntity.account_type|lower|ucfirst}{if isset($activeEntity)} ( {$activeEntity.entity_name} ){/if}</span>
+            {else}          
+		  <span>{$activeAccount.account_name} - {$activeAccount.account_type|lower|ucfirst}{if isset($activeEntity)} ( {$activeEntity.entity_name} ){/if}</span>
+           {/if}
+           <i class="fa fa-angle-down"></i>
+		</a>
        
-    </div><!-- End Heading -->
-	 {if isset($admin)}
-    <!-- Start Top Nav -->
-    <div id="topnav"> 
-            <ul>
-                <li><a href="/" title="Home" {if $page eq 'default.php' or $page eq ''} class="active"{/if}>Home</a></li>				
-				<li><a href="/campaign/" title="Campaign" {if $page eq 'campaign'} class="active"{/if}>Campaign</a></li>
-				<li><a href="/products/" title="Products" {if $page eq 'products'} class="active"{/if}>Products</a></li>
-				<li><a href="/website/" title="Website" {if $page eq 'website'} class="active"{/if}>Website</a></li>
-            </ul>
-    </div><!-- End Top Nav -->
-  <div class="clearer"><!-- --></div>
-  {/if}
-</div><!--header-->
-{if isset($admin)}
-    <div class="logged_in">
-        <ul>
-            <li><a href="/logout.php" title="Logout">Logout</a></li>
-        </ul>
-    </div><!--logged_in-->
-	{/if}
-  	<br />
+		<div class="dropdown-menu dropdown-menu-right">
+		  <nav class="nav">
+            <a href="/account/details.php?id={$activeAccount.account_id}" class="nav-link"><i class="icon ion-person"></i> Edit Account</a>
+			<a href="/logout.php" class="nav-link"><i class="icon ion-forward"></i> Log Out</a>
+		  </nav>
+		</div><!-- dropdown-menu -->
+	  </div><!-- dropdown -->
+	</div><!-- header-right -->
+  </div><!-- container -->
+</div><!-- slim-header -->
+<div class="slim-navbar">
+  <div class="container">
+	<ul class="nav">
+	  <li class="nav-item {if $currentPage eq ''}active{/if}">
+		<a class="nav-link" href="/">
+		  <i class="icon ion-ios-home-outline"></i>
+		  <span>Dashboard</span>
+		</a>
+	  </li>
+      {if $activeAccount.account_type eq 'SUPER' && !isset($activeEntity)}
+	  <li class="nav-item {if $currentPage eq 'account'}active{/if}">
+		<a class="nav-link" href="/account/">
+		  <i class="icon ion-ios-analytics-outline"></i>
+		  <span>Account</span>
+		</a>
+	  </li>      
+      {/if}      
+	  {if isset($activeAccount) && !isset($activeEntity)}
+	  <li class="nav-item {if $currentPage eq 'entity'}active{/if}">
+		<a class="nav-link" href="/entity/">
+		  <i class="icon ion-ios-analytics-outline"></i>
+		  <span>Entity</span>
+		</a>
+	  </li>
+      <li class="nav-item {if $currentPage eq 'product'}active{/if}">
+        <a class="nav-link" href="/product/">
+		  <i class="icon ion-ios-chatboxes-outline"></i>
+		  <span>Product</span>
+		</a>
+	  </li>       
+      <li class="nav-item {if $currentPage eq 'invoice'}active{/if}">
+        <a class="nav-link" href="/invoice/">
+		  <i class="icon ion-ios-chatboxes-outline"></i>
+		  <span>Invoice</span>
+		</a>	
+	  </li> 
+	  <li class="nav-item {if $currentPage eq 'template'}active{/if}">
+		<a class="nav-link" href="/template/">
+		  <i class="icon ion-ios-analytics-outline"></i>
+		  <span>Template</span>
+		</a>
+	  </li>
+      {/if}
+      {if isset($activeAccount) && isset($activeEntity)}
+	  <li class="nav-item {if $currentPage eq 'template'}active{/if}">
+		<a class="nav-link" href="/template/">
+		  <i class="icon ion-ios-analytics-outline"></i>
+		  <span>Template</span>
+		</a>
+	  </li>      
+      <li class="nav-item {if $currentPage eq 'product'}active{/if}">
+        <a class="nav-link" href="/product/">
+		  <i class="icon ion-ios-chatboxes-outline"></i>
+		  <span>Product</span>
+		</a>
+	  </li>      
+      <li class="nav-item {if $currentPage eq 'invoice'}active{/if}">
+        <a class="nav-link" href="/invoice/">
+		  <i class="icon ion-ios-chatboxes-outline"></i>
+		  <span>Invoice</span>
+		</a>	
+	  </li>
+    <li class="nav-item with-sub ">
+    <a class="nav-link" href="#" data-toggle="dropdown">
+      <i class="icon ion-ios-chatboxes-outline"></i>
+      <span>Content</span>
+    </a>
+    <div class="sub-item">
+      <ul>
+        <li><a href="/content/article/">Article</a></li>
+        <li><a href="/content/announcement/">Announcement</a></li>
+        <li><a href="/content/event/">Event</a></li>
+        <li><a href="/content/gallery/">Gallery</a></li>
+        <li><a href="/content/news/">News</a></li>
+      </ul>
+    </div>	
+    </li>      
+      {/if}      
+	</ul>
+  </div><!-- container -->
+</div><!-- slim-navbar -->

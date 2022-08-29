@@ -1,35 +1,74 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Nolali</title>
-{include_php file='includes/css.php'}
-{include_php file='includes/javascript.php'} 
-</head>
-<body>
-<!-- Start Main Container -->
-<div id="container">
-    <!-- Start Content Section -->
-  <div id="content">
-    {include_php file='includes/header.php'}
-  <div class="inner">  
-   <h2>Nolali</h2>	
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{include_php file="{$DOCUMENTROOT}/includes/meta.php"}
+    <!-- Meta -->
+    <meta name="description" content="Share Manager">
+    <meta name="author" content="Share Manager">
+    <title>Share Manager</title>
+  </head>
+  <body class="dashboard-4">
+	{include_php file="{$DOCUMENTROOT}/includes/header.php"}
+    <div class="slim-mainpanel">
+      <div class="container pd-t-50">  
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="tx-inverse mg-b-15">Welcome back administrator!</h3>
+            <p class="mg-b-20">Welcome to the Yam Accounting Solution backend system, here you will be able to over see all activities by all clients</p>
+			<form action="/" method="POST">
+				<div class="row">	
+					<div class="col-sm-6">			  
+						<div class="form-group has-error">
+							<label for="account_id">Account</label>
+							<select id="account_id" name="account_id" class="form-control is-invalid">
+							<option value=""> -- Select an account -- </option>
+							{html_options options=$accountPairs selected=$account|default:''}
+							</select>
+							<code>Please add the account of the entity</code>								
+						</div>
+					</div>						
+					<div class="col-md-6">					
+						<div class="form-group">
+							<label>Select Entity</label>
+							<select class="form-control" id="entity_id" name="entity_id">
+								<option value=""> --- Select an entity --- </option>
+							</select>
+						</div>
+					</div>				
+				</div>
+				<div class="form-actions text-left">
+					<input type="submit" value="Select" class="btn btn-primary" />
+				</div>	
+			</form>			
+          </div><!-- col-6 -->
+        </div><!-- row -->	
+		<hr />
+		</div><!-- container -->
+    </div><!-- slim-mainpanel -->
+	{include_php file="{$DOCUMENTROOT}/includes/footer.php"}
+	{literal}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			changeEntity();
+			$("#account_id").change(function() {
+				changeEntity();
+			});			
+		});
 
-  <div class="clearer"><!-- --></div>
-  <div class="section">
-  	<a href="/campaign/" title="Manage Campaign"><img src="/images/users.gif" alt="Manage Participant Category" height="50" width="50" /></a>
-  	<a href="/campaign/" title="Manage Campaign" class="title">Manage Campaign</a>
-  </div>   
-  <div class="section mrg_left_50">
-  	<a href="/products/" title="Manage Products"><img src="/images/users.gif" alt="Manage Products" height="50" width="50" /></a>
-  	<a href="/products/" title="Manage Products" class="title">Manage Products</a>
-  </div>   
- 
-    <div class="clearer"><!-- --></div>   
-    </div><!--inner-->
-  </div><!-- End Content Section -->
- {include_php file='includes/footer.php'}
-</div>
-<!-- End Main Container -->
-</body>
+		function changeEntity() {
+			$.ajax({
+				type: "GET",
+				url: "default.php",
+				data: "getentity="+$('#account_id').val(),
+				dataType: "html",
+				success: function(html){
+					$('#entity_id').html(html);
+				}
+			});
+		}
+	</script>
+	{/literal}
+  </body>
 </html>

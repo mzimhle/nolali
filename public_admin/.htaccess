@@ -1,10 +1,9 @@
-<IfModule mod_rewrite.c>
-
 RewriteEngine On
 
 RewriteBase /
 
-DirectoryIndex index.php default.php
+DirectoryIndex default.php
 
-Options Includes FollowSymLinks MultiViews
-
+############################################################## MAILERS
+RewriteRule ^mailer/view/([^/\.]+)/?$			mailer/view.php?code=$1			[QSA,L]
+RewriteRule ^mailer/tracking/([^/\.]+)/?$		mailer/tracking.php?tracking=$1	[QSA,L]

@@ -1,137 +1,187 @@
 <?php
 
-require_once 'campaign.php';
-require_once '_productpriceitem.php';
-
+require_once 'class/template.php';
+require_once 'SendGrid/Response.php';
+require_once 'SendGrid/Client.php';
+require_once 'SendGrid/SendGrid.php';
+require_once 'SendGrid/Mail.php';
+require_once 'SendGrid/Attachment.php';
+require_once 'class/File.php';
 //custom account item class as account table abstraction
 class class_comm extends Zend_Db_Table_Abstract
 {
    //declare table variables
-    protected $_name 		= '_comm';
+    protected $_name	= '_comm';
 	protected $_primary	= '_comm_code';
-	
-	public $_campaign			= null;
-	public $_productpriceitem	= null;
-	public $_SMS					= null;
-	
-	function init()	{
-		
-		global $zfsession;
 
-		$this->_campaign				= new class_campaign();
-		$this->_productpriceitem	= new class_productpriceitem();
-		
-		$this->_SMS						= $this->_productpriceitem->getBySinglePrice('SMS');
-		
-	}
+	public $_template	= null;
+	public $_File		= null;
+
+	public $_path	= null;
+	public $_host	= null;
 	
+	public $_config		= null;
+	public $_sendgrid	= null;
+	public $_client		= null;
+	public $_mail		= null;
+	public $_response	= null;
+
+	function init()	{
+		global $zfsession;
+		$this->_template	= new class_template();
+		$this->_File        = new File();
+		$this->_path        = isset($zfsession->config['path']) ? $zfsession->config['path'] : null;
+		$this->_host        = isset($zfsession->config['site']) ? $zfsession->config['site'] : null;
+		$this->_config		= isset($zfsession->config) ? $zfsession->config : null;
+	}
 	/**
 	 * Insert the database record
 	 * example: $table->insert($data);
 	 * @param array $data
      * @return boolean
 	 */ 
-
 	public function insert(array $data) {
         // add a timestamp
-        $data['_comm_added'] 	= date('Y-m-d H:i:s');
-        $data['_comm_code'] 	= isset($data['_comm_code']) ? $data['_comm_code'] : $this->createReference();        		
-		$data['campaign_code']	= $this->_campaign->_campaigncode;
-		
+        $data['_comm_added']	= date('Y-m-d H:i:s');
+        $data['_comm_code'] 	= isset($data['_comm_code']) ? $data['_comm_code'] : $this->createCode();
 		return parent::insert($data);		
     }
-	
 	/**
 	 * get job by job _comm Id
  	 * @param string job id
      * @return object
 	 */
-	public function viewComm($code) {
+	public function viewComm($id) {
 		$select = $this->_db->select()	
-					->from(array('_comm' => '_comm'))		
-					->joinLeft('campaign', 'campaign.campaign_code = _comm.campaign_code and campaign_deleted = 0')						
-					->joinLeft('participant', 'participant.participant_code = _comm.participant_code and participant_deleted = 0')		
-					->where($this->_campaign->_campaignsql)
-					->where('_comm_code = ?', $code)					
-					->limit(1);
+			->from(array('_comm' => '_comm'))				
+			->where('_comm_code = ?', $id)					
+			->limit(1);
        
-	   $result = $this->_db->fetchRow($select);
+	    $result = $this->_db->fetchRow($select);
         return ($result == false) ? false : $result = $result;
-	}	
-	
+	}
 	/**
 	 * get job by job _comm Id
  	 * @param string job id
      * @return object
 	 */
-	public function getByCode($code)
-	{		
-		$select = $this->_db->select()	
-					->from(array('_comm' => '_comm'))				
-					->joinLeft('campaign', 'campaign.campaign_code = _comm.campaign_code and campaign_deleted = 0')	
-					->joinLeft('participant', 'participant.participant_code = _comm.participant_code and participant_deleted = 0')	
-					->where($this->_campaign->_campaignsql)					
-					->where('_comm_code = ?', $code)					
-					->limit(1);
-       
-	   $result = $this->_db->fetchRow($select);
-        return ($result == false) ? false : $result = $result;
+	public function sendEmail($recepient, $attach = array()) {
 
-	}
-	
-	public function getByCategoryReference($category, $reference) {
-	
-		$select = $this->_db->select()	
-					->from(array('_comm' => '_comm'))	
-					->joinLeft('campaign', 'campaign.campaign_code = _comm.campaign_code and campaign_deleted = 0')	
-					->joinLeft('participant', 'participant.participant_code = _comm.participant_code and participant_deleted = 0')
-					->where($this->_campaign->_campaignsql)
-					->where('_custom_reference = ?', $reference)
-					->where('_custom_category = ?', $category);	
+		global $smarty;
 
-		$result = $this->_db->fetchAll($select);
-		return ($result == false) ? false : $result = $result;	
-	}
-	
-	public function getAll($where = '_comm_added != \'\'', $order = '_comm_added asc') {		
-	
-		$select = $this->_db->select()	
-					->from(array('_comm' => '_comm'))	
-					->joinLeft('campaign', 'campaign.campaign_code = _comm.campaign_code and campaign_deleted = 0')	
-					->joinLeft('participant', 'participant.participant_code = _comm.participant_code and participant_deleted = 0')
-					->where($this->_campaign->_campaignsql)
-					->where($where)
-					->order($order);	
+		$data               = array();
+        $data['_comm_code']	= $this->createCode();
 
-		$result = $this->_db->fetchAll($select);
-		return ($result == false) ? false : $result = $result;
+		$file = $this->_path.$recepient['template_file'];
+
+		$html = file_get_contents($file);
+		/* Other details. */
+		$html = str_replace('[tracking]', $data['_comm_code'], $html);		
+		$html = str_replace('[date]', date("F j, Y, g:i a"), $html);
+		$html = str_replace('[browser]', '<a style="text-decoration: none;color: black;" href="[host]/mailer/view/'.$data['_comm_code'].'">View mail on browser</a>', $html);
+		$html = str_replace('[unsubscribe]', '<a style="text-decoration: none;" href="[host]/mailer/unsubscribe/'.$data['_comm_code'].'">Click to unsubscribe</a>', $html);
+		$html = str_replace('[track]', '<img src="[host]/mailer/tracking/'.$data['_comm_code'].'" width="0" height="0" border="0"  />', $html);
+		/* Body */
+		foreach($recepient as $key => $value) {
+			if(!is_array($value)) $html = str_replace("[$key]", $value, $html);
+		}
+		/* Subject */
+		foreach($recepient as $key => $value) {
+			if(!is_array($value)) $recepient['template_subject'] = str_replace("[$key]", $value, $recepient['template_subject']);
+		}
+		if(isset($recepient['recipient_message'])) $html = str_replace('[message]', $recepient['recipient_message'], $html);
+		if(isset($recepient['recipient_media'])) $html = str_replace('[mediapath]', $recepient['recipient_media'], $html);
+
+		if(isset($this->_host)) $html = str_replace('[host]', $this->_host, $html);	
+		if(isset($this->_config['admin'])) $html = str_replace('[admin]', $this->_config['admin'], $html);	
+		$html = str_replace('[site]', $_SERVER['HTTP_HOST'], $html);	
+		/* Setup email. */
+		$email_from		= new Email($recepient['recipient_from_name'], $recepient['recipient_from_email']);
+		$email_to		= new Email($recepient['recipient_name'], $recepient['recipient_email']);
+		$email_content	= new Content("text/html", $html);
+
+		$mail 			= new Mail($email_from, $recepient['template_subject'], $email_to, $email_content);
+		$email_sendgrid	= new SendGrid($this->_config['sendGrid_api']);
+		/* If we have attachments, add them here. */
+		$attachment = array();
+		if(count($attach) !== 0) {
+			for($i = 0; $i < count($attach); $i++) {
+				$mime = $this->_File->file_content_type($attach[$i]);
+				if($mime != '') {
+					$attachment[$i] = new Attachment();
+					$attachment[$i]->setContent(base64_encode(file_get_contents($attach[$i])));
+					$attachment[$i]->setType($mime);
+					$attachment[$i]->setFilename(basename($attach[$i]));
+					$attachment[$i]->setDisposition("attachment");
+					$attachment[$i]->setContentId(basename($attach[$i]));
+					$mail->addAttachment($attachment[$i]);
+				} else {
+					return false;
+				}
+			}
+		}
+		/* Send email. */
+		$response = $email_sendgrid->client->mail()->send()->post($mail);
+		/* Save data to the comms table. */
+		$data['_comm_sent']         = null;
+		$data['_comm_type']         = 'EMAIL';				
+		$data['_comm_name']         = $recepient['recipient_name'];
+		$data['_comm_item_type']    = $recepient['recipient_type'];
+		$data['_comm_item_id']		= $recepient['recipient_id'];
+		$data['_comm_sent']         = null;
+		$data['_comm_email']        = $recepient['recipient_email'];
+		$data['_comm_html']         = $html;
+		$data['_commstatus_code']   = $response->statusCode();
+		$data['_comm_message']      = isset($recepient['recipient_message']) ? $recepient['recipient_message'] : null;
+		$data['_comm_subject']      = $recepient['template_subject'];
+		$data['template_id']        = $recepient['template_id'];
+		/* Send the email. */
+		if((int)$data['_commstatus_code'] >= 200 && (int)$data['_commstatus_code'] <= 299) {
+			$data['_comm_sent']		= 1;
+			$data['_comm_output']	= 'Success!';
+		} else {
+			$data['_comm_output']	= 'Failed';	
+		}
+		return $this->insert($data);
 	}
-	
-	public function sendSMS($message, $participant) {		
+	/**
+	 * get job by job _comm Id
+ 	 * @param string job id
+     * @return object
+	 */
+	public function sendSMS($recepient) {
+
+		$user 		= urlencode($this->_config['clickatell_user']);
+		$password 	= urlencode($this->_config['clickatell_password']);
+		$api_id		= urlencode($this->_config['clickatell_api_id']);
+		$baseurl 	= $this->_config['clickatell_baseurl']; 
 		
-		$user 			= "willowvine"; 
-		$password 	= "DUJbgGdNRXROaA"; 
-		$api_id 			= "3420082"; 
-		$baseurl 		="http://api.clickatell.com"; 
-		$text 			= urlencode($message); 
-		$to 				= $participant['participant_cellphone']; 
-		
-		$successCounter	= 0;
-		$failCounter			= 0;
+		$text = $recepient['template_message']; 
+		$to	= trim($recepient['recipient_cellphone']);
+		/* Body */
+		foreach($recepient as $key => $value) {
+			$text = str_replace("[$key]", $value, $text);
+		}
+		/* Check number of characters. */
+		$number	= strlen($text)/160;				// 160 is the maximum characters allowed for one sms.
+		$whole		= floor($number);					// Get the current number. 
+		$fraction	= (($number - $whole) > 0 ? 1 : 0);	// Check if there are any more out there
+		$unites		= $whole + $fraction;				// Add if there are extra characters left over
 		
 		$data								= array();
-		$data['_comm_code']			= $this->createReference();
-		$data['participant_code']	= $participant['participant_code'];
-		$data['_comm_type']			= 'SMS';
-		$data['_comm_name']		= $participant['participant_name'].' '.$participant['participant_surname'];
-		$data['_comm_cell']			= $participant['participant_cellphone'];
-		$data['_comm_email']		= $participant['participant_email'];
-		$data['_comm_cost']			= $this->_SMS['_productpriceitem_price'];
-		$data['_comm_message']	= trim($message);
-		$data['_comm_sent']			= 0;		
-		$data['_comm_reference']	= $participant['reference'];
-					
-		if( preg_match( "/^0[0-9]{9}$/", trim($participant['participant_cellphone']))) {
+		$data['_comm_sent']			= null;
+		$data['_comm_type']			= 'SMS';		
+		$data['_comm_name']		    = $recepient['recipient_name'];
+		$data['_comm_item_type']	= $recepient['recipient_type'];
+		$data['_comm_item_id']	    = $recepient['recipient_id'];
+		$data['_comm_cellphone']	= $recepient['recipient_cellphone'];
+		$data['_comm_message']	    = $text;
+		$data['_comm_subject']		= $recepient['template_subject'];
+		$data['template_id']		= $recepient['template_id'];
+		$data['_comm_unit']			= $unites;	
+		$text = urlencode($text); 
+		
+		if( preg_match( "/^0[0-9]{9}$/", $to)) {
 			
 			$url = "$baseurl/http/auth?user=$user&password=$password&api_id=$api_id"; 
 
@@ -165,242 +215,50 @@ class class_comm extends Zend_Db_Table_Abstract
 				$data['_comm_sent']		= 0;	  
 			} 
 		} else {
-			$data['_comm_output']	=  "Invalid number ".$participant['participant_cellphone'];	
+			$data['_comm_output']	=  "Invalid number ".$member['member_number'];	
 			$data['_comm_sent']		= 0;		  
 		}
 		
 		$this->insert($data);
-		$return = $data['_comm_sent'] == 1 ? $data['_comm_code'] : false;
-		return $return;
 		
+		return $data['_comm_sent'];
 	}
-	
-	public function sendEmail($participant, $message, $subject, $file = null, $content = null) {
 
-		// require 'config/smarty.php';
-		global $smarty;
-		
-		require_once('Zend/Mail.php');
-		
-		$mail = new Zend_Mail();
-		
-		$data						= array();
-		$data['_comm_code']	= $this->createReference();
-		
-		$smarty->assign('tracking', $data['_comm_code']);
-		$smarty->assign('participant', $participant);
-		$smarty->assign('message', $message);
-		$smarty->assign('domain', $_SERVER['HTTP_HOST']);
-				
-		$template = $file == null ? $content : $smarty->fetch($file);
-		
-		$template = str_replace('[email]', $participant['participant_email'], $template);
-		$template = str_replace('[tracking]', $data['_comm_code'], $template);
-		$template = str_replace('[fullname]', $participant['participant_name'].' '.$participant['participant_surname'], $template);
-		$template = str_replace('[participantcode]', $participant['participant_code'], $template);
-		
-		$mail->setFrom($participant['campaign_email'], $participant['campaign_name']); //EDIT!!											
-		$mail->addTo($participant['participant_email']);
-		$mail->setSubject($subject);
-		$mail->setBodyHtml($template);			
-
-		/* Save data to the comm table. */
-		$data['participant_code']		= $participant['participant_code'];
-		$data['_comm_type']				= 'EMAIL';
-		$data['_comm_name']			= $participant['participant_name'].' '.$participant['participant_surname'];
-		$data['_comm_sent']				= null;
-		$data['_comm_email']			= $participant['participant_email'];
-		$data['_comm_cell']				= $participant['participant_cellphone'];
-		$data['_comm_cost']				= isset($participant['participant_cost']) ? $participant['participant_cost'] : null;
-		$data['_comm_html']				= $template;
-		$data['_comm_reference']		= $participant['_comm_reference'];
-		$data['_custom_category'] 		= isset($participant['_custom_category']) ? $participant['_custom_category'] : null;
-		$data['_custom_reference'] 	= isset($participant['_custom_reference']) ? $participant['_custom_reference'] : null;
-				
-		$this->insert($data);
-
-		try {
-			$mail->send();
-			$data['_comm_sent']	= 1;	
-			$data['_comm_output']	= 'Email Sent!';
-			
-		} catch (Exception $e) {
-			$data['_comm_sent']		= 0;	
-			$data['_comm_output']	= $e->getMessage();
-		}
-		
-		$where = $this->getAdapter()->quoteInto('_comm_code = ?', $data['_comm_code']);
-		$success = $this->update($data, $where);
-		
-		$mail = null; unset($mail);
-		$return = $data['_comm_sent'] == 1 ? $data['_comm_code'] : false;
-		return $return;
-	}
-	
-	public function sendEmailAdmin($administrator, $message, $subject, $file) {
-
-		// require 'config/smarty.php';
-		global $smarty;
-		
-		require_once('Zend/Mail.php');
-		
-		$mail = new Zend_Mail();
-		
-		$data						= array();
-		$data['_comm_code']	= $this->createReference();
-		
-		$smarty->assign('tracking', $data['_comm_code']);
-		$smarty->assign('administrator', $administrator);
-		$smarty->assign('message', $message);
-		$smarty->assign('domain', $_SERVER['HTTP_HOST']);
-				
-		$template = $smarty->fetch($file);
-		
-		$mail->setFrom($administrator['campaign_email'], $administrator['campaign_name']); //EDIT!!											
-		$mail->addTo($administrator['administrator_email']);
-		$mail->setSubject($subject);
-		$mail->setBodyHtml($template);			
-
-		/* Save data to the comm table. */
-		$data['administrator_code']	= $administrator['administrator_code'];
-		$data['_comm_type']				= 'EMAIL';
-		$data['_comm_name']			= $administrator['administrator_name'].' '.$administrator['administrator_surname'];
-		$data['_comm_sent']				= null;
-		$data['_comm_email']			= $administrator['administrator_email'];
-		$data['_comm_cell']				= $administrator['administrator_cellphone'];
-		$data['_comm_html']				= $template;
-		$data['_comm_reference']		= isset($administrator['_comm_reference']) ? $administrator['_comm_reference'] : null;
-		$data['_custom_category'] 		= isset($administrator['_custom_category']) ? $administrator['_custom_category'] : null;
-		$data['_custom_reference'] 	= isset($administrator['_custom_reference']) ? $administrator['_custom_reference'] : null;
-				
-		$this->insert($data);
-
-		try {
-			$mail->send();
-			$data['_comm_sent']	= 1;	
-			$data['_comm_output']	= 'Email Sent!';
-			
-		} catch (Exception $e) {
-			$data['_comm_sent']		= 0;	
-			$data['_comm_output']	= $e->getMessage();
-		}
-		
-		$where = $this->getAdapter()->quoteInto('_comm_code = ?', $data['_comm_code']);
-		$success = $this->update($data, $where);
-		
-		$mail = null; unset($mail);
-		$return = $data['_comm_sent'] == 1 ? $data['_comm_code'] : false;
-		return $return;
-	}
-	
 	/**
 	 * get domain by domain Account Id
  	 * @param string domain id
      * @return object
 	 */
-	public function getCode($reference)
+	public function getCode($code)
 	{
 		$select = $this->_db->select()	
-						->from(array('_comm' => '_comm'))		
-					   ->where('_comm_code = ?', $reference)
-					   ->limit(1);
+			->from(array('_comm' => '_comm'))		
+			->where('_comm_code = ?', $code)
+			->limit(1);
 
 	   $result = $this->_db->fetchRow($select);
         return ($result == false) ? false : $result = $result;				   		
 	}
-	
-	public function getCampaignSMSDetails() {
-		
-		$select = "select 
-							pci.campaign_code,	
-							pci._productpriceitem_code,
-							ppi._productprice_code,
-							ifnull(_c.sms_count_sent, 0) sms_count_sent,
-							(ifnull(_c.sms_count_sent, 0) * ppi._productpriceitem_price) sms_sent_cost,
-							sum(pci._productcampaignitem_count) sms_count_total,
-							(sum(pci._productcampaignitem_count) * ppi._productpriceitem_price) sms_total_cost,
-							sum(pci._productcampaignitem_count) - ifnull(_c.sms_count_sent, 0) sms_count_remainding
-						from 
-							_productcampaignitem pci
-								left join (select campaign_code,	count(_comm_code) sms_count_sent from _comm where campaign_code = ? and _comm_sent = 1 and _comm_type = 'SMS' group by campaign_code) _c on _c.campaign_code = pci.campaign_code,
-							_productpriceitem ppi,
-							_productprice pp
-						where 
-							pci.campaign_code = ?
-							and ppi._productpriceitem_code = pci._productpriceitem_code
-							and ppi._productprice_code = 'SMS'
-							and pp._productprice_code = ppi._productprice_code
-							and ppi._productpriceitem_active = 1 and ppi._productpriceitem_deleted = 0
-							and pp._productprice_active = 1 and pp._productprice_deleted = 0
-							and pci._productcampaignitem_active = 1 and pci._productcampaignitem_deleted = 0
-						group by
-							pci.campaign_code,	
-							pci._productpriceitem_code,
-							ppi._productprice_code;";
-							
-	   $result = $this->_db->fetchRow($select, array($this->_campaign->_campaigncode, $this->_campaign->_campaigncode));
-       return ($result == false) ? false : $result = $result;
-	   
-	}
-	
-	public function getCampaignEmailDetails() {
-		
-		$select = "select 
-							pci.campaign_code,	
-							pci._productpriceitem_code,
-							ppi._productprice_code,
-							ifnull(_c.email_count_sent, 0) email_count_sent,
-							(ifnull(_c.email_count_sent, 0) * ppi._productpriceitem_price) email_sent_cost,
-							sum(pci._productcampaignitem_count) email_count_total,
-							(sum(pci._productcampaignitem_count) * ppi._productpriceitem_price) email_total_cost,
-							sum(pci._productcampaignitem_count) - ifnull(_c.email_count_sent, 0) email_count_remainding
-						from 
-							_productcampaignitem pci
-								left join (select campaign_code,	count(_comm_code) email_count_sent from _comm where campaign_code = ? and _comm_sent = 1 group by campaign_code) _c on _c.campaign_code = pci.campaign_code,
-							_productpriceitem ppi,
-							_productprice pp
-						where 
-							pci.campaign_code = ?
-							and ppi._productpriceitem_code = pci._productpriceitem_code
-							and ppi._productprice_code = 'VJMU'
-							and pp._productprice_code = ppi._productprice_code 
-							and ppi._productpriceitem_active = 1 and ppi._productpriceitem_deleted = 0
-							and pp._productprice_active = 1 and pp._productprice_deleted = 0
-							and pci._productcampaignitem_active = 1 and pci._productcampaignitem_deleted = 0							
-						group by
-							pci.campaign_code,	
-							pci._productpriceitem_code,
-							ppi._productprice_code;";
-							
-	   $result = $this->_db->fetchRow($select, array($this->_campaign->_campaigncode, $this->_campaign->_campaigncode));
-       return ($result == false) ? false : $result = $result;
-	   
-	}
-	
-	function createReference() {
+	/**
+	 * get domain by domain Account Id
+ 	 * @param string domain id
+     * @return object
+	 */
+	function createCode() {
 		/* New reference. */
 		$reference = "";
-		$codeAlphabet = "123456789";
-
+		$codeAlphabet = "abcdefghijklmnopqrstuvwxyz0123456789";
 		$count = strlen($codeAlphabet) - 1;
-		
-		for($i=0;$i<15;$i++) {
-			$reference .= $codeAlphabet[rand(0,$count)];
-		}
-		
+		for($i=0;$i<10;$i++) { $reference .= $codeAlphabet[rand(0,$count)]; }
+		$reference = md5($reference.date('YmdHis'));
 		/* First check if it exists or not. */
 		$itemCheck = $this->getCode($reference);
-		
 		if($itemCheck) {
 			/* It exists. check again. */
-			$this->createReference();
+			$this->createCode();
 		} else {
 			return $reference;
 		}
 	}
-
-	function reference() {
-		return date('Y-m-d-H:i:s');
-	}	
 }
 ?>
