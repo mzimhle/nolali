@@ -29,21 +29,6 @@ class class_media extends Zend_Db_Table_Abstract
         $data['media_updated'] = date('Y-m-d H:i:s');
         return parent::update($data, $where);
     }
-	/**
-	 * get job by job media Id
- 	 * @param string job id
-     * @return object
-	 */
-	public function getByCode($code) {	
-		$select = $this->_db->select()	
-            ->from(array('media' => 'media'))
-            ->where('media_deleted = 0')
-            ->where('media_id = ?', $code)
-            ->limit(1);
-
-		$result = $this->_db->fetchRow($select);
-        return ($result == false) ? false : $result = $result;
-	}
 	
 	/**
 	 * get job by job media Id
@@ -89,26 +74,25 @@ class class_media extends Zend_Db_Table_Abstract
         return ($result == false) ? false : $result = $result;	
 	}
 	
-	public function updatePrimary($type, $reference, $code, $category = 'IMAGE') {
+	public function updatePrimary($type, $id, $code, $category = 'IMAGE') {
 
-		$item = $this->getPrimary($type, $code, $category);
+		$item = $this->getPrimary($type, $id, $category);
 
 		if($item) {
-
-			$data							= array();
-			$where							= array();
+			$data                   = array();
+			$where                  = array();
 			$data['media_primary']	= 0;
-			
+
 			$where[]	= $this->getAdapter()->quoteInto('media_item_type = ?', $type);
-			$where[]	= $this->getAdapter()->quoteInto('media_item_id = ?', $code);
+			$where[]	= $this->getAdapter()->quoteInto('media_item_id = ?', $id);
 			$where[]	= $this->getAdapter()->quoteInto('media_category = ?', $category);
 			$success	= $this->update($data, $where);				
 		}
 
-		$data					= array();
-		$data['media_primary']	= 1;
+		$data                   = array();
+		$data['media_primary']  = 1;
 
-		$where		= $this->getAdapter()->quoteInto('media_id = ?', $reference);
+		$where		= $this->getAdapter()->quoteInto('media_id = ?', $code);
 		$success	= $this->update($data, $where);
 
 		return $success;

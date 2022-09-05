@@ -8,10 +8,12 @@ require_once 'config/smarty.php';
 require_once 'includes/auth.php';
 /* Other resources. */
 require_once 'class/content.php';
-require_once 'class/price.php';
+require_once 'class/media.php';
+require_once 'class/File.php';
 
 $contentObject	= new class_content();
-$priceObject	= new class_price();
+$mediaObject	= new class_media();
+$fileObject		= new File(array('png', 'jpg', 'jpeg'));
 
 if(isset($_GET['id']) && trim($_GET['id']) != '') {
 
@@ -26,10 +28,10 @@ if(isset($_GET['id']) && trim($_GET['id']) != '') {
 
 	$smarty->assign('contentData', $contentData);
 	
-	$priceData = $priceObject->getBycontent($id);
+	$mediaData = $mediaObject->getByType('CONTENT', $id);
 
-	if($priceData) {
-		$smarty->assign('priceData', $priceData);
+	if($mediaData) {
+		$smarty->assign('mediaData', $mediaData);
 	}
 } else {
 	header('Location: /content/article/');
@@ -46,72 +48,111 @@ if(isset($_GET['delete_id'])) {
 	if($errors['error']  == '' && $errors['result']  == 1 ) {
 
 		$data					= array();
-		$data['price_active']	= 0;
-		$data['price_date_end']	= date('Y-m-d H:i:s');
+		$data['media_deleted']	= 1;
 
 		$where		= array();
-		$where[]	= $priceObject->getAdapter()->quoteInto('price_id = ?', $deactivate);
-		$priceObject->update($data, $where);
+		$where[]	= $mediaObject->getAdapter()->quoteInto('media_id = ?', $deactivate);
+		$mediaObject->update($data, $where);
 	}
 
 	echo json_encode($errors);
 	exit;
 }
+
 /* Check posted data. */
-if(count($_POST) > 0) {
+if(isset($_GET['status_id'])) {
 
-	$errors	= array();
-	/* The price. */
-	if(!isset($_POST['price_original'])) {
-		$errors[] = 'Price amount is required';
-	} else if(trim($_POST['price_original']) == '') {
-		$errors[] = 'Price amount is required';
-	} else if($priceObject->validateAmount(trim($_POST['price_original'])) == null) {
-		$errors[] = 'Amount needs to be a valid decimal, e.g. 453.23';
-	}
-    
-	if(!isset($_POST['price_quantity'])) {
-		$errors[] = 'Quantity is required';
-	} else if((int)trim($_POST['price_quantity']) == 0) {
-		$errors[] = 'Quantity is required';
-	}	
-    
-	if(!isset($_POST['price_type'])) {
-		$errors[] = 'Monthly or once off payment';
-	} else if(trim($_POST['price_type']) == '') {
-		$errors[] = 'Monthly or once off payment';
-	}	
-    
-	/* The discount. */
-	if(isset($_POST['price_discount']) && trim($_POST['price_discount']) != '0') {
-		if((int)trim($_POST['price_discount']) == 0) {
-			$errors[] = 'Please add a valid discount number from 0 and 100';
-		} else if((int)trim($_POST['price_discount']) > 101) {
-			$errors[] = 'Please add a valid discount number from 0 and 100';
-		}
+	$errorArray				= array();
+	$errorArray['error']	= '';
+	$errorArray['result']	= 0;
+	$id                     = trim($_GET['status_id']);
+
+	$mediaData = $mediaObject->getById($id);
+
+	if($mediaData) {
+		$mediaObject->updatePrimary('CONTENT', $contentData['content_id'], $mediaData['media_id'], $mediaData['media_category']);	
+	} else {
+		$errorArray['error']	= 'Did not update.';
+		$errorArray['result']	= 1;		
 	}
 
-	if(count($errors) == 0) {
+	$errorArray['error']	= '';
+	$errorArray['result']	= 1;				
 
-		$data					= array();
-		$data['content_id']		= $contentData['content_id'];		
-		$data['price_original']	= trim($_POST['price_original']);
-		$data['price_type']	    = trim($_POST['price_type']);
-		$data['price_quantity']	= trim($_POST['price_quantity']);   
-		$data['price_name']	    = trim($_POST['price_name']);        
-		$data['price_discount']	= (int)trim($_POST['price_discount']);
-
-		$success	= $priceObject->insert($data);			
-
-		if($success) {
-			header('Location: /content/article/price.php?id='.$contentData['content_id']);
-			exit;
-		}
-
-	}
-	/* if we are here there are errors. */
-	$smarty->assign('errors', implode('<br />', $errors));
+	echo json_encode($errorArray);
+	exit;
 }
 
-$smarty->display('content/article/price.tpl');
+/* Check posted data. */
+if(count($_FILES) > 0 && isset($_FILES['mediafiles'])) {
+
+	$errorArray	= array();
+
+	if(isset($_FILES['mediafiles']['name']) && count($_FILES['mediafiles']['name']) > 0) {
+		for($i = 0; $i < count($_FILES['mediafiles']['name']); $i++) {
+			if((int)$_FILES['mediafiles']['size'][$i] != 0 && trim($_FILES['mediafiles']['name'][$i]) != '') {
+				/* Check if its the right file. */
+				$ext = $fileObject->file_extention($_FILES['mediafiles']['name'][$i]); 
+				if($ext != '') {
+					$checkExt = $fileObject->getValidateExtention('mediafiles', $ext, $i);
+					if(!$checkExt) {
+						$errorArray[] = 'Invalid file type something funny with the file format';					
+					}
+				} else {
+					$errorArray[] = 'Invalid file type';								
+				}
+			} else {			
+				switch((int)$_FILES['mediafiles']['error'][$i]) {
+					case 1 : $errorArray[] = 'The uploaded file exceeds the maximum upload file size, should be less than 1M';
+					case 2 : $errorArray[] = 'File size exceeds the maximum file size';
+					case 3 : $errorArray[] = 'File was only partically uploaded, please try again';
+					case 4 : $errorArray[] = 'No file was uploaded';
+					case 6 : $errorArray[] = 'Missing a temporary folder';
+					case 7 : $errorArray[] = 'Faild to write file to disk';
+				}
+			}
+		}
+	}
+
+	if(count($errorArray) == 0) {
+		if(isset($_FILES['mediafiles']) && count($_FILES['mediafiles']['name']) > 0) {
+			for($i = 0; $i < count($_FILES['mediafiles']['name']); $i++) {
+				$data 								= array();
+				$data['media_code']			= $mediaObject->createCode();		
+				$data['media_item_id']      = $contentData['content_id'];
+				$data['media_item_type']    = 'CONTENT';
+				$data['media_category']		= 'IMAGE';
+
+				$ext		= strtolower($fileObject->file_extention($_FILES['mediafiles']['name'][$i]));					
+				$filename	= $data['media_code'].'.'.$ext;		
+				$directory	= $zfsession->config['path'].'/media/content/article/'.$contentData['content_id'].'/'.$data['media_code'];
+				$file		= $directory.'/'.$filename;	
+				if(!is_dir($directory)) mkdir($directory, 0777, true); 
+				/* Create files for this catalog type. */ 
+				foreach($fileObject->image as $catalog) {
+					/* Change file name. */
+					$newfilename = str_replace($filename, $catalog['code'].$filename, $file);
+					/* Resize media. */
+					$fileObject->resize_crop_image($catalog['width'], $catalog['height'], $_FILES['mediafiles']['tmp_name'][$i], $newfilename);
+				}
+				$data['media_path']	= '/media/content/article/'.$contentData['content_id'].'/'.$data['media_code'].'/';
+				$data['media_ext']		= '.'.$ext ;
+				/* Check for other medias. */
+				$primary = $mediaObject->getPrimary('CONTENT', $contentData['content_id'], 'IMAGE');		
+				if($primary) {
+					$data['media_primary']	= 0;
+				} else {
+					$data['media_primary']	= 1;
+				}
+				$success	= $mediaObject->insert($data);	
+			}
+		}
+		header('Location: /content/article/media.php?id='.$contentData['content_id']);
+		exit;
+	}
+	/* if we are here there are errors. */
+	$smarty->assign('errors', implode('<br />', $errorArray));
+}
+
+$smarty->display('content/article/media.tpl');
 ?>

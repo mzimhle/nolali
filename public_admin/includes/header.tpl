@@ -104,7 +104,23 @@
         <li><a href="/content/news/">News</a></li>
       </ul>
     </div>	
-    </li>      
+    </li>  
+    <li class="nav-item with-sub ">
+    <a class="nav-link" href="#" data-toggle="dropdown">
+      <i class="icon ion-ios-chatboxes-outline"></i>
+      <span>Commodity</span>
+    </a>
+    <div class="sub-item">
+      <ul>
+        <li><a href="/commodity/booking/">Booking</a></li>
+        <li><a href="/commodity/catalog/">Catalog</a></li>
+        <li><a href="/commodity/enquiry/">Enquiries</a></li>
+        <li><a href="/commodity/participant/">Participant</a></li>
+        <li><a href="/commodity/bulk-sms/">Bulk SMS</a></li>
+        <li><a href="/commodity/bulk-email/">Bulk Email</a></li>
+      </ul>
+    </div>	
+    </li>     
       {/if}      
 	</ul>
   </div><!-- container -->

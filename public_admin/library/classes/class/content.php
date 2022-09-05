@@ -47,7 +47,7 @@ class class_content extends Zend_Db_Table_Abstract {
 		$select = $this->_db->select()
 			->from(array('content' => 'content'))
 			->joinInner(array('entity' => 'entity'), "entity_deleted = 0 and entity.entity_id = content.entity_id")
-			->joinLeft(array('media' => 'media'), "media.media_category = 'IMAGE' and content.content_id = media.media_item_id and media.media_item_type = 'CONTENT' and media.media_primary = 1 and media.media_active = 1", array('media_code', 'media_path', 'media_ext'))
+			->joinLeft(array('media' => 'media'), "media.media_category = 'IMAGE' and content.content_id = media.media_item_id and media.media_item_type = 'CONTENT' and media.media_primary = 1", array('media_code', 'media_path', 'media_ext'))
 			->where('content_deleted = 0 and content.entity_id = ?', $this->_entity)
 			->where('content.content_id = ?', $id)
 			->limit(1);		
@@ -92,7 +92,7 @@ class class_content extends Zend_Db_Table_Abstract {
 		$select = $this->_db->select()
 			->from(array('content' => 'content'))
 			->joinInner(array('entity' => 'entity'), "entity_deleted = 0 and entity.entity_id = content.entity_id", array('entity_name'))
-			->joinLeft(array('media' => 'media'), "media.media_category = 'IMAGE' and content.content_id = media.media_item_id and media.media_item_type = 'CONTENT' and media.media_primary = 1 and media.media_active = 1", array('media_code', 'media_path', 'media_ext'))
+			->joinLeft(array('media' => 'media'), "media.media_category = 'IMAGE' and content.content_id = media.media_item_id and media.media_item_type = 'CONTENT' and media.media_primary = 1", array('media_code', 'media_path', 'media_ext'))
 			->where('content_deleted = 0 and content.entity_id = ?', $this->_entity)          
 			->where($where)
 			->order('content_name desc');
@@ -101,7 +101,31 @@ class class_content extends Zend_Db_Table_Abstract {
 		$result = $this->_db->fetchAll($select . " limit $start, $length");
 		return ($result === false) ? false : $result = array('count'=>$result_count['query_count'],'displayrecords'=>count($result),'records'=>$result);
 	}
-	
+
+	public function validateDate($string) {
+		if(preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $string)) {
+			if(date('Y-m-d', strtotime($string)) != $string) {
+				return '';
+			} else {
+				return $string;
+			}
+		} else {
+			return '';
+		}
+	}
+    
+	public function validateTime($string) {
+		if(preg_match('/^[0-9]{2}:[0-9]{2}$/', $string)) {
+			if(date('H:i', strtotime($string)) != $string) {
+				return '';
+			} else {
+				return $string;
+			}
+		} else {
+			return '';
+		}
+	}
+    
     function sanitize(&$string) { $string = preg_replace("/[^a-zA-Z0-9_,]+/", "", $string);}
     function sanitizeArray(&$array) { for($i = 0; $i < count($array); $i++) { $array[$i] = preg_replace("/[^a-zA-Z0-9_]+/", "", $array[$i]); } }	
 }

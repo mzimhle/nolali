@@ -59,7 +59,7 @@ if(isset($_GET['action']) && trim($_GET['action']) == 'search') {
 		for($i = 0; $i < count($contentData['records']); $i++) {
 			$item = $contentData['records'][$i];
 			$contents[$i] = array(
-                ($item['media_code'] != '' ? '<img src="'.$zfsession->site.$item['media_path'].'tny_'.$item['media_code'].$item['media_ext'].'" />' : '<img src="/images/no-image.png" />'),
+                ($item['media_code'] != '' ? '<img src="'.$zfsession->config['site'].$item['media_path'].'tny_'.$item['media_code'].$item['media_ext'].'" />' : '<img src="/images/no-image.png" />'),
 				'<a href="/content/article/details.php?id='.trim($item['content_id']).'">'.trim($item['content_name']).'</a>',
 				"<button onclick=\"deleteModal('".$item['content_id']."', '', 'default'); return false;\" class='btn'>Delete</button>"
 			);
