@@ -164,7 +164,7 @@ class class_product extends Zend_Db_Table_Abstract {
  	 * @param string job id
      * @return object
 	 */	
-	public function search($query, $limit = 20) {
+	public function search($type, $query, $limit = 20) {
 
 		$items = $this->_db->select()
 			->from(array('price' => 'price'), array('price.product_id'))
@@ -177,7 +177,9 @@ class class_product extends Zend_Db_Table_Abstract {
 			->from(array('product' => 'product'))
 			->joinLeft(array('inventory' => 'inventory'), "inventory.product_id = product.product_id and inventory_deleted = 0 and product_type = 'ITEM'", array('ifnull(sum(inventory_quantity), 0) as inventory_quantity'))
 			->joinLeft(array('items' => $items), 'items.product_id = product.product_id', array('ifnull(product_quantity,0) as product_quantity', 'ifnull(sum(inventory_quantity)-ifnull(product_quantity,0), 0) as product_left'))
+			->joinLeft(array('price' => 'price'), "price.product_id = product.product_id and price_deleted = 0 and price_primary = 1 and price_active = 1", array('price_amount', 'price_id'))            
 			->where('product_deleted = 0 and product.entity_id = ?', $this->_entity)
+            ->where('product_type = ?', $type)
             ->where('product_deleted = 0 and product.account_id = ?', $this->_account)            
 			->where("lower(concat(product_name)) like lower(?)", "%$query%")
 			->limit($limit)

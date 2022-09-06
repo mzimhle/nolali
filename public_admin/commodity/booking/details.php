@@ -11,12 +11,10 @@ require_once 'includes/auth.php';
 require_once 'class/price.php';
 require_once 'class/invoice.php';
 require_once 'class/invoiceitem.php';
-require_once 'class/bankentity.php';
 
 $priceObject		= new class_price();
 $invoiceObject		= new class_invoice();
 $invoiceitemObject	= new class_invoiceitem();
-$bankentityObject	= new class_bankentity(); 
 
 if (isset($_GET['id']) && trim($_GET['id']) != '') {
 
@@ -41,18 +39,6 @@ if(count($_POST) > 0 && !isset($_POST['generate_invoice'])) {
 		$errors[] = 'Please add owner of this invoice';
 	}
 
-	if(!isset($_POST['template_code'])) {
-		$errors[] = 'Please add make of this invoice';
-	} else if(trim($_POST['template_code']) == '') {
-		$errors[] = 'Please add make of this invoice';
-	}
-
-	if(!isset($_POST['bankentity_id'])) {
-		$errors[] = 'Please add bank account of the statement';	
-	} else if(trim($_POST['bankentity_id']) == '') {
-		$errors[] = 'Please add bank account of the statement';	
-	}
-	
 	if(!isset($_POST['price_id'])) {
 		$errors[] = 'Please select the room and price';
 	} else if(trim($_POST['price_id']) == '') {
@@ -90,11 +76,9 @@ if(count($_POST) > 0 && !isset($_POST['generate_invoice'])) {
 
 		$datediff = strtotime(trim($_POST['invoiceitem_date_end'])) - strtotime(trim($_POST['invoiceitem_date_start']));
 
-		$data							= array();								
-		$data['template_code']		    = trim($_POST['template_code']);	
+		$data							= array();										
 		$data['invoice_date_payment']   = trim($_POST['invoiceitem_date_start']);
         $data['participant_id']         = trim($_POST['search_participant_id']);   
-        $data['bankentity_id']         	= trim($_POST['bankentity_id']);
 
 		$idata								= array();
 		$idata['price_id']					= trim($_POST['price_id']);
@@ -113,7 +97,8 @@ if(count($_POST) > 0 && !isset($_POST['generate_invoice'])) {
 			$where	= $invoiceitemObject->getAdapter()->quoteInto('invoiceitem_id = ?', $invoiceData['invoiceitem_id']);
 			$invoiceitemObject->update($idata, $where);	
 		} else {
-			$data['invoice_type']	= 'BOOKING';
+			$data['invoice_type']	= 'ONCEOFF';
+            $data['template_code']  = 'BOOK';
 			$success	= $invoiceObject->insert($data);
 			// Add record.
 			$idata['invoice_id']	= $success;
@@ -127,10 +112,6 @@ if(count($_POST) > 0 && !isset($_POST['generate_invoice'])) {
 	/* if we are here there are errors. */
 	$smarty->assign('errors', implode('<br />', $errors));	
 }
-
-$bankentityPairs = $bankentityObject->pairs();
-if($bankentityPairs) $smarty->assign('bankentityPairs', $bankentityPairs);
-
 /* Display the template  */	
 $smarty->display('commodity/booking/details.tpl');
 ?>

@@ -19,14 +19,14 @@ $list		= array();
 if(isset($_REQUEST['term'])) {
 		
 	$q				= strtolower(trim($_REQUEST['term'])); 
-	$productData	= $productObject->rooms($q, 10);
+	$productData	= $productObject->search('BOOK', $q, 10);
 	
 	if($productData) {
 		for($i = 0; $i < count($productData); $i++) {
 			$list[] = array(
 				"id" 		=> $productData[$i]["price_id"],
-				"label" 	=> $productData[$i]['product_name'].', at R '.number_format($productData[$i]['price_amount'], 2, ',', ' ').' per day',
-				"value" 	=> $productData[$i]['product_name'].', at R '.number_format($productData[$i]['price_amount'], 2, ',', ' ').' per day'
+				"label" 	=> $productData[$i]['product_name'].' at R '.number_format($productData[$i]['price_amount'], 2, ',', ' ').' per day',
+				"value" 	=> $productData[$i]['product_name'].' at R '.number_format($productData[$i]['price_amount'], 2, ',', ' ').' per day'
 			);			
 		}
 	}

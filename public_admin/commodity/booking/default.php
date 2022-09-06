@@ -76,7 +76,7 @@ if(isset($_GET['action']) && trim($_GET['action']) == 'search') {
 	$length	= isset($_REQUEST['iDisplayLength']) ? $_REQUEST['iDisplayLength'] : 20;
 
 	if(isset($_REQUEST['filter_search']) && trim($_REQUEST['filter_search']) != '') $filter[] = array('filter_search' => trim($_REQUEST['filter_search']));
-	$filter[] = array('filter_type' => 'BOOKING');
+	$filter[] = array('filter_template' => 'BOOK');
 	
 	$invoiceData = $invoiceObject->paginate($start, $length, $filter);
 
@@ -91,7 +91,7 @@ if(isset($_GET['action']) && trim($_GET['action']) == 'search') {
 				$item['invoiceitem_date_end'],
 				$item['participant_cellphone'],
 				$item['participant_name'],
-				'<a href="/commodity/booking/details.php?id='.$item['invoice_id'].'" '.((int)$item['invoice_paid'] == 1 ? 'class="success"' : 'class="error"').' title="'.($item['template_code'] == 'INVOICE' ? 'Invoice' : 'Quotation').'" alt="'.($item['template_code'] == 'INVOICE' ? 'Invoice' : 'Quotation').'">'.$item['invoice_code'].'</a>',
+				'<a href="/commodity/booking/details.php?id='.$item['invoice_id'].'" '.((int)$item['invoice_paid'] == 1 ? 'class="success"' : 'class="error"').'>'.$item['invoice_code'].'</a>',
 				'R '.number_format($item['invoiceitem_amount_total'], 2, ',', ' '),
 				$item['invoiceitem_quantity'].' nights in the '.$item['product_name'].' at R '.number_format($item['invoiceitem_amount_unit'], 2, ',', ' ')
 			);

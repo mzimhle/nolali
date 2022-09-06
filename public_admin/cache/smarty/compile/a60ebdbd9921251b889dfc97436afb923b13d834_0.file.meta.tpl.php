@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2022-09-05 23:25:16
+/* Smarty version 3.1.34-dev-7, created on 2022-09-07 00:20:27
   from 'C:\sites\nolali.loc\public_admin\includes\meta.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6316693cc10ca6_64520260',
+  'unifunc' => 'content_6317c7ab07a325_71263968',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6316693cc10ca6_64520260 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6317c7ab07a325_71263968 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

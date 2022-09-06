@@ -28,9 +28,8 @@
                                     <option value=""> -- All -- </option>
                                     <option value="PRODUCT"> Products </option>
                                     <option value="SERVICE"> Services </option>
-                                    <!-- <option value=""> Event </option> -->
-                                    <!-- <option value=""> Catalog </option> -->
-                                    <!-- <option value=""> Property </option> -->
+                                    <option value="BOOK"> Booking </option>
+                                    <option value="CATALOG"> Catalog </option>
                                 </select>
                             </div>
                         </div>

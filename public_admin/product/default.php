@@ -49,7 +49,7 @@ if(isset($_GET['action']) && trim($_GET['action']) == 'search') {
 	$length	= isset($_REQUEST['iDisplayLength']) ? $_REQUEST['iDisplayLength'] : 100;
 	
 	if(isset($_REQUEST['filter_search']) && trim($_REQUEST['filter_search']) != '') $filter[] = array('filter_search' => trim($_REQUEST['filter_search']));	
-	$filter[] = array('filter_type' => isset($_REQUEST['filter_type']) && in_array(trim($_REQUEST['filter_type']), array('PRODUCT', 'SERVICE')) ? trim($_REQUEST['filter_type']) :  'PRODUCT,SERVICE');	
+	$filter[] = array('filter_type' => isset($_REQUEST['filter_type']) && in_array(trim($_REQUEST['filter_type']), array('PRODUCT', 'SERVICE')) ? trim($_REQUEST['filter_type']) :  'PRODUCT,SERVICE,BOOK,CATALOG');	
     // For whom ever is logged in.
 	$filter[] = array('filter_entity' => (isset($zfsession->activeEntity) ? $zfsession->activeEntity['entity_id'] : 0));
     $filter[] = array('filter_account' => (isset($zfsession->activeEntity) ? $zfsession->activeEntity['account_id'] : $zfsession->id));	

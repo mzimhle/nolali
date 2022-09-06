@@ -33,7 +33,10 @@
 			</li>
 			<li class="nav-item">
 				<a href="/product/price.php?id={$productData.product_id}" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Price</a>
-			</li>		
+			</li>
+			<li class="nav-item">
+				<a href="/product/media.php?id={$productData.product_id}" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Media</a>
+			</li>              
 		</ul><br />
         {/if}		
         <div class="section-wrapper">
@@ -51,9 +54,8 @@
                                     <option value=""> --- Select --- </option>
                                     <option value="PRODUCT" {if isset($productData) && $productData.product_type eq 'PRODUCT'}selected{/if}> PRODUCT </option>
                                     <option value="SERVICE" {if isset($productData) && $productData.product_type eq 'SERVICE'}selected{/if}> SERVICE </option>
-                                    <!-- <option value=""> Event </option> -->
-                                    <!-- <option value=""> Catalog </option> -->
-                                    <!-- <option value=""> Property </option> -->
+                                    <option value="BOOK"  {if isset($productData) && $productData.product_type eq 'BOOK'}selected{/if}> BOOKING </option>
+                                    <option value="CATALOG"  {if isset($productData) && $productData.product_type eq 'CATALOG'}selected{/if}> CATALOG </option>
                                 </select>
                             <code>Please add the name of the product</code>									
                         </div>

@@ -111,3 +111,10 @@
 127.0.0.1 - - [05/Sep/2022:21:38:14 +0200] "GET /images/bg-image-1.jpg HTTP/1.1" 200 115585
 127.0.0.1 - - [05/Sep/2022:21:38:14 +0200] "GET /assets/elegant-icons/fonts/ElegantIcons.ttf HTTP/1.1" 200 59388
 127.0.0.1 - - [05/Sep/2022:21:38:14 +0200] "GET /favicon.ico?v=3 HTTP/1.1" 200 1150
+127.0.0.1 - - [06/Sep/2022:20:59:07 +0200] "GET /css/nivo_themes/default/loading.gif HTTP/1.1" 200 7303
+127.0.0.1 - - [06/Sep/2022:20:59:07 +0200] "GET /css/nivo_themes/default/close.png HTTP/1.1" 200 1222
+127.0.0.1 - - [06/Sep/2022:20:59:07 +0200] "GET /css/nivo_themes/default/prev.png HTTP/1.1" 200 1377
+127.0.0.1 - - [06/Sep/2022:20:59:07 +0200] "GET /css/nivo_themes/default/next.png HTTP/1.1" 200 1329
+127.0.0.1 - - [06/Sep/2022:20:59:07 +0200] "GET /images/project-3-lg.jpg HTTP/1.1" 200 274336
+127.0.0.1 - - [06/Sep/2022:20:59:09 +0200] "GET /images/project-2-lg.jpg HTTP/1.1" 200 173625
+127.0.0.1 - - [06/Sep/2022:20:59:10 +0200] "GET /images/project-1-lg.jpg HTTP/1.1" 200 132560

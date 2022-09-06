@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2022-09-05 23:18:45
+/* Smarty version 3.1.34-dev-7, created on 2022-09-06 22:09:17
   from 'C:\sites\nolali.loc\public_admin\product\default.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_631667b530e474_89556308',
+  'unifunc' => 'content_6317a8ed0165d6_68712807',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fae922fce17840fb1bc4ee2af49502b30865f541' => 
     array (
       0 => 'C:\\sites\\nolali.loc\\public_admin\\product\\default.tpl',
-      1 => 1661370554,
+      1 => 1662494952,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_631667b530e474_89556308 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6317a8ed0165d6_68712807 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -54,9 +54,8 @@ function content_631667b530e474_89556308 (Smarty_Internal_Template $_smarty_tpl)
                                     <option value=""> -- All -- </option>
                                     <option value="PRODUCT"> Products </option>
                                     <option value="SERVICE"> Services </option>
-                                    <!-- <option value=""> Event </option> -->
-                                    <!-- <option value=""> Catalog </option> -->
-                                    <!-- <option value=""> Property </option> -->
+                                    <option value="BOOK"> Booking </option>
+                                    <option value="CATALOG"> Catalog </option>
                                 </select>
                             </div>
                         </div>

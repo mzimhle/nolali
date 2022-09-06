@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2022-09-05 23:25:16
+/* Smarty version 3.1.34-dev-7, created on 2022-09-07 00:11:12
   from 'C:\sites\nolali.loc\public_admin\commodity\booking\default.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6316693cbc9531_12244991',
+  'unifunc' => 'content_6317c580dafe19_25906371',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6316693cbc9531_12244991 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6317c580dafe19_25906371 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

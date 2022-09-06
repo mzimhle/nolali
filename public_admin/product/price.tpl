@@ -26,7 +26,10 @@
 			</li>
 			<li class="nav-item">
 				<a href="/product/price.php?id={$productData.product_id}" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Price</a>
-			</li>		
+			</li>
+			<li class="nav-item">
+				<a href="/product/media.php?id={$productData.product_id}" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Media</a>
+			</li>            
 		</ul><br />	
         <div class="section-wrapper">
 			<label class="section-title">Add price for {$productData.product_name}</label>

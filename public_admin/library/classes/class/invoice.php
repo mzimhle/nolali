@@ -39,6 +39,8 @@ class class_invoice extends Zend_Db_Table_Abstract
         // add a timestamp
         $data['invoice_added']  = isset($data['invoice_added']) ? $data['invoice_added'] : date('Y-m-d H:i:s');
         $data['invoice_code']	= isset($data['invoice_code']) ? $data['invoice_code'] : $this->createCode();
+        $data['account_id']     = $this->_account;
+        $data['entity_id']      = $this->_entity;        
 		return parent::insert($data);	
     }
 	/**
@@ -116,12 +118,12 @@ class class_invoice extends Zend_Db_Table_Abstract
 		$select = $this->_db->select()	
 			->from(array('invoice' => 'invoice'))
 			->joinInner(array('account' => 'account'), "account.account_id = invoice.account_id", array('account_id', 'account_name', 'account_type', 'account_cellphone', 'account_email', 'account_reference'))
-			->joinLeft(array('entity' => 'entity'), "entity.entity_id = invoice.entity_id and entity_deleted = 0", array( 'entity_name', 'entity_code', 'entity_contact_cellphone', 'entity_contact_email'))	            
+			->joinLeft(array('entity' => 'entity'), "entity.entity_id = invoice.entity_id and entity_deleted = 0", array( 'entity_name', 'entity_code', 'entity_contact_cellphone', 'entity_contact_email', 'entity_address_physical'))	            
 			->joinLeft(array('participant' => 'participant'), "participant.participant_id = invoice.participant_id AND participant_deleted = 0", array('participant_name', 'participant_address', 'participant_email', 'participant_cellphone', 'participant_id'))
 			->joinLeft(array('template' => 'template'), "template.template_category = 'TEMPLATE' and template.template_code = invoice.template_code and template_deleted = 0 and template.account_id = invoice.account_id", array('template_id', 'template_category', 'template_subject', 'template_file', 'template_message'))
 			->joinLeft(array('itemtotal' => $itemtotal), 'itemtotal.invoice_id = invoice.invoice_id', array('invoice_amount_total'))
 			->joinLeft(array('statement' => $paymenttotal), 'statement.invoice_id = invoice.invoice_id', array('invoice_amount_paid', 'invoice_amount_due' => new Zend_Db_Expr('IFNULL(invoice_amount_total, 0) - IFNULL(invoice_amount_paid, 0)')))
-			->joinLeft(array('invoiceitem' => 'invoiceitem'), "invoiceitem.invoice_id = invoice.invoice_id and invoice.invoice_type = 'BOOKING' and invoiceitem_deleted = 0", array('invoiceitem_text', 'invoiceitem_title', 'invoiceitem_date_start', 'invoiceitem_date_end', 'invoiceitem_quantity', 'invoiceitem_id'))
+			->joinLeft(array('invoiceitem' => 'invoiceitem'), "invoiceitem.invoice_id = invoice.invoice_id and invoice.template_code = 'BOOK' and invoiceitem_deleted = 0", array('invoiceitem_date_start', 'invoiceitem_date_end', 'invoiceitem_quantity', 'invoiceitem_amount_total', 'invoiceitem_amount_unit'))
 			->joinLeft(array('price' => 'price'), "price.price_id = invoiceitem.price_id and price_deleted = 0", array('price_id', 'price_amount'))
 			->joinLeft(array('product' => 'product'), "product.product_id = price.product_id and product_deleted = 0", array('product_name', 'product_text'))
 			->where('invoice_deleted = 0 and invoice.invoice_id = ?', $id)
@@ -191,6 +193,10 @@ class class_invoice extends Zend_Db_Table_Abstract
 					$text = trim($filter[$i]['filter_type']);
 					$this->sanitize($text);
 					$where .= " and invoice_type = '$text'";
+				} else if(isset($filter[$i]['filter_template']) && trim($filter[$i]['filter_template']) != '') {
+					$text = trim($filter[$i]['filter_template']);
+					$this->sanitize($text);
+					$where .= " and invoice.template_code = '$text'";                    
 				} else if(isset($filter[$i]['filter_monthly']) && trim($filter[$i]['filter_monthly']) != '') {
 					$text = trim($filter[$i]['filter_monthly']);
 					$this->sanitize($text);
@@ -216,7 +222,7 @@ class class_invoice extends Zend_Db_Table_Abstract
 			->joinLeft(array('template' => 'template'), "template.template_category = 'TEMPLATE' and template.template_code = invoice.template_code and template_deleted = 0 and template.entity_id = participant.entity_id", array('template_id', 'template_category', 'template_subject', 'template_file', 'template_message'))
 			->joinLeft(array('itemtotal' => $itemtotal), 'itemtotal.invoice_id = invoice.invoice_id', array('invoice_amount_total'))
 			->joinLeft(array('statement' => $paymenttotal), 'statement.invoice_id = invoice.invoice_id', array('invoice_amount_paid', 'invoice_amount_due' => new Zend_Db_Expr('IFNULL(invoice_amount_total, 0) - IFNULL(invoice_amount_paid, 0)')))
-			->joinLeft(array('invoiceitem' => 'invoiceitem'), "invoiceitem.invoice_id = invoice.invoice_id and invoice.invoice_type = 'BOOKING' and invoiceitem_deleted = 0", array('invoiceitem_date_start', 'invoiceitem_date_end', 'invoiceitem_quantity', 'invoiceitem_amount_total', 'invoiceitem_amount_unit'))
+			->joinLeft(array('invoiceitem' => 'invoiceitem'), "invoiceitem.invoice_id = invoice.invoice_id and invoice.template_code = 'BOOK' and invoiceitem_deleted = 0", array('invoiceitem_date_start', 'invoiceitem_date_end', 'invoiceitem_quantity', 'invoiceitem_amount_total', 'invoiceitem_amount_unit'))
 			->joinLeft(array('price' => 'price'), "price.price_id = invoiceitem.price_id and price_deleted = 0", array('price_amount', 'price_quantity'))
 			->joinLeft(array('product' => 'product'), "product.product_id = price.product_id and product_deleted = 0")
 			->where($where)
